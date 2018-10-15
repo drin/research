@@ -1,6 +1,6 @@
 # blog
 I am just starting a PhD in computer science, and am interested in keeping my
-writings in an accessible, ''blog-able'' format, and this is my first attempt
+writings in an accessible, "blog-able" format, and this is my first attempt
 at that!
 
 **Note**: This is a repository for blog-like posts in markdown, in the style of
