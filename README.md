@@ -25,10 +25,9 @@ COPS*][paper-pdf-dontsettle].
 ----
 
 #### [The Log-Structured Merge-Tree (278 Review)](https://github.com/Drin/blog/blob/master/posts/by-date/2018-10-14.md)
-I provide a brief summary of the paper, [*Don't Settle for Eventual: Scalable
-Causal Consistency for Wide-Area Storage with COPS*][paper-pdf-lsmtree]. I also
-provide a few thoughts relevant to work by Joy Alruraj due to his recent talk
-in our class.
+I provide a brief summary of the paper, [*The Log-Structured Merge-Tree
+(LSM-Tree)*][paper-pdf-lsmtree]. I also provide a few thoughts relevant to work
+by Joy Alruraj due to his recent talk in our class.
 
 
 [paper-pdf-dontsettle]: https://www.cs.cmu.edu/~dga/papers/cops-sosp2011.pdf
