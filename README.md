@@ -13,6 +13,12 @@ the near-ish future; so bear with me! This README may not always be kept up to
 date, but I'll do my best :)
 
 ---
+#### [CMPS 278 Reading Schedule](https://github.com/Drin/blog/blob/master/posts/by-course/cmps278/index.md)
+I have already fallen way behind in keeping this up to date. But, for my own convenience, I have put a schedule of the readings for CMPS 278, and I will eventually update them with links to the papers (though likely privately available only since I don't want to be held accountable for publishing them).
+
+Anyways, hopefully I can find the time (and sanity) to keep up with this more. I will definitely want to keep up with everything as I do blog posts for CMPS 290S, and get started on my various course projects.
+
+---
 
 #### [Don't Settle for Eventual (290S Response)](https://github.com/Drin/blog/blob/master/posts/by-date/2018-10-15.md)
 I provide a brief summary and my thoughts on the paper, [*Don't Settle for
