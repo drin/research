@@ -3,9 +3,11 @@
 A schedule of the readings for CMPS 278 for my convenience. I'll also link my reading reviews as I write them, just so that this feels a bit more complete.
 
 ### Oct 19 Friday
-[F1: A Distributed SQL Database That Scales (also discussing Spanner a little)](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41344.pdf)
+Paper
+    [F1: A Distributed SQL Database That Scales (also discussing Spanner a little)](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41344.pdf)
 
-[F1 - Reading review](https://github.com/Drin/blog/blob/master/posts/by-date/2018-10-18.md)
+Review
+    [F1 - Reading review](https://github.com/Drin/blog/blob/master/posts/by-date/2018-10-18.md)
 
 ### Oct 22 Monday
 [Bigtable: A Distributed Storage System for Structured Data](https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf)
