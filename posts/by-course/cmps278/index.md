@@ -1,22 +1,26 @@
 # Reading Schedule
 
+A schedule of the readings for CMPS 278 for my convenience. I'll also link my reading reviews as I write them, just so that this feels a bit more complete.
+
 ### Oct 19 Friday
-F1: A Distributed SQL Database That Scales (also discussing Spanner a little)
+[F1: A Distributed SQL Database That Scales (also discussing Spanner a little)](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41344.pdf)
+
+[F1 - Reading review](https://github.com/Drin/blog/blob/master/posts/by-date/2018-10-18.md)
 
 ### Oct 22 Monday
-Bigtable: A Distributed Storage System for Structured Data
+[Bigtable: A Distributed Storage System for Structured Data](https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf)
 
 ### Oct 24 Wednesday
-MapReduce: Simplified Data Processing on Large Clusters, Dean and Ghemawat
+[MapReduce: Simplified Data Processing on Large Clusters](https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf)
 
 ### Oct 26 Friday
-Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing
+[Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing](https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final138.pdf)
 
 ### Oct 29 Monday
-Amazon Aurora: Design Considerations for High Throughput Cloud-Native Relational Databases
+[Amazon Aurora: Design Considerations for High Throughput Cloud-Native Relational Databases](https://www.allthingsdistributed.com/files/p1041-verbitski.pdf)
 
 ### Oct 31 Wednesday
-Discretized Streams: Fault-Tolerant Streaming Computation at Scale
+[Discretized Streams: Fault-Tolerant Streaming Computation at Scale](https://people.csail.mit.edu/matei/papers/2013/sosp_spark_streaming.pdf)
 
 ### Nov 2 Friday
 The MemSQL Query Optimizer
