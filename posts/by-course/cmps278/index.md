@@ -18,6 +18,9 @@ Review
 ### Oct 24 Wednesday
 [Bigtable: A Distributed Storage System for Structured Data](https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf)
 
+Review
+    [BigTable - Reading Review](https://github.com/Drin/blog/blob/master/posts/by-course/cmps278/2018-10-23.bigtable.md)
+
 ### Oct 26 Friday
 [Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing](https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final138.pdf)
 
