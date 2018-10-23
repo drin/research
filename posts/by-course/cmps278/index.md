@@ -12,6 +12,9 @@ Review
 ### Oct 22 Monday
 [MapReduce: Simplified Data Processing on Large Clusters](https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf)
 
+Review
+    [MapReduce - Reading Review](https://github.com/Drin/blog/blob/master/posts/by-course/cmps278/2018-10-21.mapreduce.md)
+
 ### Oct 24 Wednesday
 [Bigtable: A Distributed Storage System for Structured Data](https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf)
 
