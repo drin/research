@@ -8,6 +8,20 @@
 #### Presentation
 [Reading Presentation](https://github.com/lkuper/CMPS290S-2018-09/blob/master/presentations/2018-10-03-cap-12years.pdf)
 
+### Nov 2 Friday
+
+#### Paper
+['Cause I'm Strong Enough: Reasoning about Consistency Choices in Distributed Systems](http://software.imdea.org/~gotsman/papers/logic-popl16.pdf)
+
+#### Presentation
+
+### Dec 3 Monday
+
+#### Paper
+[Modular Software Upgrades for Distributed Systems](http://pmg.csail.mit.edu/pubs/ajmani06modular-abstract.html)
+
+#### Presentation
+
 # Reading Schedule
 
 A schedule of the readings for CMPS 290S for my convenience. I'll also link my reading reviews as I write them, just so that this feels a bit more complete.
