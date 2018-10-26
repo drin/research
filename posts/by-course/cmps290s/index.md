@@ -89,7 +89,7 @@ I used a free pass and didn't do this reading
 [Consistency in Non-Transactional Distributed Storage Systems](https://dl.acm.org/citation.cfm?id=2926965)
 
 #### Response
-[Reading Response](https://github.com/lkuper/CMPS290S-2018-09/blob/master/responses/6478-response-2018-10-17.md)
+[Reading Response](https://github.com/Drin/blog/blob/master/posts/by-course/cmps290s/2018-10-17.consistency-survey.md)
 
 ### Oct 19 Friday
 
