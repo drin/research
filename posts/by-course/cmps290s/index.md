@@ -123,6 +123,7 @@ Class cancelled
 [Replicated Data Types: Specification, Verification, Optimality](https://www.microsoft.com/en-us/research/publication/replicated-data-types-specification-verification-optimality/)
 
 #### Response
+[Reading Response](https://github.com/Drin/blog/blob/master/posts/by-date/2018-10-29.md)
 
 ### Oct 31 Wednesday
 
