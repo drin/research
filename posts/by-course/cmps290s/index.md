@@ -131,13 +131,15 @@ Class cancelled
 [Disciplined Inconsistency with Consistency Types](http://bholt.org/gen/ipa.pdf)
 
 #### Response
+[Reading Response](https://github.com/Drin/blog/blob/master/posts/by-date/2018-10-31.md)
 
 ### Nov 2 Friday
 
 #### Paper
 ['Cause I'm Strong Enough: Reasoning about Consistency Choices in Distributed Systems](http://software.imdea.org/~gotsman/papers/logic-popl16.pdf)
 
-#### Response
+#### Presentation
+
 
 ### Nov 5 Monday
 
@@ -145,6 +147,7 @@ Class cancelled
 [MixT: A Language for Mixing Consistency in Geodistributed Transactions](http://www.cs.cornell.edu/andru/papers/mixt/mixt.pdf)
 
 #### Response
+[Reading Response](https://github.com/Drin/blog/blob/master/posts/by-date/2018-11-05.md)
 
 ### Nov 7 Wednesday
 
