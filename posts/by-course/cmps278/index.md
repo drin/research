@@ -31,10 +31,10 @@ Review
 [Discretized Streams: Fault-Tolerant Streaming Computation at Scale](https://people.csail.mit.edu/matei/papers/2013/sosp_spark_streaming.pdf)
 
 ### Nov 2 Friday
-The MemSQL Query Optimizer
+[The MemSQL Query Optimizer](http://www.vldb.org/pvldb/vol9/p1401-chen.pdf)
 
 ### Nov 5 Monday
-Predicting Multiple Metrics for Queries: Better Decisions Enabled by Machine Learning
+[Predicting Multiple Metrics for Queries: Better Decisions Enabled by Machine Learning](https://ieeexplore.ieee.org/document/4812438)
 
 ### Nov 7 Wednesday
 The Case for Learned Index Structures
