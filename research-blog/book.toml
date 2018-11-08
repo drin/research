@@ -1,0 +1,8 @@
+[book]
+authors = ["Aldrin"]
+multilingual = false
+src = "research-blog-content"
+title = "Research Blog"
+
+[build]
+build-dir = "html"
