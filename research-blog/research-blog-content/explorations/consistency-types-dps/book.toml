@@ -1,5 +1,8 @@
 [book]
 authors = ["Aldrin Montana"]
 multilingual = false
-src = "src"
+src = "consistency-dps-content"
 title = "Consistency Types in Declarative Programmable Storage"
+
+[build]
+build-dir = "html"
