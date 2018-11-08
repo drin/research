@@ -1,0 +1,5 @@
+[book]
+authors = ["Aldrin Montana"]
+multilingual = false
+src = "src"
+title = "Consistency Types in Declarative Programmable Storage"
