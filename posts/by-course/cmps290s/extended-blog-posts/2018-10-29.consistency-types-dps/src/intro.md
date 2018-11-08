@@ -1,38 +1,55 @@
 # Work in Progress
 TODO:
 * Fill in content:
-    * Describe background (consistency types and analysis of consistency)
-    * Describe research question being investigated
-    * Describe goals and long-term value of investigation
-    * Describe investigation details:
-        * design
-        * implementation (low-hanging fruit)
-        * future implementation
+    * Describe Ceph:
+        * what is Ceph?
+        * Why only strong consistency?
+        * Why weaker consistency (Examples, examples, examples)?
+        * How weaker consistency? (Also, Object Gateway?)
+            * What granularity
+            * How is it tunable
+            * Quorum?
+    * Describe Declarative Programmable Storage:
+        * how does it interact with Ceph?
+        * how could consistency level be specified
+        * how could consistency level be enforced
+    * Link Declarative programmable storage and consistency back to IPA and
+      MixT
 * Create and include graphics
 * coalesce this mdbook into a single md-format post
 
 # Introduction
-This extended blog post explores how to reason about consistency (and similar
-properties) in a declarative programmable storage system. On one hand, this
-post will explore the use of types to enforce consistency, on the other hand,
-this post will explore how to generalize the property of consistency and how to
-reason about it from a dataflow perspective. Although it is likely out of scope
-for this class (CMPS 290S), an approach to implementation is something that
-this post will design, architect, and explore.
+This blog post explores how to reason about consistency (and similar
+properties) in a declarative programmable storage system. **Declarative**
+*Programmable Storage* (DPS) is a complex system with many components and
+subsystems. While this post will necessarily discuss background, the intent is
+to consider implementations of type systems for enforcing consistency levels
+(e.g. [IPA][disciplined-inconsistency] and [MixT][mixt]) and how they can
+inform intelligent enforcement of consistency levels in a storage system.
+
+Even beyond the use of declarative reasoning over mixed consistency levels,
+this investigation will be useful for future work, exploring the generalization
+of data properties enforceable with pre and post conditions, and how to reason
+over them.
 
 # Navigating this blog post
 For understanding work on consistency models that influences this blog post,
-see the [Consistency Models](background/consistency-models.md) and [Consistency
-Types](background/consistency-types.md) subsections of the
-[Background](background/intro.md) section. For understanding what declarative
+see the [Consistency Models](consistency/consistency-models.md) and
+[Consistency Types](consistency/consistency-types.md) subsections of the
+[Background](consistency/intro.md) section. For understanding what declarative
 programmable storage is, and the relevance of consistency models and
 consistency as a property of data to declarative programmable storage, see the
 [Declarative Programmable
-Storage](background/declarative-programmable-storage.md) subsection of the
-[Background](background/intro.md) section.
+Storage](consistency/declarative-programmable-storage.md) subsection of the
+[Background](consistency/intro.md) section.
 
 The meat of what this blog post then investigates, can be found in the
-[Consistency as a Property](../investigation/consistency-property.md)
-subsection of the [Investiation](../investigation/intro.md) section. The
+[Consistency as a Property](consistency/consistency-property.md)
+subsection of the [Consistency](consistency/intro.md) section. The
 Investigation section, overall, describes how consistency as a property may be
 implemented and reasoned over in a declarative programmable storage system.
+
+[disciplined-inconsistency]: https://homes.cs.washington.edu/~luisceze/publications/ipa-socc16.pdf
+[mixt]: http://www.cs.cornell.edu/andru/papers/mixt/mixt.pdf
+
+[hacky-comment-1]: reason_about_consistency_from_a_dataflow_perspective.
