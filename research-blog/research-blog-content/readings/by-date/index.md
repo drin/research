@@ -9,7 +9,7 @@ straightforward way to look up content chronologically.
 Partition-Tolerant Web Services](https://users.ece.cmu.edu/~adrian/731-sp04/readings/GL-cap.pdf)
 
 #### Response
-[Reading Response](by-date/2018-10-01.md)
+[Reading Response](2018-10-01.md)
 
 ### Oct 3rd - Wednesday
 
@@ -25,7 +25,7 @@ Partition-Tolerant Web Services](https://users.ece.cmu.edu/~adrian/731-sp04/read
 [Linearizability: A Correctness Condition for Concurrent Objects](https://cs.brown.edu/~mph/HerlihyW90/p463-herlihy.pdf)
 
 #### Response
-[Reading Response](by-date/2018-10-05.md)
+[Reading Response](2018-10-05.md)
 
 ### Oct 8th - Monday
 
@@ -41,7 +41,7 @@ I used a free pass and didn't do this reading
 [Time, Clocks, and the Ordering of Events](https://www.semanticscholar.org/paper/Session-Guarantees-for-Weakly-Consistent-Replicated-Terry-Demers/84f5ed07b001fe3407101b36a6768864df374e51)
 
 #### Response
-[Reading Response](by-date/2018-10-10.md)
+[Reading Response](2018-10-10.md)
 
 ### Oct 12th - Friday
 
@@ -49,7 +49,7 @@ I used a free pass and didn't do this reading
 [Session Gurantees for Weakly Consistent Replicated Data](https://www.semanticscholar.org/paper/Session-Guarantees-for-Weakly-Consistent-Replicated-Terry-Demers/84f5ed07b001fe3407101b36a6768864df374e51)
 
 #### Response
-[Reading Response](by-date/2018-10-12.md)
+[Reading Response](2018-10-12.md)
 
 ### Oct 15th - Monday
 
@@ -57,7 +57,7 @@ I used a free pass and didn't do this reading
 [Don't Settle for Eventual: Scalable Causal Consistency for Wide-Area Storage with COPS](https://www.cs.cmu.edu/~dga/papers/cops-sosp2011.pdf)
 
 #### Response
-[Reading Response](by-date/2018-10-15.md)
+[Reading Response](2018-10-15.md)
 
 ### Oct 17th - Wednesday
 
@@ -65,7 +65,7 @@ I used a free pass and didn't do this reading
 [Consistency in Non-Transactional Distributed Storage Systems](https://dl.acm.org/citation.cfm?id=2926965)
 
 #### Response
-[Reading Response](by-date/2018-10-17.md)
+[Reading Response](2018-10-17.md)
 
 ### Oct 19 Friday
 #### Paper
@@ -73,7 +73,7 @@ I used a free pass and didn't do this reading
 - [F1: A Distributed SQL Database That Scales (also discussing Spanner a little)](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41344.pdf)
 
 #### Response
-- [F1 - Reading review](by-date/2018-10-18.md)
+- [F1 - Reading review](2018-10-18.md)
 
 
 ### Oct 22 Monday
@@ -83,7 +83,7 @@ I used a free pass and didn't do this reading
 - [MapReduce: Simplified Data Processing on Large Clusters](https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf)
 
 #### Review
-- [MapReduce - Reading Review](by-date/2018-10-21.md)
+- [MapReduce - Reading Review](2018-10-21.md)
 
 
 ### Oct 24 Wednesday
@@ -91,7 +91,7 @@ I used a free pass and didn't do this reading
 - [Bigtable: A Distributed Storage System for Structured Data](https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf)
 
 #### Reading Review
-- [BigTable - Reading Review](by-date/2018-10-23.md)
+- [BigTable - Reading Review](2018-10-23.md)
 
 
 ### Oct 26 Friday
@@ -100,7 +100,7 @@ I used a free pass and didn't do this reading
 - [Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing](https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final138.pdf)
 
 #### Reading Review
-- [Reading Response](by-date/2018-10-26.md)
+- [Reading Response](2018-10-26.md)
 
 ### Oct 29 Monday
 [Amazon Aurora: Design Considerations for High Throughput Cloud-Native Relational Databases](https://www.allthingsdistributed.com/files/p1041-verbitski.pdf)
@@ -160,7 +160,7 @@ The rest below, to be integrated above in the future
 [Replicated Data Types: Specification, Verification, Optimality](https://www.microsoft.com/en-us/research/publication/replicated-data-types-specification-verification-optimality/)
 
 #### Response
-[Reading Response](by-date/2018-10-29.md)
+[Reading Response](2018-10-29.md)
 
 ### Oct 31 Wednesday
 
@@ -168,7 +168,7 @@ The rest below, to be integrated above in the future
 [Disciplined Inconsistency with Consistency Types](http://bholt.org/gen/ipa.pdf)
 
 #### Response
-[Reading Response](by-date/2018-10-31.md)
+[Reading Response](2018-10-31.md)
 
 ### Nov 2 Friday
 
@@ -184,7 +184,7 @@ The rest below, to be integrated above in the future
 [MixT: A Language for Mixing Consistency in Geodistributed Transactions](http://www.cs.cornell.edu/andru/papers/mixt/mixt.pdf)
 
 #### Response
-[Reading Response](posts/by-date/2018-11-05.md)
+[Reading Response](2018-11-05.md)
 
 ### Nov 7 Wednesday
 
