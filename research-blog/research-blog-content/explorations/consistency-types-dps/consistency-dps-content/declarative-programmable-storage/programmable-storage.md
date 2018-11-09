@@ -10,11 +10,23 @@
         * How is it tunable
         * Quorum?
 
+## Ceph
+
+### Ceph **O**bject **S**torage **D**aemon
+The Ceph OSD relies upon the stability and performance of the underlying
+filesystem[^osd-fs-fn] when using [the filestore
+backend][ceph-backend-filestore]. The file system currently recommended for
+production systems is XFS, although btrfs is supported. On the other hand, the
+[new BlueStore backend][ceph-backend-bluestore] allows Ceph to directly manage
+storage devices, bypassing the extra layer of abstraction that comes with the
+use of kernel file systems (e.g. XFS, btrfs).
+
 ### Ceph Object Gateway and Eventual Consistency for Disaster Recovery
-Ceph is able to [support multiple data centers][data-center-faq], but with
-safeguards to ensure data safety. When a client writes data to Ceph the primary
+Ceph is able to [support multiple data centers][data-center-faq], but only
+provides strong consistency. When a client writes data to Ceph the primary
 OSD will not acknowledge the write to the client until the secondary OSDs have
-written the replicas synchronously. See How Ceph Scales for details.
+written the replicas synchronously. Ceph [achieves
+scalability][ceph-cuttlefish-arch] through "intelligent data replication."
 
 The Ceph community is working to ensure that OSD/monitor heartbeats and peering
 processes operate effectively with the additional latency that may occur when
@@ -33,4 +45,9 @@ for disaster recovery purposes. This will work with data read and written via
 the Object Gateway only. Work is also starting on a similar capability for Ceph
 Block devices which are managed via the various cloudstacks.
 
+[^osd-fs-fn]: This is mentioned in [recommendations for the RADOS configuration][ceph-fs-recommendation]
 [data-center-faq]: http://docs.ceph.com/docs/cuttlefish/faq/#can-ceph-support-multiple-data-centers
+[ceph-fs-recommendation]: http://docs.ceph.com/docs/jewel/rados/configuration/filesystem-recommendations/#filesystems
+[ceph-backend-bluestore]: http://docs.ceph.com/docs/mimic/rados/configuration/storage-devices/#osd-backends
+[ceph-backend-filestore]: http://docs.ceph.com/docs/mimic/rados/configuration/storage-devices/#filestore
+[ceph-cuttlefish-arch]: http://docs.ceph.com/docs/cuttlefish/architecture/#how-ceph-scales
