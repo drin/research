@@ -5,4 +5,4 @@ src = "consistency-dps-content"
 title = "Consistency Types in Declarative Programmable Storage"
 
 [build]
-build-dir = "html"
+build-dir = "/srv/http/consistency-types-dps"
