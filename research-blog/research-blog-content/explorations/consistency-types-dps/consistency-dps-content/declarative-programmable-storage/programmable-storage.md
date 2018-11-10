@@ -1,6 +1,4 @@
-# Programmable Storage
-
-## TODO
+# TODO
 * Describe Ceph:
     * what is Ceph?
     * Why only strong consistency?
@@ -10,7 +8,27 @@
         * How is it tunable
         * Quorum?
 
-## Ceph
+## Programmable Storage
+
+## [Ceph][ceph-intro]
+Ceph is an open source, distributed, large-scale storage system. As described
+by Noah Watkins [in his dissertation][noah-dissertation], "Ceph is something of
+a storage Swiss army knife." Ceph's architecture is designed around the
+**R**eliable **A**utonomous **D**istributed **O**bject **S**tore (RADOS). This
+data store provides object, block, and file system storage in a unified storage
+cluster. The backend for RADOS is the **O**bject **S**torage **D**aemon, which
+runs on each node in the Ceph RADOS cluster.
+
+### Why Ceph?
+In the near future, I will be working on research related to [Noah's
+dissertation][noah-dissertation], and he had chosen to do his research on
+programmable storage on top of Ceph. So, for this blog post, the choice of Ceph
+is to minimize time to ramp up on other technologies. While I am not personally
+experienced with Ceph, if I can provide a layer for enforcing consistency types
+on top of Ceph, then Noah's [work on top of Ceph][noah-zlog] could be made to
+benefit. This then carries over nicely into a clear path for evaluation and
+understanding if adding features for sequential, causal, or weaker consistency
+is useful for a programmable storage system.
 
 ### Ceph **O**bject **S**torage **D**aemon
 The Ceph OSD relies upon the stability and performance of the underlying
@@ -46,8 +64,15 @@ the Object Gateway only. Work is also starting on a similar capability for Ceph
 Block devices which are managed via the various cloudstacks.
 
 [^osd-fs-fn]: This is mentioned in [recommendations for the RADOS configuration][ceph-fs-recommendation]
-[data-center-faq]: http://docs.ceph.com/docs/cuttlefish/faq/#can-ceph-support-multiple-data-centers
+
+[disorderlylabs]: https://disorderlylabs.github.io/
+[maltzahn-website]: https://users.soe.ucsc.edu/~carlosm/UCSC/Home/Home.html
+[programmable-storage]: http://programmability.us/
+[noah-dissertation]: https://cloudfront.escholarship.org/dist/prd/content/qt72n6c5kq/qt72n6c5kq.pdf?t=pcfodf
+[noah-zlog]: https://github.com/cruzdb/zlog
+[ceph-intro]: https://ceph.com/ceph-storage/
+[ceph-cuttlefish-arch]: http://docs.ceph.com/docs/cuttlefish/architecture/#how-ceph-scales
 [ceph-fs-recommendation]: http://docs.ceph.com/docs/jewel/rados/configuration/filesystem-recommendations/#filesystems
 [ceph-backend-bluestore]: http://docs.ceph.com/docs/mimic/rados/configuration/storage-devices/#osd-backends
 [ceph-backend-filestore]: http://docs.ceph.com/docs/mimic/rados/configuration/storage-devices/#filestore
-[ceph-cuttlefish-arch]: http://docs.ceph.com/docs/cuttlefish/architecture/#how-ceph-scales
+[data-center-faq]: http://docs.ceph.com/docs/cuttlefish/faq/#can-ceph-support-multiple-data-centers
