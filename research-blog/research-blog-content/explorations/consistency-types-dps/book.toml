@@ -6,3 +6,6 @@ title = "Consistency Types in Declarative Programmable Storage"
 
 [build]
 build-dir = "/srv/http/consistency-types-dps"
+
+[output.html]
+mathjax-support = true

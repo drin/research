@@ -8,5 +8,5 @@
     - [Declarative Storage](declarative-programmable-storage/declarative-storage.md)
 - [Consistency](consistency/index.md)
     - [Consistency Models](consistency/consistency-models.md)
-    - [Consistency Types](consistency/consistency-types.md)
+    - [Consistency Types](consistency/consistency-type-systems.md)
     - [Consistency as a Property](consistency/consistency-as-a-property.md)

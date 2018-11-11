@@ -4,22 +4,36 @@ For conciseness in other areas, many definitions are provided here.
 ## Programmable Storage
 
 ### Ceph
-OSD:    [**O**bject **S**torage **D**aemon][osd-doc] is a daemon that is
-        responsible for storing objects on a local file system and providing
-        access to them over the network.
+* OSD
+    * [**O**bject **S**torage **D**aemon][osd-doc] is a daemon that is
+      responsible for storing objects on a local file system and providing
+      access to them over the network.
 
-CRUSH:  [**C**ontrolled **R**eplication **U**nder **S**calable **H**ashing][crush-paper]
-        is a pseudo-random data distribution algorithm that efficiently and
-        robustly distributes object replicas across a heterogenous, structured
-        storage cluster[^crush-fn].
+* PG
+    * TODO
 
-Cluster Map:    Set of 5 maps that represent the toplogy of the ceph storage
-                cluster: (1) Monitor, (2) OSD, (3) PG, (4) CRUSH, (5) MDS.
+* CRUSH
+    * [**C**ontrolled **R**eplication **U**nder **S**calable **H**ashing][crush-paper]
+      is a pseudo-random data distribution algorithm that efficiently and robustly
+      distributes object replicas across a heterogenous, structured storage
+      cluster[^crush-fn].
 
-fsid:   A unique identifier for an OSD. The "fsid" term is used interchangeably
-        with "uuid".
+* MDS
+    * Ceph metadata software or metadata management service
 
-MDS:    Ceph metadata software or metadata management service
+* Cluster Map
+    * Set of 5 maps that represent the toplogy of the ceph storage
+      cluster:
+
+        1. Monitor
+        2. OSD
+        3. PG
+        4. CRUSH
+        5. MDS
+
+* fsid
+    * A unique identifier for an OSD. The "fsid" term is used interchangeably
+      with "uuid".
 
 ## Declarative Programmable Storage
 

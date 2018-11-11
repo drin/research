@@ -1,14 +1,12 @@
 # TODO:
 * Link Declarative programmable storage and consistency back to IPA and
   MixT
-* Create and include graphics
 
 # Introduction
-In this blog post, I explore how to provide enforcement of various consistency models (and similar
-properties) in a **D**eclarative **P**rogrammable **S**torage (DPS) system. I analyze
-implementations of type systems (e.g. [IPA][ipa-paper], [MixT][mixt-paper]) and declarative
-programming models (e.g. [Declarative Programming over ECDS][quelea-paper]) for enforcing a variety
-of consistency models.
+In this blog post, I explore how to provide enforcement of various consistency models in a
+**D**eclarative **P**rogrammable **S**torage (DPS) system. I analyze implementations of type
+systems (e.g. [IPA][ipa-paper], [MixT][mixt-paper]) and declarative programming models (e.g.
+[Declarative Programming over ECDS][quelea-paper]) for enforcing a variety of consistency models.
 
 Necessary background information can be found in the following sections:
 * [**D**eclarative **P**rogrammable **S**torage](declarative-programmable-storage/index.md):
@@ -16,7 +14,7 @@ Necessary background information can be found in the following sections:
     * [glossary of DPS system terminology](declarative-programmable-storage/glossary.md)
 * [Consistency](consistency/index.md)
     * [consistency models](consistency/consistency-models.md)
-    * [consistency types](consistency/consistency-types.md)
+    * [consistency type systems](consistency/consistency-type-systems.md)
     * [consistency as a property](consistency/consistency-as-a-property.md)
 
 I imagine that enforcement of consistency models for a DPS system requires two major parts:
@@ -55,6 +53,14 @@ The meat of what this blog post then investigates, can be found in the
 subsection of the [Consistency](consistency/intro.md) section. The
 Investigation section, overall, describes how consistency as a property may be
 implemented and reasoned over in a declarative programmable storage system.
+
+## Short Term Objective
+To design and implement a DPS system that is able to optimize over, and generate an "execution
+plan," for a storage application *that can accommodate several consistency models*.
+
+## Long Term Objective
+ (and similar
+properties) 
 
 [ipa-paper]: https://homes.cs.washington.edu/~luisceze/publications/ipa-socc16.pdf
 [mixt-paper]: http://www.cs.cornell.edu/andru/papers/mixt/mixt.pdf

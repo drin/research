@@ -1,19 +1,23 @@
 # Consistency Types
-This subsection provides necessary background to understand how type systems
-for explicit interaction with mixed consistency models have been approached.
+As described in the [Consistency Models](consistency-models.md) section, a consistency model is a
+framework for defining what consistency is. Because there are many consistency models, it is useful
+to understand how to compare them, but especially how to verify and enforce them. Consistency type
+systems associate data types with the consistency model we would like the data types to conform to.
+The consistency model is defined by consistency constraints (or requirements), in a way that the
+programming language or system can enforce. The association of data types with consistency models
+allows the developer, and the system, to explicitly reason over consistency constraints in
+applications.
 
 ## Related Work
-In [CMPS290S][course-website], we have been reading a handful of papers
-discussing consistency models and various tools for understanding, analyzing,
-and reasoning about consistency in a distributed system. There are a few
-categories that I would group related work into:
+In [CMPS290S][course-website], we have been reading a handful of papers that discuss various tools
+for understanding, analyzing, and reasoning about consistency in a distributed system. There are a
+few categories that I would group related work into:
 
 1. Consistency type systems
 2. Analysis of consistent, distributed logic
 
-Consistency type systems are type systems that explicitly accommodate
-consistency constraints on abstract data types. For this category, this blog
-post is influenced by:
+For the first category, consistency type systems, I first describe and analyze the following
+existing implementations:
 * [Disciplined Inconsistency with Consistency Types][disciplined-inconsistency]
 * [MixT: A Language for Mixing Consistency in Geodistributed
   Transactions][mixt]
