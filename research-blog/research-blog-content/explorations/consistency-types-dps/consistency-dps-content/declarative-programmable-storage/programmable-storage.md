@@ -11,25 +11,24 @@
 # Programmable Storage
 
 ## [Ceph][ceph-intro]
-Ceph is an open source, distributed, large-scale storage system. As described
-by Noah Watkins, [in his dissertation][noah-dissertation], "Ceph is something of
-a storage Swiss army knife." According to [Ceph's introduction blog
-post][ceph-intro-blog], "the main goals of Ceph are to be completely
-distributed without a single point of failure, scalable to the exabyte level,
-and freely-available." Ceph has been part of storage system research at UC
-Santa Cruz for several years under Carlos Maltzahn, including the [CRUSH
-algorithm][crush-paper], and [the RADOS][rado-paper]. As I will be working with
-Carlos Maltzahn and Peter Alvaro on [declarative programmable
-storage](declarative-storage), Ceph is a great first choice for investigating
-related, initial research questions.
+Ceph is an open source, distributed, large-scale storage system. Some quotes that nicely summarize
+Ceph:
 
-As described in [the introduction](../index.md), this blog post will 
-So, for this blog post, the backend data store for our declarative model that we explore as a choice of Ceph is to minimize time to ramp up on other technologies. While I am not personally
-experienced with Ceph, if I can provide a layer for enforcing consistency types
-on top of Ceph, then Noah's [work on top of Ceph][noah-zlog] could be made to
-benefit. This then carries over nicely into a clear path for evaluation and
-understanding if adding features for sequential, causal, or weaker consistency
-is useful for a programmable storage system.
+* As described by Noah Watkins, [in his dissertation][noah-dissertation], "Ceph is something of a
+  storage Swiss army knife."
+* According to [Ceph's introduction blog post][ceph-intro-blog], "the main goals of Ceph are to be
+  completely distributed without a single point of failure, scalable to the exabyte level, and
+  freely-available."
+
+Ceph has been part of storage systems research at UC Santa Cruz for several years under Carlos
+Maltzahn, including the [CRUSH algorithm][crush-paper] (2006), the data store, [RADOS][rados-paper]
+(2007), up to and including Noah's dissertation earlier this year (2018). I have just
+started working with Carlos Maltzahn and Peter Alvaro on [declarative programmable
+storage](declarative-storage), making Ceph a natural choice for investigating related, initial
+research questions. While I am not personally experienced with Ceph, if I can provide a layer for
+enforcing consistency types on top of Ceph, then Noah's [programmable storage work on top of
+Ceph][noah-zlog] could benefit. Then, this carries over nicely into assessing the utility of
+sequential, causal, or weaker consistency for a programmable storage system.
 
 Ceph's architecture is designed around the
 [**R**eliable **A**utonomous **D**istributed **O**bject **S**tore (RADOS)][rados-paper].
@@ -39,7 +38,8 @@ blocks, and files. A Ceph storage cluster consists of two types of daemons:
 * Ceph Monitor
 * Ceph **O**bject **S**torage **D**aemon (OSD)
 
-The Monitor daemon maintains a master copy of *the cluster map* including:
+The Monitor daemon maintains a master copy of [*the cluster map*](glossary.md#cluster-map)
+including:
 
 * cluster members
 * state

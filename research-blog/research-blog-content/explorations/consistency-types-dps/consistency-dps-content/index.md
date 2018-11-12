@@ -3,10 +3,11 @@
   MixT
 
 # Introduction
-In this blog post, I explore how to provide enforcement of various consistency models in a
-**D**eclarative **P**rogrammable **S**torage (DPS) system. I analyze implementations of type
-systems (e.g. [IPA][ipa-paper], [MixT][mixt-paper]) and declarative programming models (e.g.
-[Declarative Programming over ECDS][quelea-paper]) for enforcing a variety of consistency models.
+In this blog post, I explore how to enforce various consistency models in a **D**eclarative
+**P**rogrammable **S**torage (DPS) system. I analyze implementations of consistency type systems
+(e.g. [IPA][ipa-paper], [MixT][mixt-paper]) and declarative programming models (e.g.  [Declarative
+Programming over ECDS][quelea-paper]) for explicitly accommodating, and reasoning over, a variety
+of consistency models.
 
 Necessary background information can be found in the following sections:
 * [**D**eclarative **P**rogrammable **S**torage](declarative-programmable-storage/index.md):
@@ -17,17 +18,17 @@ Necessary background information can be found in the following sections:
     * [consistency type systems](consistency/consistency-type-systems.md)
     * [consistency as a property](consistency/consistency-as-a-property.md)
 
-I imagine that enforcement of consistency models for a DPS system requires two major parts:
-1. Mechanisms for supporting weaker consistency models in a storage system
-2. A way to define consistency requirements for data, and a way to enforce those consistency
-   requirements for operations on that data.
+For a DPS system, I imagine there are 2 major features to allow developers to specify consistency
+requirements over data types:
+1. Mechanisms for supporting weaker consistency models in the backend storage system.
+2. A way to define, and enforce, consistency requirements for data types.
 
-The IPA and QUELEA implementations used [Cassandra][cassandra-datastore] as the backend data store,
-while the MixT impelemntation used the [PostgreSQL][postgres-dbms] data management system as the
-backend data store. 
+The IPA and QUELEA implementations used [Cassandra][cassandra-datastore] as the backend storage
+system, while the MixT implementation used [PostgreSQL][postgres-dbms] as the backend storage
+system.
 
 <!--TODO-->
-Cassandra uses a quor
+Cassandra is an eventually consistent data store.
 
 I am interested in using Ceph, a programmable storage system as
 the backend. Some [initial work on a DPS system][noah-dissertation], by Noah Watkins, uses Ceph as
