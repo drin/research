@@ -1,21 +1,29 @@
 # Supporting mixed consistency in a Declarative Programmable Storage System
 
 ## Introduction
-In this blog post, I explore how to enforce various consistency models in a **D**eclarative
-**P**rogrammable **S**torage (DPS) system. I analyze implementations of consistency type systems
-(e.g. [IPA][ipa-paper], [MixT][mixt-paper]) and declarative programming models (e.g.
-[QUELEA][quelea-paper]) for explicitly accommodating, and reasoning over, a variety of consistency
-models.
+In this blog post, we explore how to enforce various consistency models in a **D**eclarative
+**P**rogrammable **S**torage (DPS) system. In the following sections, we describe what we mean by
+DPS systems:
 
-Necessary background information can be found in the following sections:
 * [**D**eclarative **P**rogrammable **S**torage](declarative-programmable-storage/index.md):
-    * [*programmable storage* systems](declarative-programmable-storage/programmable-storage.md)
-    * [glossary of DPS system terminology](declarative-programmable-storage/glossary.md)
-* [Consistency](consistency/index.md)
-    * [consistency models](consistency/consistency-models.md)
-    * [consistency type systems](consistency/consistency-type-systems.md)
-    * [consistency as a property](consistency/consistency-as-a-property.md)
+* [*programmable storage* systems](declarative-programmable-storage/programmable-storage.md)
+* [glossary of DPS system terminology](declarative-programmable-storage/glossary.md)
 
+Once we know what a DPS system is, and what type of backend data store we are using, We analyze
+implementations of consistency type systems (e.g. [IPA][ipa-paper], [MixT][mixt-paper]) and
+declarative programming models (e.g. [QUELEA][quelea-paper]) for explicitly accommodating, and
+reasoning over, a variety of consistency models. Background for understanding what consistency
+means and what consistency models are, can be found in these sections:
+
+* [Consistency](consistency/index.md)
+* [consistency models](consistency/consistency-models.md)
+
+And then we explore our main topics of interest in these sections:
+
+* [consistency type systems](consistency/consistency-type-systems.md)
+* [consistency as a property](consistency/consistency-as-a-property.md)
+
+### Overview
 For a DPS system, There are 2 major features that I explore to allow developers specify
 consistency requirements over data types:
 1. Mechanisms for supporting weaker consistency models in the backend storage system.
