@@ -267,25 +267,37 @@ ADT in 1 of 2 ways:
    achieve the strongest consistency possible.
 
 Static consistency policies are roughly "passed-through" to the data store. IPA is implemented as a
-layer on top of Cassandra because of Cassandra's quorum approach to consistency. By achieving
-"quorum intersection," writes to and reads from Cassandra can be strongly consistent. Weak
-consistency policies can be satisfied by specifying few replicas to write to (e.g. 1 or 2) and few
-replicas to read from (e.g. 1 or 2). The number of replicas written to, W, and the
-number of replicas read from, R, only needs to be less than the total number of replicas, N, to be
-weakly consistent. But, notice that Cassandra does not natively support complex consistency models,
-such as causal or strong eventual.
+layer on top of Cassandra because of Cassandra's quorum approach to consistency (and maybe because
+it seemed easier to develop on top of?). By achieving "quorum intersection," writes to and reads
+from Cassandra can be strongly consistent. Weak consistency policies can be satisfied by specifying
+fewer replicas to write to (e.g. 1 or 2) or fewer replicas to read from (e.g. 1 or 2) such that
+quorum intersection is **not satisfied**. The number of replicas written to, W, and the number of
+replicas read from, R, only needs to be less than the total number of replicas, N, to be weakly
+consistent. But, notice that Cassandra does not natively support complex consistency models, such
+as causal or strong eventual.
 
-Unlike with Cassandra, implementing an IPA-style consistency type system on top of Ceph will
-require communicating with Ceph's OSDs more directly. This approach would enable a quorum approach
-by treating each OSD as a replica. I'm not entirely sure that there's a way to write to an OSD in a
-way that doesn't trigger the OSD to communicate to other OSDs automatically. Understanding the
-details of OSD communication will be important for understanding what parts of IPA may be portable
-to a DPS system on top of Ceph.
+Dynamic consistency policies are specifications of performance or behavior properties, within which
+the strongest consistency constraints should be satisfied. More concretely, there are two types of
+of dynamic consistency types: rushed and interval. A rushed type represents latency bounds in which
+an answer is expected. For a latency bound of 2 seconds, IPA would return a value meeting the
+strongest consistency constraints within 2 seconds. If strong consistency could be achieved for the
+operation in 1 second, then that value would be preferred to a returned value that is only weakly
+consistent. When the latency threshold is reached, it may be possible that a value only satisfying
+weak consistency is available, and thus that would be returned.
+
+Because the typical IO path to Ceph's storage cluster does not support various consistency models,
+an IPA-style consistency type system would have to be modified, or a new storage interface on top
+of Ceph be provided. In the quorum style of supporting various consistency models, Ceph may require
+communicating with the OSDs directly. A potential problem could be if the OSD has synchronization
+with other OSDs in the configured cluster built-in. If it is possible to communicate writes to OSDs
+individually, it would be possible, potentially even "trivial", to enable a quorum approach to
+consistency over Ceph OSDs. Understanding the details of OSD communication will be important for
+understanding whether Ceph can provide a similar interface to IPA as what Cassandra provides.
 
 ### MixT Consistency Type System
 In contrast to IPA's approach, [MixT's implementation][mixt-impl] is in C++ and much lower in the
 development stack. Another interesting difference is that the backend data store used is
-Postgres. What makes this interesting is that Postgres (to my knowledge) supports strong
+Postgres. What makes this interesting is that Postgres (to my understanding) supports strong
 consistency, but various levels of *isolation*. MixT allows weaker consistencies by providing a
 **D**omain **S**pecific **L**anguage (DSL) for defining computation in a *mixed-consistency
 transaction*. Operations within these mixed-consistency transactions are then split into smaller
@@ -296,13 +308,19 @@ that *already supports* weaker consistency models seemed more natural. Grouping 
 operation constraints) seemed easier to reason about than slicing operations into sub-groups, or
 into isolated operations. Operationally, this makes MixT a very different approach to enforcing
 consistency types. At a glance, this approach seems like it should be easier to build on top of
-Ceph than an IPA-style consistency type system. However, while the similarity between Ceph and
-Postgres providing strong consistency by default seems like something that would make MixT
-applicable for being used on top of Ceph, it is not clear that mixed-consistency transactions will
-be able to achieve weaker consistency on top of Ceph. I think this is due to Postgres having weaker
-levels of isolation, but I am not sure that Ceph offers weaker levels of isolation. Before
+Ceph than an IPA-style consistency type system due to the lack of support for weaker consistency.
+However, while the similarity between Ceph and Postgres providing strong consistency by default
+seems like something that would make MixT applicable for being used on top of Ceph, it is not clear
+that mixed-consistency transactions will be able to achieve weaker consistency on top of Ceph. I
+suspect that support for weaker levels of isolation in Postgres enables MixT to support weaker
+consistency by breaking up a transaction into smaller transactions. I may be misunderstanding
+MixT's implementation, but it seems that weaker isolation is the only way to achieve weaker
+consistency if the data store does not explicitly support weak consistency models. Before
 attempting to architect an approach that layers MixT on top of Ceph, it will be important to
-understand the effect of isolation levels on mixed-consistency transactions.
+understand the effect of isolation levels on mixed-consistency transactions. It will also be
+important to understand whether transaction splitting has the desired semantics over Ceph, given
+that Ceph does not seem to support transactions (though they are requested? It is hard to tell when
+they were requested and if they were ever completed).
 
 ### Declarative Programming over Mixed Consistencies
 [QUELEA][quelea-paper] takes a declarative programming approach to allowing developers directly
