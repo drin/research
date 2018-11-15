@@ -58,16 +58,18 @@ GraphX: Graph Processing in a Distributed Dataflow Framework
 Scalable Atomic Visibility with RAMP Transactions
 
 ### Nov 28 Wednesday
-Data Curation at Scale: The Data Tamer System
+Guest Speaker
+
+-Data Curation at Scale: The Data Tamer System-
 
 ### Nov 30 Friday
 Data provenance to audit compliance with privacy policy in the Internet of Things
 
-### Dec 3 Monday
-NoDB: efficient query execution on raw data files
-
-### Dec 5 Wednesday
+### Dec 3 Wednesday
 The Myria Big Data Management and Analytics System and Cloud Service
+
+### Dec 5 Monday
+NoDB: efficient query execution on raw data files
 
 ### Dec 7 Friday
 The Case For Heterogeneous HTAP
