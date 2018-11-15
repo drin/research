@@ -1,4 +1,4 @@
-# Supporting mixed consistency in a Declarative Programmable Storage System
+# Mixing Consistency in a Declarative Programmable Storage System
 
 
 <!-- ------------------------------>
