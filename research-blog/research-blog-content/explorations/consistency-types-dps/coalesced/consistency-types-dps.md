@@ -1,9 +1,26 @@
-# Mixing Consistency in a Declarative Programmable Storage System
+---
+title: Mixing Consistency in a Declarative Programmable Storage System
+author: Aldrin Montana
+layout: single
+classes: wide
+---
 
+by Aldrin Montana &middot; edited by Abhishek Singh and Lindsey Kuper
 
 <!-- ------------------------------>
 <!-- SECTION -->
 ## Introduction
+Modern distributed applications call for ways to store and access data using a range of consistency
+guarantees.
+<!-- TODO: example -->
+Recent systems such as [QUELEA][quelea-paper], [IPA][ipa-paper], and [MixT][mixt-paper] aim to make
+programming in a mixed-consistency world safer and easier.
+
+<!-- TODO: brief descriptions of implementations -->
+
+<!--
+ Keeping for reference.
+
 In general, I tend to be interested in approaches to lifting various concepts to first-class
 citizens of a programming model. Of course, there is a lot of contextual important to be
 considered, but when I think of an application domain and how a problem might be
@@ -23,13 +40,13 @@ production-capable systems were likely designed and began development before mix
 been well explored. Specifically, the systems we consider in this blog post: [QUELEA][quelea-paper],
 [IPA][ipa-paper], and [MixT][mixt-paper], have all been released and published in the last 3 years.
 
-To establish a clear objective, in this blog post we explore approaches for declaring, and
-enforcing, various consistency models in a **D**eclarative **P**rogrammable **S**torage system
-([dps system](#dps-system)). The following sections include an overview, some definitions and
-intuitions, and goals of dps systems:
+-->
 
-* [*programmable storage* systems](#programmable-storage)
-* [**D**eclarative **P**rogrammable **S**torage](#declarative-programmable-storage):
+In this blog post, we explore approaches for specifying a range of consistency guarantees in a
+_declarative prgorammable storage_ (DPS) system.
+
+<!--
+ Keeping for Reference
 
 For our high-level analysis of [mixing consistency](#mixing-consistency) to be
 meaningful, it is important to have _some_ understanding of what programmable storage is, and
@@ -45,6 +62,8 @@ type system implementations we choose to cover were discussed as part of [CMPS
 Consistency](#mixing-consistency). Background for understanding what consistency even is, and what
 consistency models are, can be found in these sections (TBD later, since this knowledge is assumed
 for the class, CMPS 290S):
+
+-->
 
 <!-- TODO later -->
 * [Consistency](#consistency)
@@ -73,58 +92,81 @@ supporting these subsystems is larger, and these subsystems are exercised and im
 frequently. Without diving too deep into the details, programmable storage seems to be a domain
 that will continue to grow, as described by Noah Watkins [in his dissertation][noah-dissertation].
 
-Also described in Noah's dissertation, is the programmable storage system, [Ceph](#ceph). In his
-dissertation, Noah details his implementation of a distributed, shared log on top of Ceph, which he
-also described [in a blog post][noah-blog-zlog]. Since Noah has already explored programmable
-storage system work on top of Ceph, it seemed like a natural choice to use for my data store
-backend for this blog post.
+In his dissertation, Noah details his implementation of a distributed, shared log on top of the
+[Ceph][ceph-intro] storage system, which he also described [in a blog post][noah-blog-zlog]. Since
+Ceph has already dserved as a substrate for programmable storage work, we will consider using Ceph
+as the backend for a declarative programmable storage system that supports mixing consistency
+guarnatees.
 
 
-## [Ceph][ceph-intro]
-Ceph is an open source, distributed, large-scale storage system, that can be nicely summarized (I
-think) by the following:
+## Ceph
+Ceph is an open source, distributed, large-scale storage system that aims to be, "[completely
+distributed without a single point of failure, scalable to the exabyte level, and
+freely-available][ceph-intro-blog]." Ceph has been part of storage systems research at UC Santa
+Cruz from [the original Ceph paper][ceph-paper] to the [CRUSH algorithm][crush-paper] (2006) and the
+[RADOS][rados-paper] data store (2007); [Noah's recent dissertation][noah-dissertation] on
+programmable storage also involved building on top of Ceph.
 
-* In Noah's dissertation, "Ceph is something of a storage Swiss army knife."
-* [In Ceph's introduction blog post][ceph-intro-blog], "the main goals of Ceph are to be
-  completely distributed without a single point of failure, scalable to the exabyte level, and
-  freely-available."
+Considering Noah's previous work on ZLog, it may be interesting to evaluate the addition of mixed
+consistency guarantees using [recently published work on FuzzyLog][fuzzylog-paper]. Because Ceph
+does not currently support consistency guarantees weaker than strong consistency, with the addition
+of weaker consistency guarantees, an implementation of FuzzyLog may be possible.
 
-Ceph has been part of storage systems research at UC Santa Cruz for several years under Carlos
-Maltzahn, including the [CRUSH algorithm][crush-paper] (2006), the [RADOS][rados-paper] data store
-(2007), even up to [Noah's dissertation][noah-dissertation] earlier this year (2018). I have just
-started working with Carlos Maltzahn and Peter Alvaro on [declarative programmable
-storage](declarative-storage), where there is some interest in continuing to use Ceph as the
-underlying storage system implementation. While I am not personally experienced with Ceph nor have
-I interacted with users of Ceph, the idea of allowing the developer to mix consistency on top of a
-storage system seemed interesting enough to explore. Especially, when considering that Ceph is
-distributed over a cluster (and potentially replicated to remote clusters). With Noah's previous
-work, an implementation of mixing consistencies over Ceph seems to have a clear path forward for
-evaluating the benefit of sequential, causal, or weaker consistency for a programmable storage
-system. This brings us to the variety of consistency models that Ceph supports.
+This brings us to the variety of consistency models that Ceph supports.
 
-For traditional storage systems, strong consistency is a must. Although Ceph is a distributed,
-large-scale storage system, Ceph was designed to fill the role of reliable, durable storage. This
-expectation is common (and preferred) for many applications, especially scientific applications,
-where the complexity of distributed systems and consistency models weaker than linearizability is
-too difficult to work with. This makes Ceph's support for only strong consistency reasonable.
-However, there are many other applications with large data volumes, rich data models, but with
-inherently low business risk that prefer to trade strong consistency for availability and
-performance. This is especially common in social, web-based applications, but could also be
-applicable in other scenarios (examples to come as I think about them? Maybe this is just an
-interesting exercise for a graduate student?). To more optimally support these types of
-applications, it would be ideal to provide the ability to specify weaker consistency models over
-low risk, or non-essential, data types.
+<!--
+ Keeping for reference
+
+While I am not personally experienced with Ceph nor have I interacted with users of Ceph, the idea
+of allowing the developer to mix consistency on top of a storage system seemed interesting enough
+to explore. Especially, when considering that Ceph is distributed over a cluster (and potentially
+replicated to remote clusters).
+
+-->
+
+
+Although Ceph is a distributed, large-scale storage system, Ceph was designed to fill the role of
+reliable, durable storage. This expectation is common (and preferred) for many applications,
+especially scientific applications, where the complexity of distributed systems and weak
+consistency models is too difficult to work with. This makes Ceph's support for only strong
+[primary-copy consistency model][ceph-replication] reasonable. Recent work on a weak consistency
+model for Ceph, [PROAR][proar-paper], has been published by researchers at the Graduate School at
+Shenzhen, Tsinghua University. [Some applications][dynamo-paper], however, prefer to trade strong
+consistency for availability and performance. For Ceph to support these types of applications, it
+would need to offer weaker consistency as an option. 
+
+<!-- TODO (narrative):
+    once ceph supports weaker consistency, we want to make it easy to program against
+-->
+
+<!--
+ Keeping for reference
 
 Ceph's architecture is designed around the [RADOS data store](#rados). This data store is a unified
-system that provides storage interfaces for objects, blocks, and files. A Ceph storage cluster
-consists of two types of daemons:
-* [Ceph Monitor](#ceph-monitor)
-* [Ceph OSD](#ceph-object-storage-daemon)
+system that provides storage interfaces for objects, blocks, and files.
 
-The [Ceph Monitor](#monitor) monitors the Ceph storage cluster. One or more Monitors form a Paxos
-part-time parliament cluster that manage cluster membership, configuration, and state.
+-->
 
-The [Ceph OSD](#osd) handles data persistence on a node in the Ceph storage cluster. The osd relies
+A Ceph storage cluster consists of two types of daemons:
+* Ceph Monitor
+* Ceph OSD
+
+The Ceph Monitor monitors the Ceph storage cluster, while the Ceph OSD handles data persistence on
+a node in the Ceph storage cluster. One or more Monitors form a Paxos part-time parliament cluster
+that manage cluster membership, configuration, and state. The primary responsibility of the monitor
+service is to maintain a master copy of the cluster map. The cluster map represents the topology
+of the ceph storage cluster by the use of 5 maps:
+1. Monitor Map
+2. OSD Map
+3. PG
+4. CRUSH
+5. MDS
+
+
+<!--
+ Keeping for reference
+
+The osd relies
 upon the stability and performance of the underlying filesystem[^osd-fs-fn] when using [the
 filestore backend][ceph-backend-filestore]. The file system currently recommended for production
 systems is XFS, although btrfs is supported. On the other hand, the [new BlueStore
@@ -133,29 +175,60 @@ extra layer of abstraction that comes with the use of kernel file systems (e.g. 
 
 While understanding Ceph in general is useful, the aspect that is relevant for what we want to
 explore in this blog post, is how Ceph replicates data, and what type of consistency is available
-to developers and users. Well, Ceph is able to [support multiple data centers][data-center-faq],
-but only provides strong consistency. When a client writes data to Ceph the primary OSD will not
-acknowledge the write to the client until the secondary OSDs have written the replicas
-synchronously. Ceph [achieves scalability][ceph-cuttlefish-arch] through "intelligent data
-replication." For hardware deployed in differenge geographic locations, this will clearly lead to
-additional latency in the time to receive synchronous acknowledgements. Considering the possible
-(likely) latency, The Ceph community is working to ensure that OSD/monitor heartbeats and peering
-processes still operate effectively. Othewrise, Ceph's current solutions are to rely on hardware
-within a data center, or to configure Ceph in a way that ensures effective peering, heartbeat
-acknowledgement and writes. According to [Ceph's faq][data-center-faq], there was an asynchronous
-write capability in progress via the Ceph Object Gateway (RGW) which would provide an
-eventually-consistent copy of data for disaster recovery purposes. However, this would only work
-with reads and writes sent via the Object Gateway. There is also similar capability for Ceph Block
-devices which are managed via the various cloudstacks. Unfortunately, it is not clear what the
-progress is on these capabilities, and the proposed use cases sound particular to disaster recovery
-and not performance. This leaves some potentially interesting work to be done by this blog post and
-a follow-up blog post.
+to developers and users. Well, 
+
+-->
+
+<!-- TODO:
+    * explain intelligent replication
+    * simplify "heartbeets and peering processes"
+-->
+Ceph is able to [support multiple data centers][data-center-faq], but only provides strong
+consistency. When a client writes data to Ceph, the primary OSD will not acknowledge the write to
+the client until the secondary OSDs have written the replicas synchronously. Ceph [achieves
+scalability through what it calls "intelligent data replication."][ceph-cuttlefish-arch] For
+hardware deployed in differenge geographic locations, this will lead to additional latency in the
+time to receive synchronous acknowledgements. Considering the possible (likely) latency, The Ceph
+community is working to ensure that OSD/monitor heartbeats and peering processes still operate
+effectively.
+
+In the meantime, one must either use a single data center, or configure Ceph in a way that ensures
+effective peering, heartbeat acknowledgement and writes. According to [Ceph's
+faq][data-center-faq], there is an asynchronous write capability in progress via the Ceph Object
+Gateway (RGW) which would provide an eventually-consistent copy of data for disaster recovery
+purposes. However, this would only work with reads and writes sent via the Object Gateway. There is
+also similar capability for Ceph Block devices which are managed via the various cloudstacks.
+Unfortunately, it is not clear what the progress is on these capabilities, and the proposed use
+cases sound particular to disaster recovery and not performance. This leaves some potentially
+interesting work to be done on extending Ceph to support weaker consistency.
 
 
 <!-- ------------------------------>
 <!-- SECTION -->
 
 # Declarative Programmable Storage
+
+<!-- TODO:
+ Develop this a lot:
+    I think I found the one liner to explain programmable storage:
+
+    "A programmable storage system exposes internal subsystem abstractions as “interfaces” to
+    enable the creation of higher-level services via composition"
+
+    http://programmability.us/
+
+    so, a layer over ceph's subsystems (malacology in that link) composes a programmable storage
+    system. zlog was built as a service on malacology. zlog is the implementation of corfu on
+    programmable storage, as described in declstore. specifying corfu in a declarative language in
+    C++ is basically zlog written in a declarative language.
+-->
+
+<!-- TODO: place this in this section -->
+I have just
+started working with Carlos Maltzahn and Peter Alvaro on [declarative programmable
+storage](declarative-storage), where there is some interest in continuing to use Ceph as the
+underlying storage system implementation. 
+
 Programmable storage tends to be a difficult, low-level task that requires lots of code and
 detailed knowledge of storage subsystem implementations. Even when carefully written, storage
 systems built on top of reusable components can still expose dependencies that make maintenance
@@ -340,11 +413,6 @@ for a DPS system.
 For conciseness in other areas, many definitions are provided here.
 
 #### Monitor
-The Ceph Monitor service maintains a master copy of [*the cluster map*](#cluster-map) including:
-* cluster members
-* state
-* changes
-* overall health of the storage cluster
 
 #### RADOS
 The RADOS ([**R**eliable **A**utonomous **D**istributed **O**bject **S**tore][rados-paper]) data
@@ -370,13 +438,6 @@ heterogenous, structured storage cluster[^crush-fn].
 The [**M**eta**d**ata **S**erver][mds-docs] (MDS) daemons maange the file system namespace.
 
 #### Cluster Map
-Set of 5 maps that represent the toplogy of the ceph storage cluster:
-
-1. [Monitor Map](#monitor-map)
-2. [OSD Map](#osd-map)
-3. [PG](#pg-map)
-4. [CRUSH](#crush)
-5. [MDS](#metadata-service)
 
 #### Monitor Map
 A map containing [Ceph Monitor](#monitor) information for the storage cluster:
@@ -420,20 +481,13 @@ A unique identifier for an OSD. The "fsid" term is used interchangeably with "uu
 [^osd-fs-fn]: This is mentioned in [recommendations for the RADOS configuration][ceph-fs-recommendation]
 
 <!-- intro links -->
-[ipa-paper]: https://homes.cs.washington.edu/~luisceze/publications/ipa-socc16.pdf
-[mixt-paper]: http://www.cs.cornell.edu/andru/papers/mixt/mixt.pdf
-[quelea-paper]: http://kcsrk.info/papers/quelea_pldi15.pdf
-[noah-dissertation]: https://cloudfront.escholarship.org/dist/prd/content/qt72n6c5kq/qt72n6c5kq.pdf?t=pcfodf
-
 [cassandra-datastore]: http://cassandra.apache.org/
 [postgres-dbms]: https://www.postgresql.org/docs/9.4/release-9-4.html
 
 <!-- DPS links -->
 [osd-doc]: http://docs.ceph.com/docs/mimic/man/8/ceph-osd/
-[crush-paper]: https://ceph.com/wp-content/uploads/2016/08/weil-crush-sc06.pdf
 [pg-docs]: http://docs.ceph.com/docs/mimic/rados/operations/placement-groups/
 [mds-docs]: http://docs.ceph.com/docs/master/man/8/ceph-mds/
-[declstore-paper]: https://www.usenix.org/conference/hotstorage17/program/presentation/watkins
 
 <!-- programmable storage links -->
 [disorderlylabs]: https://disorderlylabs.github.io/
@@ -449,8 +503,21 @@ A unique identifier for an OSD. The "fsid" term is used interchangeably with "uu
 [ceph-backend-bluestore]: http://docs.ceph.com/docs/mimic/rados/configuration/storage-devices/#osd-backends
 [ceph-backend-filestore]: http://docs.ceph.com/docs/mimic/rados/configuration/storage-devices/#filestore
 [data-center-faq]: http://docs.ceph.com/docs/cuttlefish/faq/#can-ceph-support-multiple-data-centers
-[rados-paper]: https://ceph.com/wp-content/uploads/2016/08/weil-rados-pdsw07.pdf
+[ceph-replication]: http://docs.ceph.com/docs/cuttlefish/architecture/#cluster-side-replication
+
+<!-- paper links -->
+[ceph-paper]: https://www.ssrc.ucsc.edu/Papers/weil-osdi06.pdf
 [crush-paper]: https://ceph.com/wp-content/uploads/2016/08/weil-crush-sc06.pdf
+[rados-paper]: https://ceph.com/wp-content/uploads/2016/08/weil-rados-pdsw07.pdf
+[declstore-paper]: https://www.usenix.org/conference/hotstorage17/program/presentation/watkins
+[fuzzylog-paper]: https://www.usenix.org/system/files/osdi18-lockerman.pdf
+[proar-paper]: http://www.cs.nthu.edu.tw/~ychung/conference/ICPADS-2016.pdf
+[ipa-paper]: https://homes.cs.washington.edu/~luisceze/publications/ipa-socc16.pdf
+[mixt-paper]: http://www.cs.cornell.edu/andru/papers/mixt/mixt.pdf
+[quelea-paper]: http://kcsrk.info/papers/quelea_pldi15.pdf
+
+[noah-dissertation]: https://cloudfront.escholarship.org/dist/prd/content/qt72n6c5kq/qt72n6c5kq.pdf?t=pcfodf
+[dynamo-paper]: https://dl.acm.org/citation.cfm?id=1294281
 
 <!-- consistency-types links -->
 [course-website]: http://composition.al/CMPS290S-2018-09/
