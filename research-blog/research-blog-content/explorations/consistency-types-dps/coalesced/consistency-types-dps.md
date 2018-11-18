@@ -137,10 +137,10 @@ to developers and users. Well, Ceph is able to [support multiple data centers][d
 but only provides strong consistency. When a client writes data to Ceph the primary OSD will not
 acknowledge the write to the client until the secondary OSDs have written the replicas
 synchronously. Ceph [achieves scalability][ceph-cuttlefish-arch] through "intelligent data
-replication." For hardware deployed in differenge geographic locations, this will clearly lead to
+replication." For hardware deployed in different geographic locations, this will clearly lead to
 additional latency in the time to receive synchronous acknowledgements. Considering the possible
 (likely) latency, The Ceph community is working to ensure that OSD/monitor heartbeats and peering
-processes still operate effectively. Othewrise, Ceph's current solutions are to rely on hardware
+processes still operate effectively. Otherwise, Ceph's current solutions are to rely on hardware
 within a data center, or to configure Ceph in a way that ensures effective peering, heartbeat
 acknowledgement and writes. According to [Ceph's faq][data-center-faq], there was an asynchronous
 write capability in progress via the Ceph Object Gateway (RGW) which would provide an
