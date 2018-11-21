@@ -28,14 +28,72 @@ _declarative prgorammable storage_ (DPS) system.
 <!-- SECTION -->
 
 # Programmable Storage
-Programmable storage is motivated by the current state of large-scale, distributed storage systems.
-Notably, one idea is to reuse components and subsystems from a storage system. Because storage
-systems have inherently very high expectations of reliable data persistence, rewriting relevant
-subsystems or components only invites younger, error-prone code. While this is not a hard and fast
-rule, the intuition is that reusing subsystems of a storage system means that the community
+Programmable storage is an approach to developing storage interfaces, coined by storage systems
+researchers at UC Santa Cruz, that emphasizes programmability and reusability of storage
+subsystems.
+
+
+<!-- TODO: develop motivation for programmable storage? -->
+business analytics, scientific simulations, etc.
+    -> application requirements push the limits of high-performance storage
+
+application complexity and concurrency grow
+    -> increased pressure on developers from existing I/O interfaces
+
+because next gen OSS storage systems being developed (2012)
+    -> good time for architectures and abstractions for domain specific interfaces
+
+majority of storage systems assume a byte-stream I/O interface
+    -> applications unable to represent domain-specific data models
+    -> led to:
+        -> middleware libraries providing data model abstractions
+            -> HDF5, NetCDF
+        -> I/O stack extensions that circumvent scalability bottlenecks
+            -> MPI-IO, PLFS, IOFSL
+    -> co-design of applications and middleware ends at file interfaces
+        -> services forced into one-dimensional abstraction that is difficult to scale:
+            * metadata management
+            * data translation
+            * alignment
+            * views
+
+- Many of the services implemented by middleware libnraries already exist in distributed storage systems -
+
+Mantle
+    -> introduce a programmable storage system that lets the designer inject custom balacning logic
+    -> flexibility and transparency of approach
+        -> replicate strategy of state-of-the-art metadata balancer
+        -> compare strategy to other custom balancers on same system
+
+
+Due to reliability needs, storage subsystems are robust and well tested. Some complex
+reliability features that all good storage systems provide are disaster recovery, durability, and
+data redundancy. To address modern availability and maintenance needs, large-scale, distributed
+storage systems must also provide replication and strong consistency.
+
+Storage systems have inherently very high expectations of reliability, so programmable storage
+discourages rewriting storage subsystems or components, because this only invites younger,
+error-prone code. The intuition is that reusing subsystems of a storage system means that the community
 supporting these subsystems is larger, and these subsystems are exercised and improved more
-frequently. Without diving too deep into the details, programmable storage seems to be a domain
-that will continue to grow, as described by Noah Watkins [in his dissertation][noah-dissertation].
+frequently.
+
+
+<!-- TODO: tie it back to work at UCSC -->
+<!--
+    * DataMods
+    * In-Vivo
+    * Mantle
+    * Malacology
+    * Noah's Thesis
+-->
+[Recent work by Noah Watkins][noah-dissertation] on programmable storage shows it to be
+a viable approach to storage systems development in the future.
+
+"exposes internal services and abstractions of the storage stack as building blocks for
+higher-level services"
+
+"A programmable storage system exposes internal subsystem abstractions as “interfaces” to enable
+the creation of higher-level services via composition"
 
 In his dissertation, Noah details his implementation of a distributed, shared log on top of the
 [Ceph][ceph-intro] storage system, which he also described [in a blog post][noah-blog-zlog]. Since
@@ -354,19 +412,32 @@ for a DPS system.
 [wiki-shim]: https://en.wikipedia.org/wiki/Shim_(computing)
 
 <!-- paper links -->
+
+<!-- paywalled papers:
+    * [datamods-paper]: https://ieeexplore.ieee.org/document/6495800
+    * [invivo-paper]: https://link.springer.com/chapter/10.1007/978-3-642-54420-0_3
+-->
+
 [ceph-paper]: https://www.ssrc.ucsc.edu/Papers/weil-osdi06.pdf
 [crush-paper]: https://ceph.com/wp-content/uploads/2016/08/weil-crush-sc06.pdf
 [rados-paper]: https://ceph.com/wp-content/uploads/2016/08/weil-rados-pdsw07.pdf
+
+[datamods-paper]: https://users.soe.ucsc.edu/~jayhawk/watkins-pdsw12.pdf
+[invivo-paper]: https://users.soe.ucsc.edu/~jayhawk/watkins-bdmc13.pdf
+[mantle-paper]: https://dl.acm.org/citation.cfm?id=2807607
+[malacology-paper]: https://dl.acm.org/citation.cfm?id=3064208
 [declstore-paper]: https://www.usenix.org/conference/hotstorage17/program/presentation/watkins
+[noah-dissertation]: https://cloudfront.escholarship.org/dist/prd/content/qt72n6c5kq/qt72n6c5kq.pdf?t=pcfodf
+
 [fuzzylog-paper]: https://www.usenix.org/system/files/osdi18-lockerman.pdf
+
 [proar-paper]: http://www.cs.nthu.edu.tw/~ychung/conference/ICPADS-2016.pdf
 [ipa-paper]: https://homes.cs.washington.edu/~luisceze/publications/ipa-socc16.pdf
 [mixt-paper]: http://www.cs.cornell.edu/andru/papers/mixt/mixt.pdf
 [quelea-paper]: http://kcsrk.info/papers/quelea_pldi15.pdf
 [bolton-paper]: http://www.bailis.org/papers/bolton-sigmod2013.pdf
-
-[noah-dissertation]: https://cloudfront.escholarship.org/dist/prd/content/qt72n6c5kq/qt72n6c5kq.pdf?t=pcfodf
 [dynamo-paper]: https://dl.acm.org/citation.cfm?id=1294281
+[ioflow-paper]: https://www.microsoft.com/en-us/research/wp-content/uploads/2013/11/ioflow-sosp13.pdf
 
 <!-- consistency-types links -->
 [course-website]: http://composition.al/CMPS290S-2018-09/
