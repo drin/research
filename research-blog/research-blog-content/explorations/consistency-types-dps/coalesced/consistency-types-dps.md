@@ -59,26 +59,39 @@ been significantly studied.
 A _consistency model_ defines the scenarios in which we are willing to tolerate *uncertainty*
 that Copy<sub>1</sub> and Copy<sub>2</sub> are the same. Some consistency models (with brief
 descriptions) that are relevant for us in this blog post:
-* strong
-    All clients agree on the order that operations on a data object appear.
-* linearizable
-    Any operation on a data object should appear as if applied instantaneously (atomic) and any
-    subsequent operations should be applied with respect to the new data object state: if the first
-    operation was a write, then the result of the write should be visible to the second operation;
-    if the first operation was a read, then the value that was read should also be visible to the
-    second operation.
-* eventual
-    Copies of a data object may be appear different at any point, but when given enough time
-    without updates, all copies will converge to the same state.
-* red-blue
-    Operations on data objects may be strongly consistent (red) or a weaker consistency (blue),
-    such as eventual. Red operations must be ordered with respect to each other, while blue
-    operations may be in any order (commutative).
-* causal+
-    Operation effects are transitive - The result of both operations, Op0 and Op1, should be visible
-    to a subsequent operation, Op2, if:
+
+* Strong Consistency:
+
+    * All clients agree on the order that operations on a data object appear.
+
+* Linearizable:
+
+    * Any operation on a data object should appear as if applied instantaneously (atomic) and any
+      subsequent operations should be applied with respect to the new data object state: if the
+      first operation was a write, then the result of the write should be visible to the second
+      operation; if the first operation was a read, then the value that was read should also be
+      visible to the second operation.
+
+* Eventual Consistency:
+
+    * Copies of a data object may be appear different at any point, but when given enough time
+      without updates, all copies will converge to the same state.
+
+* Red-blue Consistency:
+
+    * Operations on data objects may be strongly consistent (red) or a weaker consistency (blue),
+      such as eventual. Red operations must be ordered with respect to each other, while blue
+      operations may be in any order (commutative).
+
+* Causal+:
+
+    * Operation effects are transitive - The result of both operations, Op0 and Op1, should be
+      visible to a subsequent operation, Op2, if:
+
         * Op2 depends on Op1
         * Op1 depends on Op0
+
+    * And eventually consistent (the + means and will eventually converge)
 
 It's useful to note (especially for the next blog post), that some research, such as
 [MixT][mixt-paper], assert that consistency is a _property of the data_ being operated on. The
