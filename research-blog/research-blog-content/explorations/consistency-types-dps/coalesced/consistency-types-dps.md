@@ -48,16 +48,15 @@ post (and a subsequent blog post) will cover (which is quite a few things):
 <!-- ------------------------------>
 <!-- SECTION -->
 # Data Consistency
-In a distributed sytem where data is copied between multiple servers, it is necessary to know
+In a distributed system where data is copied between multiple servers, it is necessary to know
 *where* to access a copy of the data, and how certain that copy is *correct*. For introductory
-purposes, let's assume a small system where each _data object_ has 2 copies total
-(Copy<sub>1</sub> and Copy<sub>2</sub>) distributed over 2 servers. Consistency addresses the key
-question, what if you're accessing Copy<sub>1</sub> and it is somehow different from
-Copy<sub>2</sub>? There are many scenarios in which the two copies can be different, which have
-been significantly studied.
+purposes, let's assume a small system where each _data object_ has 2 copies total (Copy<sub>1</sub>
+and Copy<sub>2</sub>) distributed over 2 servers. Consistency addresses the key question, what if
+you're accessing Copy<sub>1</sub> and it is somehow different from Copy<sub>2</sub>? There are many
+scenarios in which the two copies can be different, which have been significantly studied.
 
-A _consistency model_ defines the scenarios in which we are willing to tolerate *uncertainty*
-that Copy<sub>1</sub> and Copy<sub>2</sub> are the same. Some consistency models (with brief
+A _consistency model_ defines the scenarios in which we are willing to tolerate *uncertainty* that
+Copy<sub>1</sub> and Copy<sub>2</sub> are the same. Some consistency models (with brief
 descriptions) that are relevant for us in this blog post:
 
 * Strong Consistency:
@@ -150,8 +149,6 @@ Cruz from [the original Ceph paper][ceph-paper] to the [CRUSH algorithm][crush-p
 [RADOS][rados-paper] data store (2007); [Noah's recent dissertation][noah-dissertation] on
 programmable storage also involved building on top of Ceph.
 
-<!-- TODO: how does PROAR motivate their work -->
-
 Although Ceph is a distributed, large-scale storage system, Ceph was designed to fill the role of
 reliable, durable storage. This expectation is common (and preferred) for many applications,
 especially scientific applications, where the complexity of weak consistency models is too
@@ -167,56 +164,25 @@ Further building up our motivating example, we would like to consider extensions
 an implementation of CORFU, which was mentioned in the FuzzyLog paper. Remember that FuzzyLog uses
 multiple consistency levels to achieve a better performing distributed shared log across
 multiple regions. It would be interesting to compare ZLog and FuzzyLog, and then compare FuzzyLog
-to an implementation of the FuzzyLog abstraction on Malacology using some method for mixing
-consistencies in our programmable service easier.
-
-<!-- TODO: edit, then place this -->
-Notice that a reason for using approaches to make
-mixing consistencies easier, is because we believe that programmability of storage systems is a
-priority.
+to an implementation of the FuzzyLog abstraction on Malacology. Using an approach in the spirit of
+QUELEA, MixT, or IPA for mixing consistencies in our implementation of FuzzyLog would align well
+with the programmability aspect of programmable storage.
 
 <!-- ------------------------------>
 <!-- SECTION -->
 ## Mixing Consistency
+There are many consistency models that have been studied for various distributed systems and
+applications. For developers working in distributed systems, it can be cumbersome to think about
+whether the correct consistency guarantees are being satisfied, and to communicate these to other
+developers. In the past few years, there have been a variety of approaches that allow the mixing of
+various consistency guarantees, alleviating this burden for the developer for applications such as
+FuzzyLog.
 
 <!-- TODO:
-    * Don't start with consistency type systems, start with overall motivation and description of
-      mixing consistency
     * then, talk about a few approaches
         * IPA is just a type system
         * QUELEA is just a contract specification
-        * MixT is something in between, using types but also using specification to restrict
-          information flow
 -->
-
-In [CMPS 290S][course-website], we have been reading a handful of papers that discuss various tools
-for understanding, analyzing, and reasoning about consistency in a distributed system. In these
-readings, I have been particularly interested in two implementations of consistency type systems
-for enforcing consistency requirements over data types:
-
-* [Disciplined Inconsistency with Consistency Types][ipa-paper]
-* [MixT: A Language for Mixing Consistency in Geodistributed Transactions][mixt-paper]
-
-For brevity, I call "a type system that includes and enforces consistency" a consistency type
-system. Consistency type systems try to lift consistency models to first-class citizens in
-the type system of the distributed system programming model. By making consistency models explicit
-in the type system, developers are able to verify that important data types are used at an
-appropriate correctness level. The IPA paper claims:
-
-    ...IPA allows the programmer to trade off performance and consistency, safe in the knowledge
-    that the type system has checked the program for consistency safety.
-
-This type of support from the programming model is necessary for developers to be both
-more efficient and more correct. To further support mixing consistency, the MixT paper claims:
-
-    ...engineers at major companies frequently find themselves writing distributed programs that
-    mix accesses to data from multiple existing storage systems, each with distinct consistency
-    guarantees.
-
-There are many consistency models that are meaningful for developers working in distributed
-systems. From the perspective of a consistency type system, we are interested in how to verify and
-enforce them for associated data types. To do this, consistency type systems associate data types
-with the consistency model we would like the data types to conform to.
 
 <!-- TODO:
     * for below sections, follow this format:
@@ -228,6 +194,12 @@ with the consistency model we would like the data types to conform to.
 -->
 
 ### IPA Consistency Type System
+IPA provides a consistency type system that lifts consistency models to first-class
+citizens in the type system of the distributed system programming model. By making consistency
+models explicit in the type system, developers are able to verify that important data types are
+used at an appropriate correctness level. This type of support from the programming model is
+useful for developers to be both more efficient and more correct.
+
 [IPA's implementation][ipa-impl] is in Scala and leverages Scala's powerful type system. This
 approach allows the developer to directly interact with the consistency type of their data, using
 features such as pattern matching. IPA allows consistency guarantees to be specified as a policy on an
@@ -279,81 +251,6 @@ individually, it would be possible, potentially even "trivial", to enable a quor
 consistency over Ceph OSDs. Understanding the details of OSD communication will be important for
 understanding whether Ceph can provide a similar interface to IPA as what Cassandra provides.
 
-<!-- TODO: work in these concepts of isolation and consistency
-    One easy way to compare isolation levels with consistency levels is by
-    considering single-operation transactions.  In that setting, snapshot
-    isolation (SI) (with a notion of session order added on) looks at
-    least as strong as causal consistency (CC).  But lots of other
-    concepts in isolation levels don't really make sense on single
-    operations; read-committed is particularly weakened, as there's not
-    much "intermediate" transaction state to observe.  But your question
-    really focused on multi-operation transactions, along with whether the
-    isolation levels could improve upon the guarantees of causal
-    consistency.  The answer to this is a definite yes!  A degenerate
-    example is perhaps easiest to see; a transaction can violate atomicity
-    while still preserving causal consistency for each of its individual
-    operations by simply allowing uncommitted reads; in essence,
-    per-operation consistency doesn't "see" the begin/commit/abort events
-    as particularly important, and makes no requirements on them.
-
-    But what if we decide that each transaction will instead be
-    interpreted as an atomic operation for the purposes of causal
-    consistency?  SI's "write skew" looks a bit like CC; it's possible for
-    two concurrent transactions to read the same snapshot and commit
-    without conflict, even if both transactions read values the other
-    transaction would overwrite.  But we also start to see some serious
-    differences between SI and CC.  As an example, a write-write conflict
-    in SI (where two concurrent transactions attempt to overwrite the same
-    value) should cause an abort, but would be perfectly permissible under
-    CC!  Looking in the other direction, SI doesn't actually make very
-    strong guarantees about *what* snapshot the transaction must operate
-    against - so long as we define "snapshot" as "a valid prefix of the
-    final serial order of transactions", we won't violate causality - but
-    SI doesn't *have* to include session order as a constraint, which
-    means it's entirely possible for a single client to execute one
-    transaction in a snapshot T_n, and a subsequent transaction in a
-    snapshot T_{n-1}.  This definitely violates CC!
-
-    And this brings me to my real point; these isolation levels were all
-    originally proposed with an implicit assumption of [mostly]
-    session-free transactions operating against a centralized server.
-    Snapshot isolation, in traditional centralized pessimistic databases,
-    will read from the "latest" system snapshot; the *implementation* of
-    SI prevents violations of causality, but the specification does not.
-    Once you start to consider a weakly-isolated distributed database, a
-    lot of traditional isolation levels start to have problems - a
-    failure to track session order, no notion of merging, etc.  And
-    databases can sometimes cheat; providing one isolation level for
-    transactions w.r.t other transactions at the same replica, while
-    providing a different notion of isolation between transactions at
-    different replicas.  Weaker isolation levels are even worse!  They
-    kind of work in the wrong direction; they're designed to make it
-    forgivable for concurrent transactions to accidentally see too much
-    without aborting. In a distributed setting, seeing *too many* events
-    is rarely the problem - we're more interested in making sure clients
-    see *enough* events.
-
-    So to answer your question... I think there really ought to be more
-    work done in specifying novel, principled isolation levels for
-    distributed, multiversion databases.  There's a whole host of
-    guarantees we might want which fit between SI and strict
-    serializability, all of which could be compatible with causal
-    consistency.  There's also the other direction to consider!
-    [Monotonic] Prefix Consistency is actually the strongest consistency
-    model possible while still preserving availability in the face of
-    partitions, and is formalized directly in terms of a "correct prefix
-    of the final serial order of operations" - the same idea from which
-    the "Snapshots" in SI are derived.
-
-    A first step is formalizing isolation levels and consistency models in
-    common, easily understood terms.  There are a few efforts in this
-    direction:
-        * favorite recentish one is probably this one:
-            https://arxiv.org/abs/1609.06670
-        * But the Bible of these things is still Atul Adya's PhD thesis:
-            http://pmg.csail.mit.edu/papers/adya-phd.pdf
--->
-
 <!-- TODO: consider Lindsey's reference to MixT TR:
     "When running as a linearizable store, PostgreSQL is put in a “normal” operating mode with a
     single master per object and the SERIALIZABLE transaction isolation level. The coding overhead
@@ -369,6 +266,10 @@ understanding whether Ceph can provide a similar interface to IPA as what Cassan
 -->
 
 ### MixT Consistency Type System
+MixT is something in between, using types but also using specification to restrict information
+flow.
+
+
 In contrast to IPA's approach, [MixT's implementation][mixt-impl] is in C++ and much lower in the
 development stack. Another interesting difference is that the backend data store used is
 Postgres. What makes this interesting is that Postgres (to my understanding) supports strong
