@@ -9,108 +9,127 @@ by Aldrin Montana &middot; edited by Abhishek Singh and Lindsey Kuper
 
 <!-- ------------------------------>
 <!-- SECTION -->
-## Introduction
+# Introduction
 Modern distributed applications call for ways to store and access data using a range of consistency
-guarantees.
+guarantees. Consider the shared log, described in the [FuzzyLog][fuzzylog-paper] paper. A log
+service is useful in many contexts for many applications including data management systems and
+storage systems. The FuzzyLog paper describes a common usage of log services for funneling updates
+for data management systems and other services (e.g., metadata and coordination services,
+filesystem namespaces) within data centers. They motivate their work on a _distributed shared log_
+by discussing the benefit of distributing the log across several servers and relaxing constraints
+on data consistency.
 
-<!-- TODO: example -->
+Developing on top of distributed systems can be difficult. The complexity of consistency models and
+making sure code is correct is one thing, but it becomes even more difficult in cases where data
+accessed at one level of consistency is used in the computation for data at a different level of
+consistency. FuzzyLog makes operations to a single color across regions causally consistent, while
+operations to a single color within a region are serializable. In this way, FuzzyLog uses at least
+two levels of consistency in its implementation: causal and serializable.
 
 Recent systems such as [QUELEA][quelea-paper], [IPA][ipa-paper], and [MixT][mixt-paper] aim to make
-programming in a mixed-consistency world safer and easier.
+programming in a mixed-consistency world safer and easier. QUELEA allows the developer to
+declaratively specify the consistency guarantees provided by a datastore and the consistency
+requirements for application-level operations. IPA provides data types representing consistency
+levels that can be mixed into standard ADTs, and consistency policies for determining the
+consistency of a data type at runtime. MixT is a domain-specific language (DSL) that uses
+information flow analysis to prevent weakly consistent data from influencing strongly consistent
+data.
 
-<!-- TODO: brief descriptions of implementations -->
+In this blog post, we are interested in exploring approaches for specifying a range of consistency
+guarantees in a _declarative programmable storage_ (DPS) system. A quick mention of what this blog
+post (and a subsequent blog post) will cover (which is quite a few things):
+1. informal overview of data and operation consistency in distributed systems
+2. what is a programmable storage system
+3. how can we mix consistency in a programmable storage system
+4. what is a declarative programmable storage system
+5. a motivating example using FuzzyLog and [ZLog][noah-blog-zlog] (an implementation of CORFU on a
+   programmable storage system)
 
-In this blog post, we explore approaches for specifying a range of consistency guarantees in a
-_declarative prgorammable storage_ (DPS) system.
+<!-- ------------------------------>
+<!-- SECTION -->
+# Data Consistency
+In a distributed sytem where data is copied between multiple servers, it is necessary to know
+*where* to access a copy of the data, and how certain that copy is *correct*. For introductory
+purposes, let's assume a small system where each _data object_ has 2 copies total
+(Copy<sub>1</sub> and Copy<sub>2</sub>) distributed over 2 servers. Consistency addresses the key
+question, what if you're accessing Copy<sub>1</sub> and it is somehow different from
+Copy<sub>2</sub>? There are many scenarios in which the two copies can be different, which have
+been significantly studied.
 
+A _consistency model_ defines the scenarios in which we are willing to tolerate *uncertainty*
+that Copy<sub>1</sub> and Copy<sub>2</sub> are the same. Some consistency models (with brief
+descriptions) that are relevant for us in this blog post:
+* strong
+    All clients agree on the order that operations on a data object appear.
+* linearizable
+    Any operation on a data object should appear as if applied instantaneously (atomic) and any
+    subsequent operations should be applied with respect to the new data object state: if the first
+    operation was a write, then the result of the write should be visible to the second operation;
+    if the first operation was a read, then the value that was read should also be visible to the
+    second operation.
+* eventual
+    Copies of a data object may be appear different at any point, but when given enough time
+    without updates, all copies will converge to the same state.
+* red-blue
+    Operations on data objects may be strongly consistent (red) or a weaker consistency (blue),
+    such as eventual. Red operations must be ordered with respect to each other, while blue
+    operations may be in any order (commutative).
+* causal+
+    Operation effects are transitive - The result of both operations, Op0 and Op1, should be visible
+    to a subsequent operation, Op2, if:
+        * Op2 depends on Op1
+        * Op1 depends on Op0
+
+It's useful to note (especially for the next blog post), that some research, such as
+[MixT][mixt-paper], assert that consistency is a _property of the data_ being operated on. The
+reason this is interesting, is that **A**bstract **D**ata **T**ypes (ADTs) are defined by the
+operations that can be invoke on them. So the concept of data and operations are necessarily
+difficult to disentangle. And, when we consider some of the informal definitions above, such as
+red-blue consistency,they seem to be defined on operations rather than data. I just want to point
+out, that most consistency models provide a logical interface for operating on data, but from the
+perspective of storage systems, data is something that is persistent and accessed by many disjoint
+logical interfaces (programs) that may not use the same consistency models. In this way, it's
+possible to see that for storage, consistency is a property of data (hence, data consistency), even
+though applications may frame consistency from the perspective of operations.
 
 <!-- ------------------------------>
 <!-- SECTION -->
 
 # Programmable Storage
+<!-- super general intro -->
+Across all fields of computing, data storage is extremely important. In fact, even the earliest
+models of computing require the concept of _tape_, as an infinite, contiguous sequence of locations
+that can store symbols. It likely isn't surprising that significant improvements in storage devices
+have huge impacts for many areas of computing. However, hardware improvements have not always come
+fast enough. As application requirements for storage have grown, storage systems have grown more
+complex. To accommodate web-scale and high-performance applications, storage systems have become
+distributed, and spanned many storage devices.
+
+<!-- Tie super general to storage systems -->
+The performance of a storage system has significant impact on the design and implementation of
+applications that communicate with it--consider HDFS and cloud-services such as Amazon's S3. And
+so, as applications increase in both complexity and concurrency, there is an increasing need to
+extract better performance from the storage system. But, in addition to growing application needs,
+there are also improvements in hardware that storage systems have yet to utilize. Due to
+reliability needs, storage systems must be well tested, and extensively exercised.  On the other
+hand, due to the rate at which requirements are increasing from application interfaces, and the
+rate at which underlying hardware is improving, it is necessary to iterate quickly, or to
+periodically re-design various subsystems. Additionally, there is a variety of storage devices to
+tune for, and that can significantly affect system design and implementation.
+
+<!-- programmable storage intro -->
 Programmable storage is an approach to developing storage interfaces, coined by storage systems
 researchers at UC Santa Cruz, that emphasizes programmability and reusability of storage
-subsystems.
+subsystems. Over the last 7 years, various services have been built on top of storage systems, and
+various abstractions developed to make programmability in storage systems easier. Due to the
+inherently high reliability expectations of storage systems, programmable storage discourages
+rewriting storage subsystems or components, because this only invites younger, error-prone code.
+The intuition is that reusing subsystems of a storage system means that the community supporting
+these subsystems is larger, and these subsystems are exercised and improved more frequently.
+Recently, [Malacology][malacology-paper] was developed and published. An interface built on top of
+the Ceph storage system, Malacology abstracts storage subsystems into building blocks that can be
+combined to more easily build a service on top of the storage system.
 
-
-<!-- TODO: develop motivation for programmable storage? -->
-business analytics, scientific simulations, etc.
-    -> application requirements push the limits of high-performance storage
-
-application complexity and concurrency grow
-    -> increased pressure on developers from existing I/O interfaces
-
-because next gen OSS storage systems being developed (2012)
-    -> good time for architectures and abstractions for domain specific interfaces
-
-majority of storage systems assume a byte-stream I/O interface
-    -> applications unable to represent domain-specific data models
-    -> led to:
-        -> middleware libraries providing data model abstractions
-            -> HDF5, NetCDF
-        -> I/O stack extensions that circumvent scalability bottlenecks
-            -> MPI-IO, PLFS, IOFSL
-    -> co-design of applications and middleware ends at file interfaces
-        -> services forced into one-dimensional abstraction that is difficult to scale:
-            * metadata management
-            * data translation
-            * alignment
-            * views
-
-- Many of the services implemented by middleware libnraries already exist in distributed storage systems -
-
-Mantle
-    -> introduce a programmable storage system that lets the designer inject custom balacning logic
-    -> flexibility and transparency of approach
-        -> replicate strategy of state-of-the-art metadata balancer
-        -> compare strategy to other custom balancers on same system
-
-
-Due to reliability needs, storage subsystems are robust and well tested. Some complex
-reliability features that all good storage systems provide are disaster recovery, durability, and
-data redundancy. To address modern availability and maintenance needs, large-scale, distributed
-storage systems must also provide replication and strong consistency.
-
-Storage systems have inherently very high expectations of reliability, so programmable storage
-discourages rewriting storage subsystems or components, because this only invites younger,
-error-prone code. The intuition is that reusing subsystems of a storage system means that the community
-supporting these subsystems is larger, and these subsystems are exercised and improved more
-frequently.
-
-
-<!-- TODO: tie it back to work at UCSC -->
-<!--
-    * DataMods
-    * In-Vivo
-    * Mantle
-    * Malacology
-    * Noah's Thesis
--->
-[Recent work by Noah Watkins][noah-dissertation] on programmable storage shows it to be
-a viable approach to storage systems development in the future.
-
-"exposes internal services and abstractions of the storage stack as building blocks for
-higher-level services"
-
-"A programmable storage system exposes internal subsystem abstractions as “interfaces” to enable
-the creation of higher-level services via composition"
-
-<!-- TODO:
-    * develop malacology interface
-    * develop ZLog
-        * find some way to allude to possibly comparing to FuzzyLog
-    * generalize programmable storage interface
-    * highlight the parts we think can benefit from this work
--->
-
-In his dissertation, Noah details his implementation of a distributed, shared log on top of the
-[Ceph][ceph-intro] storage system, which he also described [in a blog post][noah-blog-zlog]. Since
-Ceph has already dserved as a substrate for programmable storage work, we will consider using Ceph
-as the backend for a declarative programmable storage system that supports mixing consistency
-guarnatees.
-
-
-## Ceph
 Ceph is an open source, distributed, large-scale storage system that aims to be, "[completely
 distributed without a single point of failure, scalable to the exabyte level, and
 freely-available][ceph-intro-blog]." Ceph has been part of storage systems research at UC Santa
@@ -118,189 +137,30 @@ Cruz from [the original Ceph paper][ceph-paper] to the [CRUSH algorithm][crush-p
 [RADOS][rados-paper] data store (2007); [Noah's recent dissertation][noah-dissertation] on
 programmable storage also involved building on top of Ceph.
 
-Considering Noah's previous work on ZLog, it may be interesting to evaluate the addition of mixed
-consistency guarantees using [recently published work on FuzzyLog][fuzzylog-paper]. Because Ceph
-does not currently support consistency guarantees weaker than strong consistency, with the addition
-of weaker consistency guarantees, an implementation of FuzzyLog may be possible.
+<!-- TODO: how does PROAR motivate their work -->
 
 Although Ceph is a distributed, large-scale storage system, Ceph was designed to fill the role of
 reliable, durable storage. This expectation is common (and preferred) for many applications,
 especially scientific applications, where the complexity of weak consistency models is too
-difficult to work with. This makes Ceph's support for only strong [primary-copy consistency
-model][ceph-replication] reasonable. Recent work on a weak consistency model for Ceph,
-[PROAR][proar-paper], has been published by researchers at the Graduate School at Shenzhen,
-Tsinghua University. [Some applications][dynamo-paper], however, prefer to trade strong consistency
-for availability and performance. For Ceph to support these types of applications, it would need to
-    offer weaker consistency as an option. 
+difficult to work with. This makes Ceph's support for only strong consistency, via
+[primary-copy][ceph-replication] reasonable. However, the trade-off between strong consistency and
+availability or performance is very important for some [dynamo-like][dynamo-paper] applications.
+Recent work on a weak consistency model for Ceph, [PROAR][proar-paper], has been published by
+researchers at the Graduate School at Shenzhen, Tsinghua University. For Ceph to support these
+types of applications, it would need to offer weaker consistency as an option. 
 
-<!-- TODO (narrative):
-    once ceph supports weaker consistency, we want to make it easy to program against
--->
+Further building up our motivating example, we would like to consider extensions to
+[ZLog][noah-blog-zlog], an distributed shared log developed by Noah on top of Malacology. ZLog is
+an implementation of CORFU, which was mentioned in the FuzzyLog paper. Remember that FuzzyLog uses
+multiple consistency levels to achieve a better performing distributed shared log across
+multiple regions. It would be interesting to compare ZLog and FuzzyLog, and then compare FuzzyLog
+to an implementation of the FuzzyLog abstraction on Malacology using some method for mixing
+consistencies in our programmable service easier.
 
-A Ceph storage cluster consists of two types of daemons:
-* Ceph [**O**bject **S**torage **D**aemon][osd-doc] (OSD)
-* Ceph Monitor
-
-A Ceph OSD is responsible for storing objects on a local file system and providing access to them
-over the network. The OSD is part of the RADOS ([**R**eliable **A**utonomous **D**istributed
-**O**bject **S**tore][rados-paper]) data store, which is the backend subsystem of Ceph that handles
-distributed data storage.
-
-The Ceph Monitor monitors the Ceph storage cluster, while the Ceph OSD handles data persistence on
-a node in the Ceph storage cluster. One or more Monitors form a Paxos cluster that manage cluster
-membership, configuration, and state. The primary responsibility of the monitor service is to
-maintain a master copy of the cluster map. The cluster map represents the topology of the ceph
-storage cluster by the use of 5 maps over the following services:
-1. Monitor
-2. OSD
-3. [**P**lacement **G**roup][pg-docs] (PG)
-4. [**C**ontrolled **R**eplication **U**nder **S**calable **H**ashing][crush-paper] (CRUSH)
-   algorithm
-5. [**M**eta**d**ata **S**erver][mds-docs] (MDS)
-
-A PG logically represents the objects replicated by a particular set of devices. The PG for an
-object depends on: the hash of the object name, the replication factor (number of replicas to
-replicate to), and a bit mask for the total number of PGs.
-
-The abstract of the CRUSH paper defines CRUSH as a "pseudo-random data distribution algorithm that
-efficiently and robustly distributes object replicas across a heterogenous, structured storage
-cluster."
-
-The MDS manages the file system namespace.
-
-<!-- TODO:
-    * explain intelligent replication
-    * simplify "heartbeats and peering processes"
--->
-Ceph is able to [support multiple data centers][data-center-faq], but only provides strong
-consistency. When a client writes data to Ceph, the primary OSD will not acknowledge the write to
-the client until the secondary OSDs have written the replicas synchronously. Ceph [achieves
-scalability through what it calls "intelligent data replication."][ceph-cuttlefish-arch] For
-hardware deployed in differenge geographic locations, this will lead to additional latency in the
-time to receive synchronous acknowledgements. Considering the possible (likely) latency, The Ceph
-community is working to ensure that OSD/monitor heartbeats and peering processes still operate
-effectively.
-
-In the meantime, one must either use a single data center, or configure Ceph in a way that ensures
-effective peering, heartbeat acknowledgement and writes. According to [Ceph's
-faq][data-center-faq], there is an asynchronous write capability in progress via the Ceph Object
-Gateway (RGW) which would provide an eventually-consistent copy of data for disaster recovery
-purposes. However, this would only work with reads and writes sent via the Object Gateway. There is
-also similar capability for Ceph Block devices which are managed via the various cloudstacks.
-Unfortunately, it is not clear what the progress is on these capabilities, and the proposed use
-cases sound particular to disaster recovery and not performance. This leaves some potentially
-interesting work to be done on extending Ceph to support weaker consistency.
-
-
-<!-- ------------------------------>
-<!-- SECTION -->
-
-# Declarative Programmable Storage
-
-<!-- TODO:
- Develop this a lot:
-    I think I found the one liner to explain programmable storage:
-
-    "A programmable storage system exposes internal subsystem abstractions as “interfaces” to
-    enable the creation of higher-level services via composition"
-
-    http://programmability.us/
-
-    so, a layer over ceph's subsystems (malacology in that link) composes a programmable storage
-    system. zlog was built as a service on malacology. zlog is the implementation of corfu on
-    programmable storage, as described in declstore. specifying corfu in a declarative language in
-    C++ is basically zlog written in a declarative language.
--->
-
-<!-- TODO: place this in this section -->
-I have just
-started working with Carlos Maltzahn and Peter Alvaro on [declarative programmable
-storage](declarative-storage), where there is some interest in continuing to use Ceph as the
-underlying storage system implementation. 
-
-Programmable storage tends to be a difficult, low-level task that requires lots of code and
-detailed knowledge of storage subsystem implementations. Even when carefully written, storage
-systems built on top of reusable components can still expose dependencies that make maintenance
-prohibitively expensive. The idea of _declarative programmable storage_ (DPS), as [proposed by
-Watkins, et al.][declstore-paper], is to use a declarative language for specifying interfaces over
-storage systems such that maintainability and performance can be addressed by a query optimizer or
-some other principled, automatic machinery.
-
-<!-- TODO:
-    * develop "mechanisms" more
-        * not just quorum reads/writes
-    * develop "a way to define and enforce..."
-        * not just an IPA-like layer over DPS
--->
-
-<!-- TODO: work in this text
-    IPA, etc. allow developers to more correctly develop over *multiple* consistency models. This
-    enables distributed systems to use stronger consistency when necessary.
-
-    Doesn't this mean that the other direction is reasonable? IPA, etc. *enable* systems that
-    wanted reilability first to gradually support more availability?
-
-    I don't see why IPA, MixT, and QUELEA would only be useful for strengthening developing over
-    weakly consistent systems? Now that these types of tools exist, doesn't it make it possible for
-    developers who chose Ceph to transition in the other direction?
-
-    I can't imagine it would be easy to go from Ceph to something like Cassandra, from an
-    infrastructure perspective, or from a programmability perspective.
--->
-
-For a DPS system, There are two major features that I explore to allow
-developers specify consistency requirements over data types:
-1. Mechanisms for supporting weaker consistency models in the backend storage system.
-2. A way to define, and enforce, consistency requirements for data types.
-
-There is an additional, related motive for studying mixing consistency over dps systems: exploring
-the generalization of reasoning over arbitrarily complex data properties. From this perspective,
-even beyond support for mixing consistency, this investigation will help guide the direction for future
-work. To draw from MixT, which has a similar intuition, MixT claims that consistency is a property
-of data. If this is at all true, then the storage system is a clear candidate for managing a
-property such as consistency. If we minimally extend intuitions around consistency models to
-general properties of data, being able to enforce, and reason over, pre- and post-conditions for
-data seems useful.
-
-<!-- ------------------------------>
-<!-- SECTION -->
-# Consistency
-
-<!-- TODO:
-    * for sure define and describe consistency here.
--->
-
-<!-- TODO: fill this in later -->
-## Consistency Models
-Consistency is an interesting property of data. We usually define an **A**bstract
-**D**ata **T**ype (ADT) by the operations that we can invoke on them. From this
-perspective, not only is consistency a property of data--does every client in
-my system agree on the state of this data value--but it is inherently affected
-by operations. The more complete our information about a data type is, the
-easier it is to know if the relevant data value is *correct*. When we consider
-this property in a distributed system, complete information becomes more
-difficult to accumulate **efficiently**. So, we define correctness of our data
-in a distributed system, as constraints with respect to complete, relevant
-information. This definition of correctness given some set of constraints, is
-what we call a *consistency model*. That is, given information about our *way
-of thinking about consistency*, is a data value, or the state of a data type,
-**consistent**.
-
-In this section, we describe formal definitions of various consistency models
-and intuitions for what they mean. We will also define terminology as
-accessibly as possible in the [glossary](#glossary). Ultimately, formal
-definitions of consistency models are necessary for distinguishing between them
-and reasoning over them.
-
-<!--
-To be added when I have more time? Otherwise this looks too incomplete.
-
-#### Linearizabilty
-#### Sequential Consistency
-#### Causal Consistency
-#### Eventual Consistency
-#### Weak Consistency
--->
+<!-- TODO: edit, then place this -->
+Notice that a reason for using approaches to make
+mixing consistencies easier, is because we believe that programmability of storage systems is a
+priority.
 
 <!-- ------------------------------>
 <!-- SECTION -->
@@ -542,6 +402,83 @@ constraints, it seems that QUELEA may also require the ability to communicate wi
 individually, just like IPA. Once Ceph supports weaker consistency data operations, or some way of
 communicating with Ceph allows weaker consistency, then QUELEA would be an ideal approach to take
 for a DPS system.
+
+<!-- ------------------------------>
+<!-- SECTION -->
+
+# Declarative Programmable Storage
+
+<!-- TODO:
+ Develop this a lot:
+    I think I found the one liner to explain programmable storage:
+
+    "A programmable storage system exposes internal subsystem abstractions as “interfaces” to
+    enable the creation of higher-level services via composition"
+
+    http://programmability.us/
+
+    so, a layer over ceph's subsystems (malacology in that link) composes a programmable storage
+    system. zlog was built as a service on malacology. zlog is the implementation of corfu on
+    programmable storage, as described in declstore. specifying corfu in a declarative language in
+    C++ is basically zlog written in a declarative language.
+-->
+
+<!-- TODO: place this in this section -->
+I have just
+started working with Carlos Maltzahn and Peter Alvaro on [declarative programmable
+storage](declarative-storage), where there is some interest in continuing to use Ceph as the
+underlying storage system implementation. 
+
+Programmable storage tends to be a difficult, low-level task that requires lots of code and
+detailed knowledge of storage subsystem implementations. Even when carefully written, storage
+systems built on top of reusable components can still expose dependencies that make maintenance
+prohibitively expensive. The idea of _declarative programmable storage_ (DPS), as [proposed by
+Watkins, et al.][declstore-paper], is to use a declarative language for specifying interfaces over
+storage systems such that maintainability and performance can be addressed by a query optimizer or
+some other principled, automatic machinery.
+
+<!-- TODO:
+    * develop "mechanisms" more
+        * not just quorum reads/writes
+    * develop "a way to define and enforce..."
+        * not just an IPA-like layer over DPS
+
+    * develop "arbitrarily complex data properties"
+-->
+
+<!-- TODO: work in this text
+    IPA, etc. allow developers to more correctly develop over *multiple* consistency models. This
+    enables distributed systems to use stronger consistency when necessary.
+
+    Doesn't this mean that the other direction is reasonable? IPA, etc. *enable* systems that
+    wanted reilability first to gradually support more availability?
+
+    I don't see why IPA, MixT, and QUELEA would only be useful for strengthening developing over
+    weakly consistent systems? Now that these types of tools exist, doesn't it make it possible for
+    developers who chose Ceph to transition in the other direction?
+
+    I can't imagine it would be easy to go from Ceph to something like Cassandra, from an
+    infrastructure perspective, or from a programmability perspective.
+-->
+
+For a DPS system, There are two major features that I explore to allow
+developers specify consistency requirements over data types:
+1. Mechanisms for supporting weaker consistency models in the backend storage system.
+2. A way to define, and enforce, consistency requirements for data types.
+
+There is an additional, related motive for studying mixing consistency over dps systems: exploring
+the generalization of reasoning over arbitrarily complex data properties. From this perspective,
+even beyond support for mixing consistency, this investigation will help guide the direction for future
+work. To draw from MixT, which has a similar intuition, MixT claims that consistency is a property
+of data. If this is at all true, then the storage system is a clear candidate for managing a
+property such as consistency. If we minimally extend intuitions around consistency models to
+general properties of data, being able to enforce, and reason over, pre- and post-conditions for
+data seems useful.
+
+
+Since Ceph has already served as a substrate for programmable storage work, we will consider using
+Ceph as the backend for a declarative programmable storage system that supports mixing consistency
+guarantees.
 
 <!-- intro links -->
 [cassandra-datastore]: http://cassandra.apache.org/
