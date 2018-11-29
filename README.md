@@ -1,4 +1,4 @@
-# blog
+# Research Blog
 I am just starting a PhD in computer science, and am interested in keeping my
 writings in an accessible, "blog-able" format, and this is my first attempt
 at that!
