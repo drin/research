@@ -1,11 +1,8 @@
----
-title: Mixing Consistency in a Programmable Storage System
-author: Aldrin Montana
-layout: single
-classes: wide
----
+# Mixing Consistency in a Programmable Storage System
 
-by Aldrin Montana &middot; edited by Abhishek Singh and Lindsey Kuper
+&middot; by Aldrin Montana
+
+&middot; edited by Abhishek Singh and Lindsey Kuper
 
 ## Introduction
 
