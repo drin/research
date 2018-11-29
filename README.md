@@ -15,27 +15,39 @@ This README may not always be kept up to date, but I'll do my best :)
 
 ---
 ## Course-related content
-Here I have laid out the reading schedule for my CMPS 290S class and I will add
-my reading responses as I do them.
+Here I organize all of the sections of this blog that are course related (clearly). This means
+paper reviews, paper presentation materials, and anything else that seems fair to openly publish.
 
-I have also added a schedule at the top for my presentations, which will
-include links to my presentation slides.
+Each course will have it's own index which will be like a Table of Contents or schedule for the
+course. At the top of each schedule, I will have links and information on my paper presentations,
+which will include links to my presentation slides. Then the rest of the schedule will just be for
+the course readings.
 
 ### Reading reviews by date
-To make it easy to manage all content in a single location, I would like to keep reading reviews
-organized in a single location named and organized by date. Since they will be located in a single
-directory, I link it here, where the below section will continue to grow while I'm in grad school
-(and potentially "forever"!).
+To make it easy to manage all content in a single location, I would like to _also_ keep reading
+reviews organized in a single location named and organized by date. Since they will be located in a
+single directory, I link it here, where the below section will continue to grow while I'm in grad
+school (and potentially "forever"!).
 
-[reviews by date](https://github.com/Drin/research-blog/tree/master/research-blog/blog-content/readings/by-date)
+[reviews by date](https://github.com/Drin/research-blog/tree/master/blog-content/readings/by-date)
+                  
 
 ### Reading reviews by course
 For my own convenience, I am maintaining sections for each course where I can keep track of a
 schedule of the readings for the quarter. I will try to maintain links to papers, and even links to
 materials I prepare for any presentations I give.
 
-#### Fall 2018
-[CMPS 290S](https://github.com/Drin/research-blog/blob/master/research-blog/blog-content/readings/by-course/cmps290s/index.md)
-[CMPS 278](https://github.com/Drin/research-blog/blob/master/research-blog/blog-content/readings/by-course/cmps278/index.md)
-[CMPS 217](https://github.com/Drin/research-blog/blob/master/research-blog/blog-content/readings/by-course/cmps217/index.md)
+#### Fall 2018 to Spring 2019 (1st year)
+* Fall 2018
+    * [CMPS 278 reviews](https://github.com/Drin/research-blog/blob/master/blog-content/readings/by-course/cmps278/index.md)
+    * [CMPS 290S reviews](https://github.com/Drin/research-blog/blob/master/blog-content/readings/by-course/cmps290s/index.md)
 
+* Winter 2019
+    * CMPS 201
+    * CMPS 280L
+    * CMPS 280D
+
+* Fall 2019
+    * CMPS 229
+    * CMPS 232
+    * CMPS 280D
