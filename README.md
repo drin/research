@@ -29,7 +29,7 @@ reviews organized in a single location named and organized by date. Since they w
 single directory, I link it here, where the below section will continue to grow while I'm in grad
 school (and potentially "forever"!).
 
-[reviews by date](https://github.com/Drin/research-blog/tree/master/blog-content/readings/by-date)
+[reviews by date](blog-content/readings/by-date/index.md)
                   
 
 ### Reading reviews by course
@@ -39,8 +39,8 @@ materials I prepare for any presentations I give.
 
 #### Fall 2018 to Spring 2019 (1st year)
 * Fall 2018
-    * [CMPS 278 reviews](https://github.com/Drin/research-blog/blob/master/blog-content/readings/by-course/cmps278/index.md)
-    * [CMPS 290S reviews](https://github.com/Drin/research-blog/blob/master/blog-content/readings/by-course/cmps290s/index.md)
+    * [CMPS 278 reviews](blog-content/readings/by-course/cmps278/index.md)
+    * [CMPS 290S reviews](blog-content/readings/by-course/cmps290s/index.md)
 
 * Winter 2019
     * CMPS 201
