@@ -1,6 +1,7 @@
 # Mixing Consistency in a Programmable Storage System
 
 &middot; by Aldrin Montana
+
 &middot; edited by Abhishek Singh and Lindsey Kuper
 
 ## Introduction
