@@ -1,13 +1,3 @@
-# TODO
-* Describe Ceph:
-    * what is Ceph?
-    * Why only strong consistency?
-    * Why weaker consistency (Examples, examples, examples)?
-    * How weaker consistency? (Also, Object Gateway?)
-        * What granularity
-        * How is it tunable
-        * Quorum?
-
 # Programmable Storage
 
 ## [Ceph][ceph-intro]
@@ -132,19 +122,52 @@ for disaster recovery purposes. This will work with data read and written via
 the Object Gateway only. Work is also starting on a similar capability for Ceph
 Block devices which are managed via the various cloudstacks.
 
-[^osd-fs-fn]: This is mentioned in [recommendations for the RADOS configuration][ceph-fs-recommendation]
 
-[disorderlylabs]: https://disorderlylabs.github.io/
-[maltzahn-website]: https://users.soe.ucsc.edu/~carlosm/UCSC/Home/Home.html
-[programmable-storage]: http://programmability.us/
-[noah-dissertation]: https://cloudfront.escholarship.org/dist/prd/content/qt72n6c5kq/qt72n6c5kq.pdf?t=pcfodf
-[noah-zlog]: https://github.com/cruzdb/zlog
-[ceph-intro]: https://ceph.com/ceph-storage/
+[dynamo-paper]: https://dl.acm.org/citation.cfm?id=1294281
+
 [ceph-intro-blog]: https://ceph.com/geen-categorie/ceph-storage-introduction/
+[ceph-paper]: https://www.ssrc.ucsc.edu/Papers/weil-osdi06.pdf
+[rados-paper]: https://ceph.com/wp-content/uploads/2016/08/weil-rados-pdsw07.pdf
+[crush-paper]: https://ceph.com/wp-content/uploads/2016/08/weil-crush-sc06.pdf
+[ceph-replication]: http://docs.ceph.com/docs/cuttlefish/architecture/#cluster-side-replication
+
+[proar-paper]: http://www.cs.nthu.edu.tw/~ychung/conference/ICPADS-2016.pdf
+
+[noah-dissertation]: https://cloudfront.escholarship.org/dist/prd/content/qt72n6c5kq/qt72n6c5kq.pdf?t=pcfodf
+[noah-blog-zlog]: https://nwat.xyz/blog/2014/10/26/zlog-a-distributed-shared-log-on-ceph/
+[malacology-paper]: https://dl.acm.org/citation.cfm?id=3064208
+
+[corfu-presentation]: https://www.usenix.org/conference/nsdi12/technical-sessions/presentation/balakrishnan
+
+<!-- new links -->
+[osd-doc]: http://docs.ceph.com/docs/mimic/man/8/ceph-osd/
+[pg-docs]: http://docs.ceph.com/docs/mimic/rados/operations/placement-groups/
+[mds-docs]: http://docs.ceph.com/docs/master/man/8/ceph-mds/
+
+[wiki-quorum]: https://en.wikipedia.org/wiki/Quorum_(distributed_computing)
+[wiki-shim]: https://en.wikipedia.org/wiki/Shim_(computing)
+
 [ceph-cuttlefish-arch]: http://docs.ceph.com/docs/cuttlefish/architecture/#how-ceph-scales
 [ceph-fs-recommendation]: http://docs.ceph.com/docs/jewel/rados/configuration/filesystem-recommendations/#filesystems
 [ceph-backend-bluestore]: http://docs.ceph.com/docs/mimic/rados/configuration/storage-devices/#osd-backends
 [ceph-backend-filestore]: http://docs.ceph.com/docs/mimic/rados/configuration/storage-devices/#filestore
 [data-center-faq]: http://docs.ceph.com/docs/cuttlefish/faq/#can-ceph-support-multiple-data-centers
-[rados-paper]: https://ceph.com/wp-content/uploads/2016/08/weil-rados-pdsw07.pdf
-[crush-paper]: https://ceph.com/wp-content/uploads/2016/08/weil-crush-sc06.pdf
+
+[cassandra-datastore]: http://cassandra.apache.org/
+[cassandra-quorum]: https://docs.datastax.com/en/cassandra/3.0/cassandra/dml/dmlConfigConsistency.html
+[postgres-dbms]: https://www.postgresql.org/docs/9.4/release-9-4.html
+
+[datamods-paper]: https://users.soe.ucsc.edu/~jayhawk/watkins-pdsw12.pdf
+[invivo-paper]: https://users.soe.ucsc.edu/~jayhawk/watkins-bdmc13.pdf
+[mantle-paper]: https://dl.acm.org/citation.cfm?id=2807607
+
+[ioflow-paper]: https://www.microsoft.com/en-us/research/wp-content/uploads/2013/11/ioflow-sosp13.pdf
+
+<!-- consistency-types links -->
+[course-website]: http://composition.al/CMPS290S-2018-09/
+[rdt-svo]: https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/replDataTypesPOPL13-complete.pdf
+[strong-enough]: http://software.imdea.org/~gotsman/papers/logic-popl16.pdf
+[mixt-impl]: https://github.com/mpmilano/MixT
+[quelea-impl]: https://github.com/kayceesrk/Quelea
+
+[declstore-paper]: https://www.usenix.org/conference/hotstorage17/program/presentation/watkins

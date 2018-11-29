@@ -2,8 +2,7 @@
 I am a 1st year PhD student in computer science, and I am interested in keeping my writings in an
 accessible, "blog-able" format, and this is my first attempt at that!
 
-#### Note
-This is a repository for blog-like posts in markdown, in the style of [Frank McSherry's
+**Note**: This is a repository for blog-like posts in markdown, in the style of [Frank McSherry's
 Blog](https://github.com/frankmcsherry/blog).
 
 I attempted to keep this README updated, but that lasted a very very short while. What I have
@@ -22,6 +21,14 @@ Each course will have it's own index which will be like a Table of Contents or s
 course. At the top of each schedule, I will have links and information on my paper presentations,
 which will include links to my presentation slides. Then the rest of the schedule will just be for
 the course readings.
+
+### Explorations
+A more exciting title than course projects, I thought explorations would be a nice section that can
+include course projects and any research projects that I blog about. I also figured that some
+course projects may themselves become research projects, so explorations is meant to be a section
+that captures these projects, even if very short and sweet (or not sweet).
+
+[Mixing Consistency - Part 1](blog-content/explorations/mixing-consistency/coalesced/mixing-consistency-part1.md)
 
 ### Reading reviews by date
 To make it easy to manage all content in a single location, I would like to _also_ keep reading

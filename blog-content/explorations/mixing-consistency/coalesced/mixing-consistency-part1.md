@@ -217,45 +217,17 @@ consistency levels. The approaches to investigate will include quorum consistenc
 consistency, and MixT’s approach to causal consistency. Once we understand how these mechanisms
 might fit into Ceph, we can investigate various approaches to mixing consistency.
 
-<!-- intro links -->
-[cassandra-datastore]: http://cassandra.apache.org/
-[cassandra-quorum]: https://docs.datastax.com/en/cassandra/3.0/cassandra/dml/dmlConfigConsistency.html
-[postgres-dbms]: https://www.postgresql.org/docs/9.4/release-9-4.html
-
-<!-- DPS links -->
-[osd-doc]: http://docs.ceph.com/docs/mimic/man/8/ceph-osd/
-[pg-docs]: http://docs.ceph.com/docs/mimic/rados/operations/placement-groups/
-[mds-docs]: http://docs.ceph.com/docs/master/man/8/ceph-mds/
-
 <!-- programmable storage links -->
-[disorderlylabs]: https://disorderlylabs.github.io/
-[maltzahn-website]: https://users.soe.ucsc.edu/~carlosm/UCSC/Home/Home.html
-[programmable-storage]: http://programmability.us/
 [noah-dissertation]: https://cloudfront.escholarship.org/dist/prd/content/qt72n6c5kq/qt72n6c5kq.pdf?t=pcfodf
-[noah-zlog-impl]: https://github.com/cruzdb/zlog
 [noah-blog-zlog]: https://nwat.xyz/blog/2014/10/26/zlog-a-distributed-shared-log-on-ceph/
-[ceph-intro]: https://ceph.com/ceph-storage/
 [ceph-intro-blog]: https://ceph.com/geen-categorie/ceph-storage-introduction/
-[ceph-cuttlefish-arch]: http://docs.ceph.com/docs/cuttlefish/architecture/#how-ceph-scales
-[ceph-fs-recommendation]: http://docs.ceph.com/docs/jewel/rados/configuration/filesystem-recommendations/#filesystems
-[ceph-backend-bluestore]: http://docs.ceph.com/docs/mimic/rados/configuration/storage-devices/#osd-backends
-[ceph-backend-filestore]: http://docs.ceph.com/docs/mimic/rados/configuration/storage-devices/#filestore
-[data-center-faq]: http://docs.ceph.com/docs/cuttlefish/faq/#can-ceph-support-multiple-data-centers
 [ceph-replication]: http://docs.ceph.com/docs/cuttlefish/architecture/#cluster-side-replication
-
-[wiki-quorum]: https://en.wikipedia.org/wiki/Quorum_(distributed_computing)
-[wiki-shim]: https://en.wikipedia.org/wiki/Shim_(computing)
-
 
 [ceph-paper]: https://www.ssrc.ucsc.edu/Papers/weil-osdi06.pdf
 [crush-paper]: https://ceph.com/wp-content/uploads/2016/08/weil-crush-sc06.pdf
 [rados-paper]: https://ceph.com/wp-content/uploads/2016/08/weil-rados-pdsw07.pdf
 
-[datamods-paper]: https://users.soe.ucsc.edu/~jayhawk/watkins-pdsw12.pdf
-[invivo-paper]: https://users.soe.ucsc.edu/~jayhawk/watkins-bdmc13.pdf
-[mantle-paper]: https://dl.acm.org/citation.cfm?id=2807607
 [malacology-paper]: https://dl.acm.org/citation.cfm?id=3064208
-[declstore-paper]: https://www.usenix.org/conference/hotstorage17/program/presentation/watkins
 [noah-dissertation]: https://cloudfront.escholarship.org/dist/prd/content/qt72n6c5kq/qt72n6c5kq.pdf?t=pcfodf
 
 [fuzzylog-paper]: https://www.usenix.org/system/files/osdi18-lockerman.pdf
@@ -266,12 +238,5 @@ might fit into Ceph, we can investigate various approaches to mixing consistency
 [quelea-paper]: http://kcsrk.info/papers/quelea_pldi15.pdf
 [bolton-paper]: http://www.bailis.org/papers/bolton-sigmod2013.pdf
 [dynamo-paper]: https://dl.acm.org/citation.cfm?id=1294281
-[ioflow-paper]: https://www.microsoft.com/en-us/research/wp-content/uploads/2013/11/ioflow-sosp13.pdf
 
-<!-- consistency-types links -->
-[course-website]: http://composition.al/CMPS290S-2018-09/
-[rdt-svo]: https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/replDataTypesPOPL13-complete.pdf
-[strong-enough]: http://software.imdea.org/~gotsman/papers/logic-popl16.pdf
 [ipa-impl]: https://github.com/bholt/ipa/tree/master/src/main/scala/ipa
-[mixt-impl]: https://github.com/mpmilano/MixT
-[quelea-impl]: https://github.com/kayceesrk/Quelea
