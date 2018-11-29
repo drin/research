@@ -1,7 +1,7 @@
 [book]
 authors = ["Aldrin"]
 multilingual = false
-src = "research-blog-content"
+src = "blog-content"
 title = "Research Blog"
 
 [build]
