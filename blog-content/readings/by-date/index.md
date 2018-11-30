@@ -2,14 +2,11 @@
 This section organizes all of the readings by date so that there is a
 straightforward way to look up content chronologically.
 
-### Oct 1st - Monday
+| Date   | Day | Reading                           | Review                  |
+| ----   | --- | -------                           | ------                  |
+| Oct 1  | Mon | [Brewer's Conjecture][CMPS290S_1] | [review](2018-10-01.md) |
 
-#### Paper
-[Brewer's Conjecture and the Feasibility of Consistent, Available,
-Partition-Tolerant Web Services](https://users.ece.cmu.edu/~adrian/731-sp04/readings/GL-cap.pdf)
-
-#### Response
-[Reading Response](2018-10-01.md)
+[CMPS290S_1]: https://users.ece.cmu.edu/~adrian/731-sp04/readings/GL-cap.pdf
 
 ### Oct 3rd - Wednesday
 
