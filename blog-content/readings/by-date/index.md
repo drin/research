@@ -2,27 +2,16 @@
 This section organizes all of the readings by date so that there is a
 straightforward way to look up content chronologically.
 
-| Date   | Day | Reading                           | Review                  |
-| ----   | --- | -------                           | ------                  |
-| Oct 1  | Mon | [Brewer's Conjecture][CMPS290S_1] | [review](2018-10-01.md) |
+| Date   | Day | Reading                           | Review or Presentation           |
+| ----   | --- | -------                           | ----------------------           |
+| Oct 01 | Mon | [Brewer's Conjecture][CMPS290S_1] | [review](2018-10-01.md)          |
+| Oct 03 | Wed | [CAP 12 years later][CMPS290S_2]  | [presentation][cap-presentation] |
+| Oct 05 | Fri | [Linearizability][CMPS290S_3]     | [review](2018-10-05.md)          |
 
+[cap-presentation]: https://github.com/lkuper/CMPS290S-2018-09/blob/master/presentations/2018-10-03-cap-12years.pdf
 [CMPS290S_1]: https://users.ece.cmu.edu/~adrian/731-sp04/readings/GL-cap.pdf
-
-### Oct 3rd - Wednesday
-
-#### Paper
-[CAP twelve years later: How the "rules" have changed](https://ieeexplore.ieee.org/document/6133253)
-
-#### Presentation
-[Reading Presentation](https://github.com/lkuper/CMPS290S-2018-09/blob/master/presentations/2018-10-03-cap-12years.pdf)
-
-### Oct 5th - Friday
-
-#### Paper
-[Linearizability: A Correctness Condition for Concurrent Objects](https://cs.brown.edu/~mph/HerlihyW90/p463-herlihy.pdf)
-
-#### Response
-[Reading Response](2018-10-05.md)
+[CMPS290S_2]: https://ieeexplore.ieee.org/document/6133253
+[CMPS290S_3]: https://cs.brown.edu/~mph/HerlihyW90/p463-herlihy.pdf
 
 ### Oct 8th - Monday
 
