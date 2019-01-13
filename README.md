@@ -28,7 +28,8 @@ include course projects and any research projects that I blog about. I also figu
 course projects may themselves become research projects, so explorations is meant to be a section
 that captures these projects, even if very short and sweet (or not sweet).
 
-[Mixing Consistency - Part 1](blog-content/explorations/mixing-consistency/coalesced/mixing-consistency-part1.md)
+[Mixing Consistency in a Programmable Storage System](blog-content/explorations/mixing-consistency/coalesced/mixing-consistency-in-a-programmable-storage-system.md)
+[Diversifying Consistency in Ceph](blog-content/explorations/mixing-consistency/coalesced/diversifying-consistency-in-ceph.md)
 
 ### Reading reviews by date
 To make it easy to manage all content in a single location, I would like to _also_ keep reading
@@ -37,7 +38,6 @@ single directory, I link it here, where the below section will continue to grow 
 school (and potentially "forever"!).
 
 [reviews by date](blog-content/readings/by-date/index.md)
-                  
 
 ### Reading reviews by course
 For my own convenience, I am maintaining sections for each course where I can keep track of a
@@ -50,7 +50,7 @@ materials I prepare for any presentations I give.
     * [CMPS 290S reviews](blog-content/readings/by-course/cmps290s/index.md)
 
 * Winter 2019
-    * CMPS 201
+    * [CMPS 201](blog-content/readings/by-course/cmps201/index.md)
     * CMPS 280L
     * CMPS 280D
 
