@@ -29,6 +29,7 @@ course projects may themselves become research projects, so explorations is mean
 that captures these projects, even if very short and sweet (or not sweet).
 
 [Mixing Consistency in a Programmable Storage System](blog-content/explorations/mixing-consistency/coalesced/mixing-consistency-in-a-programmable-storage-system.md)
+
 [Diversifying Consistency in Ceph](blog-content/explorations/mixing-consistency/coalesced/diversifying-consistency-in-ceph.md)
 
 ### Reading reviews by date
