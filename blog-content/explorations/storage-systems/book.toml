@@ -1,0 +1,5 @@
+[book]
+authors = ["Drin"]
+multilingual = false
+src = "book-content"
+title = "Storage Systems"
