@@ -1,5 +1,11 @@
 [book]
-authors = ["Drin"]
+authors = ["Aldrin Montana"]
 multilingual = false
 src = "book-content"
 title = "Storage Systems"
+
+[build]
+build-dir = "/srv/http/storage-systems"
+
+[output.html]
+mathjax-support = true
