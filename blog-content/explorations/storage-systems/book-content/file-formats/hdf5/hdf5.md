@@ -21,6 +21,16 @@ underlying programmable storage system in a way that allows for optimizations of
 placement, data access paths, data processing, and other intelligent operations pushed down to
 lower abstraction levels.
 
+# VOL
+
+# RADOS
+<!-- references -->
+
+[rados-setupscript]: https://github.com/xweichu/object_size/blob/master/setup.sh
+[rados-build]: http://docs.ceph.com/docs/master/install/build-ceph/
+[rados-librados]: https://github.com/ceph/ceph/tree/master/src/librados
+[rados-objstore]: https://github.com/ceph/ceph/blob/0e95a2893dbd257d6bc45ae2f154e405370756c5/src/os/ObjectStore.h
+
 <!-- references -->
 [web-hdf5-intro]: https://portal.hdfgroup.org/display/HDF5/Introduction+to+HDF5
 [web-hdf5-format]: https://portal.hdfgroup.org/display/HDF5/Introduction+to+HDF5#IntroductiontoHDF5-fileformat
