@@ -74,12 +74,11 @@ August 2013 - April 2015
 Technical Experience
 --------------------
 
-Programming Languages
-:   **Experienced**
+: **Experienced Programming Languages**
     
     Python, Java, Bash, Perl, C
 
-:   **Acquainted**
+: **Acquainted Programming Languages**
 
     Scala, Rust, Javascript
 
