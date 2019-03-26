@@ -1,9 +1,12 @@
 # Research Blog
 I am a 1st year PhD student in computer science, and I am interested in keeping my writings in an
-accessible, online format! I will attempt to add new content as bite-sized blog posts, and every so
-often I will coalesce related posts into a separate "book" format (see [mdbook format][mdbook]).
+accessible, online format! 
 
-This README may not always be kept up to date, but I'll do my best :)
+More about me [here](profile/index.md)!
+
+I will attempt to add new content as bite-sized blog posts, and every so often I will coalesce
+related posts into a separate "book" format (see [mdbook format][mdbook]). This README may not
+always be kept up to date, but I'll do my best :)
 
 ---
 ## Content Overview
