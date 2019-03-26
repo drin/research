@@ -22,12 +22,14 @@ Education
 :   **Ph.D., Computer Science**; UC, Santa Cruz
 
     Declarative Programmable Storage
+    
     Advisor: Peter Alvaro
 
 2007-2013
 :   **B.S.-M.S., Computer Science**; Cal Poly, San Luis Obispo
 
     Clustering for Microbial Source Tracking
+    
     Advisor: Alex Dekhtyar
 
 Work Experience
