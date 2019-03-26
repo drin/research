@@ -1,6 +1,6 @@
 <!-- Resume template loosely from https://mszep.github.io/pandoc_resume/ -->
-Aldrin Montana
-==============
+
+# Aldrin Montana
 
 Virtual Presence
 ----------------
