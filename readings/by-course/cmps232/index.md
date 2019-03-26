@@ -2,111 +2,84 @@
 
 ## Week 1
 
-### April 1st - Monday
-#### A Note on Distributed Computing
-| [paper link][note-distributed] | [review][./2019.04.01.review.md] |
+| Date     | Day | Title (and Paper Link)                                 | Review                           |
+| -------- | --- | ------------------------------------------------------ | -------------------------------- |
+| 19/04/01 | Mon | [A Note on Distributed Computing][note-distributed]    | [review][./2019.04.01.review.md] |
+| 19/04/03 | Wed | [Time, Clocks, and Ordering of Events][lamport-clocks] | [review][./2019.04.03.review.md] |
+| 19/04/05 | Fri | [Detecting Causal Relationships][detect-causal]        | [review][./2019.04.05.review.md] |
 
-### April 3rd - Wednesday
-#### Time, Clocks, and the Ordering of Events in a Distributed System
-| [paper link][lamport-clocks] | [review][./2019.04.03.review.md] |
-
-### April 5th - Friday
-#### Detecting Causal Relationships in Distributed Computations: In Search of the Holy Grail
-| [paper link][detect-causal] | [review][./2019.04.03.review.md] |
 
 ## Week 2
-### April 8th - Monday
-#### Dynamo: Amazon’s Highly Available Key-value Store
-| [paper link][dynamo] | [review][./2019.04.03.review.md] |
 
-### April 10th - Wednesday
-#### Managing update conflicts in Bayou, a weakly connected replicated storage system
-| [paper link][bayou-conflicts] | [review][./2019.04.03.review.md] |
-
-### April 12th - Friday
-#### Chord: A Scalable Peer-to-peer Lookup Service for Internet Applications
-| [paper link][chord] | [review][./2019.04.03.review.md] |
-#### Using Lightweight Modeling To Understand Chord
-| [paper link][model-chord] | [review][./2019.04.03.review.md] |
+| Date     | Day | Title (and Paper Link)                                  | Review                                             |
+| -------- | --- | ------------------------------------------------------- | -------------------------------------------------- |
+| 19/04/08 | Mon | [Dynamo: Amazon's Available Key-Value Store][dynamo]    | [review][./2019.04.08.review.md]                   |
+| 19/04/10 | Wed | [Managing update conflicts in Bayou][bayou-conflicts]   | [review][./2019.04.10.review.md]                   |
+| 19/04/12 | Fri | [Chord: Scalable Peer-to-Peer Lookup Service][chord]    | [review][./2019.04.12.chord.review.md]             |
+| 19/04/12 | Fri | [Lightweight Modeling to Understand Chord][model-chord] | [review][./2019.04.12.lightweight-chord.review.md] |
 
 ## Week 3
-### April 15th - Monday
-#### Impossibility of Distributed Consensus with One Faulty Process 
-| [paper link][one-faulty-proc] | [review][./2019.04.03.review.md] |
 
-### April 17th - Wednesday
-#### Using Reasoning About Knowledge to analyze Distributed Systems
-
-### April 19th - Friday
-#### Paxos made simple
+| Date     | Day | Title (and Paper Link)                                  | Review                           |
+| -------- | --- | ------------------------------------------------------- | -------------------------------- |
+| 19/04/15 | Mon | [Consensus with One Faulty Process][one-faulty-proc]    | [review][./2019.04.15.review.md] |
+| 19/04/17 | Wed | [Reasoning About Knowledge... ][knowledge-analysis]     | [review][./2019.04.17.review.md] |
+| 19/04/19 | Fri | [Paxos made simple][paxos-simple]                       | [review][./2019.04.19.review.md] |
 
 ## Week 4
-### April 22nd - Monday
-#### State machine replication
-#### In Search of an Understandable Consensus Algorithm
 
-### April 24th - Wednesday
-#### Lineage-driven Fault Injection
-
-### April 26th - Friday
-#### Early Detection of Configuration Errors to Reduce Failure Damage
+| Date     | Day | Title (and Paper Link)                                          | Review                                        |
+| -------- | --- | --------------------------------------------------------------- | --------------------------------------------- |
+| 19/04/22 | Mon | [State machine replication][statemachine-repl]                  | [review][./2019.04.22.statemachine.review.md] |
+| 19/04/22 | Mon | [Understandable Consensus Algorithm][understand-consensus]      | [review][./2019.04.22.consensus.review.md]    |
+| 19/04/24 | Wed | [Lineage-driven Fault Injection][ldfi]                          | [review][./2019.04.24.review.md]              |
+| 19/04/26 | Fri | [Early Detection of Configuration Errors][detect-config-errors] | [review][./2019.04.26.review.md]              |
 
 ## Week 5
-### April 29th - Monday
-#### Stronger Semantics for Low-Latency Geo-Replicated Storage
 
-### May 1st - Wednesday
-#### Building Consistent Transactions with Inconsistent Replication
-
-### May 3rd  - Friday
-#### Practical Byzantine Fault Tolerance
+| Date     | Day | Title (and Paper Link)                                              | Review                           |
+| -------- | --- | ------------------------------------------------------------------- | -------------------------------- |
+| 19/04/29 | Mon | [Stronger Semantics for Geo-Replicated Storage][geo-repl-semantics] | [review][./2019.04.29.review.md] |
+| 19/05/01 | Wed | [Consistent Transactions with Inconsistent Replication][tapir]      | [review][./2019.05.01.review.md] |
+| 19/05/03 | Fri | [Practical Byzantine Fault Tolerance][byzantine-fault]              | [review][./2019.05.03.review.md] |
 
 ## Week 6
-### (???) May 6th - Monday
-#### Bitcoin: A Peer-to-Peer Electronic Cash System
 
-### May 8th - Wednesday
-Project LIGHTNING TALKS 1
-
-### May 10th - Friday
-Project LIGHTNING TALKS 2
+| Date     | Day | Title (and Paper Link)                                    | Review                           |
+| -------- | --- | --------------------------------------------------------- | -------------------------------- |
+| 19/05/06 | Mon | [Bitcoin: A Peer-to-Peer Electronic Cash System][bitcoin] | [review][./2019.05.06.review.md] |
 
 ## Week 7
-### May 15th - Wednesday
-#### A view of cloud computing (Armbrust, CACM 53(4), 2010)
-#### Towards a Cloud Computing Research Agenda
 
-### May 17th - Friday
-#### Sinfonia
+| Date     | Day | Title (and Paper Link)                                            | Review                                        |
+| -------- | --- | ----------------------------------------------------------------- | --------------------------------------------- |
+| 19/05/15 | Wed | [A view of Cloud Computing][view-of-cloud]                        | [review][./2019.05.15.view-cloud.review.md]   |
+| 19/05/15 | Wed | [Towards A Cloud Computing Research Agenda][toward-cloud-agenda]  | [review][./2019.05.15.cloud-agenda.review.md] |
+| 19/05/17 | Fri | [Sinfonia][sinfonia]                                              | [review][./2019.05.17.review.md]              |
 
 ## Week 8
-### (???) May 20th - Monday
-#### MapReduce
 
-### May 22nd - Wednesday
-#### A comprehensive study of Convergent and Commutative Replicated Data Types
-
-### (???)
-#### Logic and Lattices for Distributed Programming
-
-### May 24th - Friday
-#### Coordination Avoidance in Database Systems
+| Date     | Day | Title (and Paper Link)                                               | Review                           |
+| -------- | --- | -------------------------------------------------------------------- | -------------------------------- |
+| 19/05/20 | Mon | [MapReduce][mapreduce]                                               | [review][./2019.05.20.review.md] |
+| 19/05/22 | Wed | [A comprehensive study of Convergent and CRDTs][convergent-crdt]     | [review][./2019.05.22.review.md] |
+| 19/05/?? | ??? | [Logic and Lattices for Distributed Programming][logic-and-lattices] | [review][./2019.05.xx.review.md] |
+| 19/05/24 | Fri | [Coordination Avoidance in Database Systems][coord-avoid-dbms]       | [review][./2019.05.24.review.md] |
 
 ## Week 9
-### May 29th - Wednesday
-#### Just Say NO to Paxos Overhead: Replacing Consensus with Network Ordering
 
-### May 31st - Friday
-Room for more papers!
+| Date     | Day | Title (and Paper Link)                             | Review                           |
+| -------- | --- | -------------------------------------------------- | -------------------------------- |
+| 19/05/29 | Wed | [Just Say NO to Paxos Overhead][no-paxos-overhead] | [review][./2019.05.29.review.md] |
+| 19/05/31 | Fri | Room for Activities                                |                                  |
 
 ## Week 10
-### June 5th - Wednesday
-#### The Good, the Bad, and the Differences: Better Network Diagnostics with Differential Provenance
-#### Pensieve: Non-Intrusive Failure Reproduction for Distributed Systems using the Event Chaining Approach
 
-### June 7th - Friday
-#### Ruben Fitch "The Declarative Imperative: Experiences and Conjectures in Distributed Logic"
-
+| Date     | Day | Title (and Paper Link)                                                  | Review                                    |
+| -------- | --- | ----------------------------------------------------------------------- | ----------------------------------------- |
+| 19/06/05 | Wed | [Network Diagnostics with Differential Provenance][net-diff-provenance] | [review][./2019.06.05.network.review.md]  |
+| 19/06/05 | Wed | [Pensieve: Non-Intrusive Failure Reproduction][pensieve]                | [review][./2019.06.05.pensieve.review.md] |
+| 19/06/07 | Fri | The Declarative Imperative                                              | [review][./2019.06.07.review.md]          |
 
 
 <!-- Paper Links -->
