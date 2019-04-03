@@ -4,9 +4,9 @@
 
 | Date     | Day | Title (and Paper Link)                                 | Review                           |
 | -------- | --- | ------------------------------------------------------ | -------------------------------- |
-| 19/04/01 | Mon | [A Note on Distributed Computing][note-distributed]    | [review][./2019.04.01.review.md] |
-| 19/04/03 | Wed | [Time, Clocks, and Ordering of Events][lamport-clocks] | [review][./2019.04.03.review.md] |
-| 19/04/05 | Fri | [Detecting Causal Relationships][detect-causal]        | [review][./2019.04.05.review.md] |
+| 19/04/01 | Mon | [A Note on Distributed Computing][note-distributed]    | [review](./2019.04.01.review.md) |
+| 19/04/03 | Wed | [Time, Clocks, and Ordering of Events][lamport-clocks] | [review](./2019.04.03.review.md) |
+| 19/04/05 | Fri | [Detecting Causal Relationships][detect-causal]        | [review](./2019.04.05.review.md) |
 
 
 ## Week 2
