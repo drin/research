@@ -6,7 +6,7 @@
 | -------- | --- | ----------------------------------------------------------------------------- | -------------------------------------------- |
 | 19/04/02 | Tue | [Taming Performance Variability][tame-variability]                            |                                              |
 | 19/04/04 | Thu | [A Fast File System for UNIX][fast-fs-unix]                                   | [review](./2019.04.04.FFS.review.md)     |
-| 19/04/04 | Thu | [Design and Implementation of a Log-Structured File System][log-structure-fs] | [review](./2019.04.04.LSFS.md) |
+| 19/04/04 | Thu | [Design and Implementation of a Log-Structured File System][log-structure-fs] | [review](./2019.04.04.LSFS.review.md) |
 
 ## Week 2
 
