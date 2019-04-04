@@ -51,7 +51,7 @@ date, simply go to this index: [reviews by date][reading-by-date].
     * CMPS 280D
 
 * Fall 2019
-    * CMPS 229
+    * [CMPS 229][course-cmps229]
     * [CMPS 232][course-cmps232]
     * CMPS 280D
 
@@ -65,3 +65,4 @@ date, simply go to this index: [reviews by date][reading-by-date].
 <!-- navigational links -->
 [reading-by-date]: readings/by-date/index.md
 [course-cmps232]: readings/by-course/cmps232/index.md
+[course-cmps232]: readings/by-course/cmps229/index.md
