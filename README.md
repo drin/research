@@ -65,4 +65,4 @@ date, simply go to this index: [reviews by date][reading-by-date].
 <!-- navigational links -->
 [reading-by-date]: readings/by-date/index.md
 [course-cmps232]: readings/by-course/cmps232/index.md
-[course-cmps232]: readings/by-course/cmps229/index.md
+[course-cmps229]: readings/by-course/cmps229/index.md
