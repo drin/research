@@ -104,7 +104,7 @@
 [toward-cloud-agenda]:  https://www.cs.purdue.edu/homes/bb/cs590/handouts/Cornell.pdf
 [sinfonia]:             http://www.sosp2007.org/papers/sosp064-aguilera.pdf
 [mapreduce]:            http://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf
-[convergent-cdrt]:      http://hal.upmc.fr/inria-00555588/document
+[convergent-crdt]:      http://hal.upmc.fr/inria-00555588/document
 [logic-and-lattices]:   http://db.cs.berkeley.edu/papers/UCB-lattice-tr.pdf
 [coord-avoid-dbms]:     http://www.vldb.org/pvldb/vol8/p185-bailis.pdf
 [no-paxos-overhead]:    https://www.usenix.org/system/files/conference/osdi16/osdi16-li.pdf
