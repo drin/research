@@ -13,9 +13,9 @@
 
 | Date     | Day | Title (and Paper Link)                                         | Review                           |
 | -------- | --- | -------------------------------------------------------------- | -------------------------------- |
-| 19/04/08 | Mon | [Consensus with One Faulty Process][one-faulty-proc]           | [review](./2019.04.08.review.md) |
+| 19/04/08 | Mon | [Tracing and Fault Injection with Box of Pain][box-of-pain]    | [review](./2019.04.08.review.md) |
 | 19/04/10 | Wed | No Class                                                       |                                  |
-| 19/04/12 | Fri | [Tracing and Fault Injection with Box of Pain][box-of-pain]    | [review](./2019.04.12.review.md) |
+| 19/04/12 | Fri | [Consensus with One Faulty Process][one-faulty-proc]           | [review](./2019.04.12.review.md) |
 
 ## Week 3
 
