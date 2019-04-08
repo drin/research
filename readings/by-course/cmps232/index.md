@@ -22,15 +22,15 @@
 | Date     | Day | Title (and Paper Link)                                              | Review                           |
 | -------- | --- | ------------------------------------------------------------------- | -------------------------------- |
 | 19/04/15 | Mon | [Paxos made simple][paxos-simple]                                   | [review](./2019.04.15.review.md) |
-| 19/04/17 | Wed | [Lineage-driven Fault Injection][ldfi]                              | [review](./2019.04.17.review.md) |
+| 19/04/17 | Wed | [Chord: Scalable Peer-to-Peer Lookup Service][chord]                | [review](./2019.04.17.review.md) |
 | 19/04/19 | Fri | [Stronger Semantics for Geo-Replicated Storage][geo-repl-semantics] | [review](./2019.04.19.review.md) |
 
 ## Week 4
 
 | Date     | Day | Title (and Paper Link)                                         | Review                           |
 | -------- | --- | -------------------------------------------------------------- | -------------------------------- |
-| 19/04/22 | Mon | [Consistent Transactions with Inconsistent Replication][tapir] | [review](./2019.04.22.review.md) |
-| 19/04/24 | Wed | [Chord: Scalable Peer-to-Peer Lookup Service][chord]           | [review](./2019.04.24.review.md) |
+| 19/04/22 | Mon | [Managing update conflicts in Bayou][bayou-conflicts]          | [review](./2019.04.22.review.md) |
+| 19/04/24 | Wed |                                                                | [review](./2019.04.24.review.md) |
 | 19/04/26 | Fri | [Practical Byzantine Fault Tolerance][byzantine-fault]         | [review](./2019.04.26.review.md) |
 
 ## Week 5
@@ -38,47 +38,47 @@
 | Date     | Day | Title (and Paper Link)                              | Review                           |
 | -------- | --- | --------------------------------------------------- | -------------------------------- |
 | 19/04/29 | Mon | Lightning Talks                                     |                                  |
-| 19/05/01 | Wed | Lightning Talks                                     |                                  |
-| 19/05/03 | Fri | [Reasoning About Knowledge... ][knowledge-analysis] | [review][./2019.05.03.review.md] |
+| 19/05/01 | Wed | Guest/Sub/No Class                                  |                                  |
+| 19/05/03 | Fri | [Lineage-driven Fault Injection][ldfi]              | [review][./2019.05.03.review.md] |
 
 ## Week 6 (Here and below is still in flux)
 
-| Date     | Day | Title (and Paper Link)                                    | Review                           |
-| -------- | --- | --------------------------------------------------------- | -------------------------------- |
-| 19/05/06 | Mon | [Bitcoin: A Peer-to-Peer Electronic Cash System][bitcoin] | [review][./2019.05.06.review.md] |
-| 19/05/06 | Mon | [Managing update conflicts in Bayou][bayou-conflicts]     | [review][./2019.04.10.review.md]   |
+| Date     | Day | Title (and Paper Link)                                           | Review                           |
+| -------- | --- | ---------------------------------------------------------------- | -------------------------------- |
+| 19/05/06 | Mon | [Reasoning About Knowledge... ][knowledge-analysis]              | [review][./2019.05.06.review.md] |
+| 19/05/08 | Wed | [Consistent Transactions with Inconsistent Replication][tapir]   | [review][./2019.05.08.review.md] |
+| 19/05/10 | Fri | [Towards A Cloud Computing Research Agenda][toward-cloud-agenda] | [review][./2019.05.10.review.md] |
 
 ## Week 7
 
-| Date     | Day | Title (and Paper Link)                                            | Review                                        |
-| -------- | --- | ----------------------------------------------------------------- | --------------------------------------------- |
-| 19/05/15 | Wed | [A view of Cloud Computing][view-of-cloud]                        | [review][./2019.05.15.view-cloud.review.md]   |
-| 19/05/15 | Wed | [Towards A Cloud Computing Research Agenda][toward-cloud-agenda]  | [review][./2019.05.15.cloud-agenda.review.md] |
-| 19/05/17 | Fri | [Sinfonia][sinfonia]                                              | [review][./2019.05.17.review.md]              |
+| Date     | Day | Title (and Paper Link)                                            | Review                             |
+| -------- | --- | ----------------------------------------------------------------- | ---------------------------------- |
+| 19/05/13 | Mon | [Sinfonia][sinfonia]                                              | [review][./2019.05.13.review.md]   |
+| 19/05/15 | Wed | [MapReduce][mapreduce]                                            | [review][./2019.05.15.review.md]   |
+| 19/05/17 | Fri | [A comprehensive study of Convergent and CRDTs][convergent-crdt]  | [review][./2019.05.17.review.md]   |
 
 ## Week 8
 
 | Date     | Day | Title (and Paper Link)                                               | Review                           |
 | -------- | --- | -------------------------------------------------------------------- | -------------------------------- |
-| 19/05/20 | Mon | [MapReduce][mapreduce]                                               | [review][./2019.05.20.review.md] |
-| 19/05/22 | Wed | [A comprehensive study of Convergent and CRDTs][convergent-crdt]     | [review][./2019.05.22.review.md] |
-| 19/05/?? | ??? | [Logic and Lattices for Distributed Programming][logic-and-lattices] | [review][./2019.05.xx.review.md] |
-| 19/05/24 | Fri | [Coordination Avoidance in Database Systems][coord-avoid-dbms]       | [review][./2019.05.24.review.md] |
+| 19/05/20 | Mon | [Noria][noria]                                                       | [review][./2019.05.20.review.md] |
+| 19/05/22 | Wed | [Amazon Aurora][aurora]                                              | [review][./2019.05.22.review.md] |
+| 19/05/24 | Fri | [Maelstrom: Mitigating Data-Center Level Disasters][maelstrom]       | [review][./2019.05.24.review.md] |
 
 ## Week 9
 
 | Date     | Day | Title (and Paper Link)                             | Review                           |
 | -------- | --- | -------------------------------------------------- | -------------------------------- |
-| 19/05/29 | Wed | [Just Say NO to Paxos Overhead][no-paxos-overhead] | [review][./2019.05.29.review.md] |
+| 19/05/29 | Wed | [Canopy: End-to-End Performance Tracing][canopy]   | [review][./2019.05.29.review.md] |
 | 19/05/31 | Fri | Room for Activities                                |                                  |
 
 ## Week 10
 
-| Date     | Day | Title (and Paper Link)                                                  | Review                                    |
-| -------- | --- | ----------------------------------------------------------------------- | ----------------------------------------- |
-| 19/06/05 | Wed | [Network Diagnostics with Differential Provenance][net-diff-provenance] | [review][./2019.06.05.network.review.md]  |
-| 19/06/05 | Wed | [Pensieve: Non-Intrusive Failure Reproduction][pensieve]                | [review][./2019.06.05.pensieve.review.md] |
-| 19/06/07 | Fri | The Declarative Imperative                                              | [review][./2019.06.07.review.md]          |
+| Date     | Day | Title (and Paper Link)                                                  | Review                            |
+| -------- | --- | ----------------------------------------------------------------------- | --------------------------------- |
+| 19/06/03 | Mon | [Logic and Lattices for Distributed Programming][logic-and-lattices]    | [review][./2019.06.03.review.md]  |
+| 19/06/05 | Wed |                                                                         | [review][./2019.06.05.review.md]  |
+| 19/06/07 | Fri |                                                                         | [review][./2019.06.07.review.md]  |
 
 
 <!-- Paper Links -->
@@ -111,6 +111,10 @@
 [net-diff-provenance]:  http://www.cis.upenn.edu/~angchen/papers/sigcomm-2016.pdf
 [pensieve]:             http://www.eecg.toronto.edu/~yuan/papers/pensieve-sosp17.pdf
 [box-of-pain]:          https://arxiv.org/pdf/1903.12226.pdf
+[noria]:                https://www.usenix.org/conference/osdi18/presentation/gjengset
+[aurora]:               https://dl.acm.org/citation.cfm?id=3183713.3196937
+[maelstrom]:            https://www.usenix.org/conference/osdi18/presentation/veeraraghavan
+[canopy]:               https://research.fb.com/publications/canopy-end-to-end-performance-tracing-at-scale/
 
 <!-- Orphaned Papers -->
 <!--
@@ -119,4 +123,10 @@
 | 19/04/26 | Fri | [Early Detection of Configuration Errors][detect-config-errors] | [review][./2019.04.26.review.md]              |
 | 19/04/22 | Mon | [State machine replication][statemachine-repl]                  | [review][./2019.04.22.statemachine.review.md] |
 | 19/04/22 | Mon | [Understandable Consensus Algorithm][understand-consensus]      | [review][./2019.04.22.consensus.review.md]    |
+[Bitcoin: A Peer-to-Peer Electronic Cash System][bitcoin]
+[A view of Cloud Computing][view-of-cloud]
+[Network Diagnostics with Differential Provenance][net-diff-provenance]
+[Just Say NO to Paxos Overhead][no-paxos-overhead]
+[Coordination Avoidance in Database Systems][coord-avoid-dbms]
+[Pensieve: Non-Intrusive Failure Reproduction][pensieve]
 -->
