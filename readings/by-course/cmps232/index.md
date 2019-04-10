@@ -14,14 +14,14 @@
 | Date     | Day | Title (and Paper Link)                                         | Review                           |
 | -------- | --- | -------------------------------------------------------------- | -------------------------------- |
 | 19/04/08 | Mon | [Tracing and Fault Injection with Box of Pain][box-of-pain]    | [review](./2019.04.08.review.md) |
-| 19/04/10 | Wed | No Class                                                       |                                  |
-| 19/04/12 | Fri | [Consensus with One Faulty Process][one-faulty-proc]           | [review](./2019.04.12.review.md) |
+| 19/04/10 | Wed | [Paxos made simple][paxos-simple]                              | [review](./2019.04.10.review.md) |
+| 19/04/12 | Fri | No Class                                                       |                                  |
 
 ## Week 3
 
 | Date     | Day | Title (and Paper Link)                                              | Review                           |
 | -------- | --- | ------------------------------------------------------------------- | -------------------------------- |
-| 19/04/15 | Mon | [Paxos made simple][paxos-simple]                                   | [review](./2019.04.15.review.md) |
+| 19/04/15 | Mon | [Consensus with One Faulty Process][one-faulty-proc]                | [review](./2019.04.15.review.md) |
 | 19/04/17 | Wed | [Chord: Scalable Peer-to-Peer Lookup Service][chord]                | [review](./2019.04.17.review.md) |
 | 19/04/19 | Fri | [Stronger Semantics for Geo-Replicated Storage][geo-repl-semantics] | [review](./2019.04.19.review.md) |
 
@@ -29,7 +29,7 @@
 
 | Date     | Day | Title (and Paper Link)                                         | Review                           |
 | -------- | --- | -------------------------------------------------------------- | -------------------------------- |
-| 19/04/22 | Mon | [Managing update conflicts in Bayou][bayou-conflicts]          | [review](./2019.04.22.review.md) |
+| 19/04/22 | Mon | [Managing update conflicts in Bayou][bayou-conflicts]            | [review](./2019.04.22.review.md) |
 | 19/04/24 | Wed |                                                                | [review](./2019.04.24.review.md) |
 | 19/04/26 | Fri | [Practical Byzantine Fault Tolerance][byzantine-fault]         | [review](./2019.04.26.review.md) |
 
@@ -39,7 +39,7 @@
 | -------- | --- | --------------------------------------------------- | -------------------------------- |
 | 19/04/29 | Mon | Lightning Talks                                     |                                  |
 | 19/05/01 | Wed | Guest/Sub/No Class                                  |                                  |
-| 19/05/03 | Fri | [Lineage-driven Fault Injection][ldfi]              | [review][./2019.05.03.review.md] |
+| 19/05/03 | Fri | [Lineage-driven Fault Injection][ldfi]               | [review][./2019.05.03.review.md] |
 
 ## Week 6 (Here and below is still in flux)
 
