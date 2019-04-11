@@ -12,10 +12,10 @@
 
 | Date     | Day | Title (and Paper Link)                                  | Review                                           |
 | -------- | --- | ------------------------------------------------------- | ------------------------------------------------ |
-| 19/04/09 | Tue | [Design Tradeoffs for SSD Performance][ssd-performance]  | [review](./2019.04.09.ssd-performance.review.md) |
-| 19/04/09 | Tue | [A New File System for Flash Storage][flash-fs]          | [review](./2019.04.09.flash-fs.review.md)         |
-| 19/04/11 | Thu | [TickerTAIP Parallel RAID Architecture][taip-raid]      | [review](./2019.04.12.tickertaip.review.md)      |
-| 19/04/11 | Thu | [HP AutoRaid Hierarchical Storage System][autoraid]     | [review](./2019.04.12.autoraid.review.md)        |
+| 19/04/09 | Tue | [Design Tradeoffs for SSD Performance][ssd-performance] | [review](./2019.04.09.ssd-performance.review.md) |
+| 19/04/09 | Tue | [A New File System for Flash Storage][flash-fs]         | [review](./2019.04.09.flash-fs.review.md)        |
+| 19/04/11 | Thu | [TickerTAIP Parallel RAID Architecture][taip-raid]      | [review](./2019.04.11.tickertaip.review.md)      |
+| 19/04/11 | Thu | [HP AutoRaid Hierarchical Storage System][autoraid]     | [review](./2019.04.11.autoraid.review.md)        |
 
 ## Week 3
 
