@@ -13,13 +13,13 @@ I thought "explorations" would be a nice name for a section containing extended 
 series of blog posts for something research-y or project-based. Some projects described in
 explorations may also include short and sweet (or not sweet) side projects.
 
-[Mixing Consistency in a Programmable Storage System][mixing-consistency]
+| Type   | Post                                                                      |
+| ------ | ------------------------------------------------------------------------- |
+| Blog   | [Mixing Consistency in a Programmable Storage System][mixing-consistency] |
+| Blog   | [Diversifying Consistency in Ceph][diversify-consistency]                 |
+| Series | [Series - LDFI for Life][ldfi-for-life]                                    |
+| Series | [Series - Programmable Access Libraries][programmable-access-libs]        |
 
-[Diversifying Consistency in Ceph][diversify-consistency]
-
-[Series - Programmable Access Libraries][programmable-access-libs]
-
-[Series - LDFI for Life][ldfi-for-life]
 
 ### Working Groups and/or projects
 For things that aren't worked on solely by myself and that have a physical piece already, I'll
