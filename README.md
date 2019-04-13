@@ -63,7 +63,7 @@ date, simply go to this index: [reviews by date][reading-by-date].
 [diversify-consistency]:    blog/mixing-consistency/coalesced/diversifying-consistency-in-ceph.md
 [programmable-access-libs]: blog/programmable-access-libraries
 [ldfi-for-life]:             blog/ldfi-for-life
-[envoyage]:                 https://github.com/disorderlylabs/envoyage/blob/master/blog
+[envoyage]:                 https://disorderlylabs.github.io/envoyage
 
 
 <!-- navigational links -->
