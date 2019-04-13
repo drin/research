@@ -45,6 +45,7 @@ date, simply go to this index: [reviews by date][reading-by-date].
 #### Readings by Course
 
 ##### First Year &middot; Fall 2018 - Spring 2019
+
 | Year | Quarter     | Course                               |
 | ---- | ----------- | ------------------------------------ |
 | 1    | Fall 2018   | [CMPS 278 reviews][course-cmps278]   |
