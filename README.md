@@ -23,6 +23,16 @@ explorations may also include short and sweet (or not sweet) side projects.
 
 [Diversifying Consistency in Ceph][diversify-consistency]
 
+[Series - Programmable Access Libraries][programmable-access-libs]
+
+[Series - LDFI for Life][ldfi-for-life]
+
+### Working Groups and/or projects
+For things that aren't worked on solely by myself and that have a physical piece already, I'll
+list here.
+
+[Sidecar working group - Envoyage][envoyage]
+
 ### Readings
 This section will include paper reviews, paper presentation materials, and anything else that seems
 relatively similar in spirit.
@@ -46,23 +56,29 @@ date, simply go to this index: [reviews by date][reading-by-date].
     * [CMPS 290S reviews](readings/by-course/cmps290s/index.md)
 
 * Winter 2019
-    * [CMPS 201](readings/by-course/cmps201/index.md)
-    * CMPS 280L
-    * CMPS 280D
+    * [CMPS 280L][seminar-cmps280l]
 
 * Fall 2019
     * [CMPS 229][course-cmps229]
     * [CMPS 232][course-cmps232]
-    * CMPS 280D
+    * [CMPS 280O][seminar-cmps280o]
 
 <!-- misc links -->
 [mdbook]: https://rust-lang-nursery.github.io/mdBook/
 
 <!-- exploration links -->
-[mixing-consistency]: blog/mixing-consistency/coalesced/mixing-consistency-in-a-programmable-storage-system.md
-[diversify-consistency]: blog/mixing-consistency/coalesced/diversifying-consistency-in-ceph.md
+[mixing-consistency]:       blog/mixing-consistency/coalesced/mixing-consistency-in-a-programmable-storage-system.md
+[diversify-consistency]:    blog/mixing-consistency/coalesced/diversifying-consistency-in-ceph.md
+[programmable-access-libs]: blog/programmable-access-libraries/index.md
+[ldfi-for-life]:             blog/ldfi-for-life/index.md
+[envoyage]:                 https://github.com/disorderlylabs/envoyage/blob/master/blog/index.md
+
 
 <!-- navigational links -->
-[reading-by-date]: readings/by-date/index.md
-[course-cmps232]: readings/by-course/cmps232/index.md
-[course-cmps229]: readings/by-course/cmps229/index.md
+[reading-by-date]:  readings/by-date/index.md
+
+[course-cmps232]:   readings/by-course/cmps232/index.md
+[course-cmps229]:   readings/by-course/cmps229/index.md
+
+[seminar-cmps280o]: https://kohdmonkey.github.io/apl.spring19/
+[seminar-cmps280l]: readings/by-course/cmps280L/index.md
