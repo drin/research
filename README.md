@@ -1,19 +1,13 @@
-# Research Blog
-I am a 1st year PhD student in computer science, and I am interested in keeping my writings in an
-accessible, online format! 
-
-More about me [here](profile/index.md)!
+# [Research Blog](http://research.aldrinmontana.com) &middot; [Aldrin Montana](profile/index.md)
+I am currently a 1st year PhD student in computer science at UC Santa Cruz, and I am interested
+in writing frequently to make my thoughts and work available and transparent online!
 
 I will attempt to add new content as bite-sized blog posts, and every so often I will coalesce
 related posts into a separate "book" format (see [mdbook format][mdbook]). This README may not
-always be kept up to date, but I'll do my best :)
+always be kept up to date, but I'll do my best :) I am going to try separating content into:
+explorations, readings, and "books".
 
 ---
-## Content Overview
-This repository will hopefully contain a majority of blog/written descriptions of my research as I
-continue through my PhD. I am going to try separating content into: explorations, readings, and a
-"book".
-
 ### Explorations
 I thought "explorations" would be a nice name for a section containing extended blog posts, or
 series of blog posts for something research-y or project-based. Some projects described in
@@ -48,20 +42,17 @@ rest of the schedule will just be for the course readings.
 Eventually I'll keep some number of most recent readings/reviews, but for now, to see reviews by
 date, simply go to this index: [reviews by date][reading-by-date].
 
-### Readings by Course
+#### Readings by Course
 
-#### Fall 2018 to Spring 2019 (1st year)
-* Fall 2018
-    * [CMPS 278 reviews](readings/by-course/cmps278/index.md)
-    * [CMPS 290S reviews](readings/by-course/cmps290s/index.md)
-
-* Winter 2019
-    * [CMPS 280L][seminar-cmps280l]
-
-* Fall 2019
-    * [CMPS 229][course-cmps229]
-    * [CMPS 232][course-cmps232]
-    * [CMPS 280O][seminar-cmps280o]
+##### First Year &middot; Fall 2018 - Spring 2019
+| Year | Quarter     | Course                               |
+| ---- | ----------- | ------------------------------------ |
+| 1    | Fall 2018   | [CMPS 278 reviews][course-cmps278]   |
+| 1    | Fall 2018   | [CMPS 290S reviews][course-cmps290s] |
+| 1    | Winter 2019 | [CMPS 280L][seminar-cmps280l]        |
+| 1    | Spring 2019 | [CMPS 229][course-cmps229]           |
+| 1    | Spring 2019 | [CMPS 232][course-cmps232]           |
+| 1    | Spring 2019 | [CMPS 280O][seminar-cmps280o]        |
 
 <!-- misc links -->
 [mdbook]: https://rust-lang-nursery.github.io/mdBook/
@@ -77,6 +68,8 @@ date, simply go to this index: [reviews by date][reading-by-date].
 <!-- navigational links -->
 [reading-by-date]:  readings/by-date/index.md
 
+[course-cmps278]:   readings/by-course/cmps278/index.md
+[course-cmps290s]:  readings/by-course/cmps290s/index.md
 [course-cmps232]:   readings/by-course/cmps232/index.md
 [course-cmps229]:   readings/by-course/cmps229/index.md
 
