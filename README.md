@@ -1,4 +1,4 @@
-# [Research Blog](http://research.aldrinmontana.com) &middot; [Aldrin Montana](profile/index.md)
+# [Research Blog](http://research.aldrinmontana.com) &middot; [Aldrin Montana](profile)
 I am currently a 1st year PhD student in computer science at UC Santa Cruz, and I am interested
 in writing frequently to make my thoughts and work available and transparent online!
 
@@ -61,18 +61,18 @@ date, simply go to this index: [reviews by date][reading-by-date].
 <!-- exploration links -->
 [mixing-consistency]:       blog/mixing-consistency/coalesced/mixing-consistency-in-a-programmable-storage-system.md
 [diversify-consistency]:    blog/mixing-consistency/coalesced/diversifying-consistency-in-ceph.md
-[programmable-access-libs]: blog/programmable-access-libraries/index.md
-[ldfi-for-life]:             blog/ldfi-for-life/index.md
-[envoyage]:                 https://github.com/disorderlylabs/envoyage/blob/master/blog/index.md
+[programmable-access-libs]: blog/programmable-access-libraries
+[ldfi-for-life]:             blog/ldfi-for-life
+[envoyage]:                 https://github.com/disorderlylabs/envoyage/blob/master/blog
 
 
 <!-- navigational links -->
-[reading-by-date]:  readings/by-date/index.md
+[reading-by-date]:  readings/by-date
 
-[course-cmps278]:   readings/by-course/cmps278/index.md
-[course-cmps290s]:  readings/by-course/cmps290s/index.md
-[course-cmps232]:   readings/by-course/cmps232/index.md
-[course-cmps229]:   readings/by-course/cmps229/index.md
+[course-cmps278]:   readings/by-course/cmps278
+[course-cmps290s]:  readings/by-course/cmps290s
+[course-cmps232]:   readings/by-course/cmps232
+[course-cmps229]:   readings/by-course/cmps229
 
 [seminar-cmps280o]: https://kohdmonkey.github.io/apl.spring19/
-[seminar-cmps280l]: readings/by-course/cmps280L/index.md
+[seminar-cmps280l]: readings/by-course/cmps280L
