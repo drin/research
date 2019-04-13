@@ -10,6 +10,6 @@ contribution (I don't think).
 
 ## Blog Posts
 
-| Date       | Day | Type   | Description                                                |
-| ---------- | --- | ------ | ---------------------------------------------------------- |
-| 2019.04.10 | Wed | Status | [First status of Spring 2019](status/2019.04.10.status.md) |
+| Date       | Day | Type   | Description                                         |
+| ---------- | --- | ------ | --------------------------------------------------- |
+| 2019.04.10 | Wed | Status | [First status of Spring 2019](2019.04.10.status.md) |
