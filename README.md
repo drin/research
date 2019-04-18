@@ -13,7 +13,7 @@ Here is a table providing an overview of the various sections, or "explorations"
 or series of blog posts for something research-y or project-based. Some of the series below may also include
 short and sweet (or not sweet) side projects.
 
-| Type   | Post, Section, Exploration, Working Group, or Project                                             |
+| Type   | Name                                                                                              |
 | ------ | ------------------------------------------------------------------------------------------------- |
 | Blog   | [Mixing Consistency over programmable storage](blog/programmable-storage/mixing-consistency.md)   |
 | Blog   | [Diversifying Consistency in Ceph](blog/programmable-storage/diversifying-consistency-in-ceph.md) |
