@@ -1,8 +1,11 @@
 [book]
 authors = ["Aldrin"]
 multilingual = false
-src = "blog-content"
+src = "book-content"
 title = "Research Blog"
 
 [build]
-build-dir = "html"
+build-dir = "book-html"
+
+[output.html]
+mathjax-support = true
