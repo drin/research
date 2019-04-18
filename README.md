@@ -16,7 +16,7 @@ explorations may also include short and sweet (or not sweet) side projects.
 | Type   | Post                                                                      |
 | ------ | ------------------------------------------------------------------------- |
 | Blog   | [Mixing Consistency in a Programmable Storage System][mixing-consistency] |
-| Blog   | [Diversifying Consistency in Ceph](blog/mixing-consistency/coalesced/diversifying-consistency-in-ceph) |
+| Blog   | [Diversifying Consistency in Ceph](blog/mixing-consistency/coalesced/diversifying-consistency-in-ceph.md) |
 | Series | [Series - LDFI for Life][ldfi-for-life]                                    |
 | Series | [Series - Programmable Access Libraries][programmable-access-libs]        |
 
