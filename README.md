@@ -16,7 +16,7 @@ explorations may also include short and sweet (or not sweet) side projects.
 | Type   | Post                                                                      |
 | ------ | ------------------------------------------------------------------------- |
 | Blog   | [Mixing Consistency in a Programmable Storage System][mixing-consistency] |
-| Blog   | [Diversifying Consistency in Ceph][diversify-consistency]                 |
+| Blog   | [Diversifying Consistency in Ceph](blog/mixing-consistency/coalesced/diversifying-consistency-in-ceph) |
 | Series | [Series - LDFI for Life][ldfi-for-life]                                    |
 | Series | [Series - Programmable Access Libraries][programmable-access-libs]        |
 
@@ -59,8 +59,8 @@ date, simply go to this index: [reviews by date][reading-by-date].
 [mdbook]: https://rust-lang-nursery.github.io/mdBook/
 
 <!-- exploration links -->
-[mixing-consistency]:       blog/mixing-consistency/coalesced/mixing-consistency-in-a-programmable-storage-system.md
-[diversify-consistency]:    blog/mixing-consistency/coalesced/diversifying-consistency-in-ceph.md
+[mixing-consistency]:       blog/mixing-consistency/coalesced/mixing-consistency-in-a-programmable-storage-system
+[diversify-consistency]:    blog/mixing-consistency/coalesced/diversifying-consistency-in-ceph
 [programmable-access-libs]: blog/programmable-access-libraries
 [ldfi-for-life]:             blog/ldfi-for-life
 [envoyage]:                 https://disorderlylabs.github.io/envoyage
