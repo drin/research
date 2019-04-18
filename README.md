@@ -33,17 +33,17 @@ readings were done, just for convenience. At the top of each schedule, I will ha
 information on my paper presentations, which will include links to my presentation slides. Then the
 rest of the schedule will just be for the course readings.
 
+#### Readings by Date
+Eventually I'll keep some number of most recent readings/reviews, but for now, to see reviews by
+date, simply go to this index: [reviews by date][reading-by-date]. This will be updated periodically,
+when I need to procrastinate important work or when I feel like it should be updated.
+
 #### Readings by Group
 
 | Principal Investigators (PIs)    | Group                                               |
 | -------------------------------- | --------------------------------------------------- |
 | Peter Alvaro                     | [Disorderly Labs][group-disorderly]                 |
 | Peter Alvaro and Carlos Maltzahn | [Declarative Programmable Storage][group-declstore] |
-
-#### Readings by Date
-Eventually I'll keep some number of most recent readings/reviews, but for now, to see reviews by
-date, simply go to this index: [reviews by date][reading-by-date]. This will be updated periodically,
-when I need to procrastinate important work or when I feel like it should be updated.
 
 #### Readings by Course
 
