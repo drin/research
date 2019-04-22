@@ -41,7 +41,7 @@
 | 19/05/01 | Wed | Guest/Sub/No Class                                  |                                  |
 | 19/05/03 | Fri | [Lineage-driven Fault Injection][ldfi]               | [review](./2019.05.03.review.md) |
 
-## Week 6 (Here and below is still in flux)
+## Week 6
 
 | Date     | Day | Title (and Paper Link)                                           | Review                           |
 | -------- | --- | ---------------------------------------------------------------- | -------------------------------- |
