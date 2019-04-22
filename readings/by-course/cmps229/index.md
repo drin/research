@@ -28,12 +28,12 @@
 
 ## Week 4
 
-| Date     | Day | Title (and Paper Link) | Review  |
-| -------- | --- | ---------------------- | ------- |
-| 19/04/23 | Tue |                        |         |
-| 19/04/23 | Tue |                        |         |
-| 19/04/25 | Thu |                        |         |
-| 19/04/25 | Thu |                        |         |
+| Date     | Day | Title (and Paper Link)                               | Review                                   |
+| -------- | --- | ---------------------------------------------------- | ---------------------------------------- |
+| 19/04/23 | Tue | [Chord: Scalable Peer-to-Peer Lookup Service][chord] | [review](2019.04.23.chord.review.md)     |
+| 19/04/23 | Tue | [Ivy: a peer-to-peer file system][ivy]               | [review](2019.04.23.ivy.review.md)       |
+| 19/04/25 | Thu | [Virtualizing Disk Performance][virtual-disk-perf]   | [review](2019.04.25.disk-perf.review.md) |
+| 19/04/25 | Thu | [Horizon: Deadline-driven Disk Management][horizon]  | [review](2019.04.25.horizon.review.md)   |
 
 ## Week 5
 
@@ -91,18 +91,23 @@
 
 
 <!-- Paper Links -->
-[tame-variability]: https://www.usenix.org/node/222562
-[fast-fs-unix]:     https://people.eecs.berkeley.edu/~brewer/cs262/FFS.pdf
-[log-structure-fs]: https://dl.acm.org/citation.cfm?id=146943
-[measure-fs]:       https://people.eecs.berkeley.edu/~prabal/resources/osprelim/BHK+91.pdf
-[fs-workloads]:     https://www.microsoft.com/en-us/research/wp-content/uploads/2000/06/fs-workloads.pdf
+[tame-variability]:  https://www.usenix.org/node/222562
+[fast-fs-unix]:      https://people.eecs.berkeley.edu/~brewer/cs262/FFS.pdf
+[log-structure-fs]:  https://dl.acm.org/citation.cfm?id=146943
+[measure-fs]:        https://people.eecs.berkeley.edu/~prabal/resources/osprelim/BHK+91.pdf
+[fs-workloads]:      https://www.microsoft.com/en-us/research/wp-content/uploads/2000/06/fs-workloads.pdf
 
-[ssd-performance]:  https://www.usenix.org/legacy/event/usenix08/tech/full_papers/agrawal/agrawal.pdf
-[flash-fs]:         https://www.usenix.org/system/files/conference/fast15/fast15-paper-lee.pdf
-[taip-raid]:        https://dl.acm.org/citation.cfm?id=185517
-[autoraid]:         https://people.eecs.berkeley.edu/~brewer/cs262/AutoRAID.pdf
+[ssd-performance]:   https://www.usenix.org/legacy/event/usenix08/tech/full_papers/agrawal/agrawal.pdf
+[flash-fs]:          https://www.usenix.org/system/files/conference/fast15/fast15-paper-lee.pdf
+[taip-raid]:         https://dl.acm.org/citation.cfm?id=185517
+[autoraid]:          https://people.eecs.berkeley.edu/~brewer/cs262/AutoRAID.pdf
 
-[wafl]:             https://www.usenix.org/conference/usenix-winter-1994-technical-conference/file-system-design-nfs-file-server-appliance
-[zebra]:            https://dl.acm.org/citation.cfm?id=210131
-[google-fs]:        https://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf
-[ceph]:             https://www.usenix.org/legacy/event/osdi06/tech/full_papers/weil/weil.pdf
+[wafl]:              https://www.usenix.org/conference/usenix-winter-1994-technical-conference/file-system-design-nfs-file-server-appliance
+[zebra]:             https://dl.acm.org/citation.cfm?id=210131
+[google-fs]:         https://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf
+[ceph]:              https://www.usenix.org/legacy/event/osdi06/tech/full_papers/weil/weil.pdf
+
+[chord]:             https://pdos.csail.mit.edu/papers/chord:sigcomm01/chord_sigcomm.pdf
+[ivy]:               https://dl.acm.org/citation.cfm?id=844132
+[virtual-disk-perf]: https://ieeexplore.ieee.org/document/4550803
+[horizon]:           https://dl.acm.org/citation.cfm?doid=1851476.1851478
