@@ -4,23 +4,26 @@
 
 ## (Paper Title)
 
-> Overall Evaluation
+#### Relevant Readings
 
 
-> Strong Points:
+#### Overall Evaluation
+
+
+#### Strong Points
 
 1.
 2.
 3.
 
-> Weak Points:
+#### Weak Points
 
 1.
 2.
 3.
   
-> Questions Raised:
+#### Questions Raised
 
 
-> Research Connections:
+#### Research Connections
 
