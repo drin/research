@@ -27,27 +27,28 @@
 
 ## Week 4
 
-| Date     | Day | Title (and Paper Link)                                         | Review                           |
-| -------- | --- | -------------------------------------------------------------- | -------------------------------- |
+| Date     | Day | Title (and Paper Link)                                           | Review                           |
+| -------- | --- | ---------------------------------------------------------------- | -------------------------------- |
 | 19/04/22 | Mon | [Managing update conflicts in Bayou][bayou-conflicts]            | [review](./2019.04.22.review.md) |
-| 19/04/24 | Wed |                                                                | [review](./2019.04.24.review.md) |
-| 19/04/26 | Fri | [Practical Byzantine Fault Tolerance][byzantine-fault]         | [review](./2019.04.26.review.md) |
+| 19/04/24 | Wed | [Towards A Cloud Computing Research Agenda][toward-cloud-agenda] | [review](./2019.04.24.review.md) |
+| 19/04/26 | Fri | [Practical Byzantine Fault Tolerance][byzantine-fault]           | [review](./2019.04.26.review.md) |
 
 ## Week 5
 
 | Date     | Day | Title (and Paper Link)                              | Review                           |
 | -------- | --- | --------------------------------------------------- | -------------------------------- |
-| 19/04/29 | Mon | Lightning Talks                                     |                                  |
+| 19/04/29 | Mon | [Lineage-driven Fault Injection][ldfi]              | [review](./2019.05.03.review.md) |
 | 19/05/01 | Wed | Guest/Sub/No Class                                  |                                  |
-| 19/05/03 | Fri | [Lineage-driven Fault Injection][ldfi]               | [review](./2019.05.03.review.md) |
+| 19/05/03 | Fri | Lightning Talks                                     |                                  |
+
 
 ## Week 6
 
 | Date     | Day | Title (and Paper Link)                                           | Review                           |
 | -------- | --- | ---------------------------------------------------------------- | -------------------------------- |
-| 19/05/06 | Mon | [Reasoning About Knowledge... ][knowledge-analysis]              | [review](./2019.05.06.review.md) |
-| 19/05/08 | Wed | [Consistent Transactions with Inconsistent Replication][tapir]   | [review](./2019.05.08.review.md) |
-| 19/05/10 | Fri | [Towards A Cloud Computing Research Agenda][toward-cloud-agenda] | [review](./2019.05.10.review.md) |
+| 19/05/06 | Mon | Lightning Talks                                                  |                                  |
+| 19/05/08 | Wed | [Reasoning About Knowledge... ][knowledge-analysis]              | [review](./2019.05.08.review.md) |
+| 19/05/10 | Fri | [Consistent Transactions with Inconsistent Replication][tapir]   | [review](./2019.05.10.review.md) |
 
 ## Week 7
 
