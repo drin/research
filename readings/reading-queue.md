@@ -32,6 +32,8 @@ or to make suggestions.
 * [LiquidTypes](http://goto.ucsd.edu/~rjhala/liquid/liquid_types.pdf)
 * [Proactive Data Containers](https://sdm.lbl.gov/~sbyna/research/papers/201805_CCGrid2018_PDCsys.pdf)
 * [Pre-mRNA splicing during transcription in a mammalian system](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3154077/pdf/nihms286954.pdf)
+* [Nanopore sequencing and assembly of a human genome with ultra-long reads](https://www.nature.com/articles/nbt.4060)
+* [Orthologs and Paralogs - We Need to Get it Right](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC138949/)
 
 <!-- Resources -->
 [lab-taylor]:    https://www.ics.uci.edu/~taylor/
