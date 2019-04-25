@@ -34,6 +34,9 @@ or to make suggestions.
 * [Pre-mRNA splicing during transcription in a mammalian system](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3154077/pdf/nihms286954.pdf)
 * [Nanopore sequencing and assembly of a human genome with ultra-long reads](https://www.nature.com/articles/nbt.4060)
 * [Orthologs and Paralogs - We Need to Get it Right](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC138949/)
+* [Liquid Haskell Tutorial](http://ucsd-progsys.github.io/liquidhaskell-tutorial/)
+* [HDF5 Data Types](https://support.hdfgroup.org/HDF5/doc1.6/UG/11_Datatypes.html)
+* [What is PL Research and how is it useful?](http://www.pl-enthusiast.net/2015/05/27/what-is-pl-research-and-how-is-it-useful/)
 
 <!-- Resources -->
 [lab-taylor]:    https://www.ics.uci.edu/~taylor/
