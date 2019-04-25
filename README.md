@@ -33,6 +33,9 @@ readings were done, just for convenience. At the top of each schedule, I will ha
 information on my paper presentations, which will include links to my presentation slides. Then the
 rest of the schedule will just be for the course readings.
 
+#### [Reading Queue](readings/reading-queue.md)
+My queue of readings to do
+
 #### Readings by Date
 Eventually I'll keep some number of most recent readings/reviews, but for now, to see reviews by
 date, simply go to this index: [reviews by date][reading-by-date]. This will be updated periodically,
