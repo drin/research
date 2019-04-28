@@ -95,7 +95,7 @@
 [paxos-simple]:         http://research.microsoft.com/en-us/um/people/lamport/pubs/paxos-simple.pdf
 [statemachine-repl]:    https://www.cs.cornell.edu/fbs/publications/SMSurvey.pdf
 [understand-consensus]: https://ramcloud.stanford.edu/wiki/download/attachments/11370504/raft.pdf
-[ldfi]:                  https://people.eecs.berkeley.edu/~palvaro/molly.pdf
+[ldfi]:                  https://people.ucsc.edu/~palvaro/molly.pdf
 [detect-config-errors]:  https://www.usenix.org/system/files/conference/osdi16/osdi16-xu.pdf
 [geo-repl-semantics]:   https://www.usenix.org/system/files/conference/nsdi13/nsdi13-final149.pdf
 [tapir]:                https://syslab.cs.washington.edu/papers/tapir-tr14.pdf
