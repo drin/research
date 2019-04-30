@@ -31,18 +31,18 @@
 | Date     | Day | Title (and Paper Link)                               | Review                                   |
 | -------- | --- | ---------------------------------------------------- | ---------------------------------------- |
 | 19/04/23 | Tue | [Chord: Scalable Peer-to-Peer Lookup Service][chord] | [review](2019.04.23.chord.review.md)     |
-| 19/04/23 | Tue | [Ivy: a peer-to-peer file system][ivy]               | [review](2019.04.23.ivy.review.md)       |
+| 19/04/23 | Tue | [Ivy: a peer-to-peer file system][ivy]                | [review](2019.04.23.ivy.review.md)       |
 | 19/04/25 | Thu | [Virtualizing Disk Performance][virtual-disk-perf]   | [review](2019.04.25.disk-perf.review.md) |
 | 19/04/25 | Thu | [Horizon: Deadline-driven Disk Management][horizon]  | [review](2019.04.25.horizon.review.md)   |
 
 ## Week 5
 
-| Date     | Day | Title (and Paper Link) | Review  |
-| -------- | --- | ---------------------- | ------- |
-| 19/04/30 | Tue |                        |         |
-| 19/04/30 | Tue |                        |         |
-| 19/05/02 | Thu |                        |         |
-| 19/05/02 | Thu |                        |         |
+| Date     | Day | Title (and Paper Link)                                  | Review                                 |
+| -------- | --- | ------------------------------------------------------- | -------------------------------------- |
+| 19/04/30 | Tue | [Corfu: A Shared Log Design for Flash Clusters][corfu]  | [review](2019.04.30.corfu.review.md)   |
+| 19/04/30 | Tue | [WiscKey: Separating Keys from Values in SSDs][wisckey] | [review](2019.04.30.wisckey.review.md) |
+| 19/05/02 | Thu |                                                         |                                        |
+| 19/05/02 | Thu |                                                         |                                        |
 
 ## Week 6
 
@@ -111,3 +111,6 @@
 [ivy]:               https://dl.acm.org/citation.cfm?id=844132
 [virtual-disk-perf]: https://ieeexplore.ieee.org/document/4550803
 [horizon]:           https://dl.acm.org/citation.cfm?doid=1851476.1851478
+
+[corfu]:             http://www.cs.yale.edu/homes/mahesh/papers/corfumain-final.pdf
+[wisckey]:           https://www.usenix.org/system/files/conference/fast16/fast16-papers-lu.pdf
