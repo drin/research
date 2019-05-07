@@ -46,12 +46,12 @@
 
 ## Week 6
 
-| Date     | Day | Title (and Paper Link) | Review  |
-| -------- | --- | ---------------------- | ------- |
-| 19/05/07 | Tue |                        |         |
-| 19/05/07 | Tue |                        |         |
-| 19/05/09 | Thu |                        |         |
-| 19/05/09 | Thu |                        |         |
+| Date     | Day | Title (and Paper Link)                                | Review                                    |
+| -------- | --- | ----------------------------------------------------- | ----------------------------------------- |
+| 19/05/07 | Tue | [Avoiding the Disk Bottleneck][disk-bottleneck]       | [review](2019.05.07.bottleneck.review.md) |
+| 19/05/07 | Tue | [A Study of Practical Deduplication][practical-dedup] | [review](2019.05.07.dedup.review.md)      |
+| 19/05/09 | Thu |                                                       |                                           |
+| 19/05/09 | Thu |                                                       |                                           |
 
 ## Week 7
 
@@ -114,3 +114,6 @@
 
 [corfu]:             http://www.cs.yale.edu/homes/mahesh/papers/corfumain-final.pdf
 [wisckey]:           https://www.usenix.org/system/files/conference/fast16/fast16-papers-lu.pdf
+
+[disk-bottleneck]:   https://www.usenix.org/legacy/event/fast08/tech/full_papers/zhu/zhu.pdf
+[practical-dedup]:   https://www.usenix.org/legacy/event/fast11/tech/full_papers/Meyer.pdf
