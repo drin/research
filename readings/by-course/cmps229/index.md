@@ -46,12 +46,13 @@
 
 ## Week 6
 
-| Date     | Day | Title (and Paper Link)                                | Review                                    |
-| -------- | --- | ----------------------------------------------------- | ----------------------------------------- |
-| 19/05/07 | Tue | [Avoiding the Disk Bottleneck][disk-bottleneck]       | [review](2019.05.07.bottleneck.review.md) |
-| 19/05/07 | Tue | [A Study of Practical Deduplication][practical-dedup] | [review](2019.05.07.dedup.review.md)      |
-| 19/05/09 | Thu |                                                       |                                           |
-| 19/05/09 | Thu |                                                       |                                           |
+| Date     | Day | Title (and Paper Link)                                     | Review                                     |
+| -------- | --- | ---------------------------------------------------------- | ------------------------------------------ |
+| 19/05/07 | Tue | [Avoiding the Disk Bottleneck][disk-bottleneck]            | [review](2019.05.07.bottleneck.review.md)  |
+| 19/05/07 | Tue | [A Study of Practical Deduplication][practical-dedup]      | [review](2019.05.07.dedup.review.md)       |
+| 19/05/09 | Thu | [Malacology: A Programmable Storage System][malacology]    | [review](2019.05.09.malacology.review.md)  |
+| 19/05/09 | Thu | [DeclStore: Layering is for the Faint of Heart][declstore] | [review](2019.05.09.declstore.review.md)   |
+| 19/05/09 | Thu | [Programmable Storage][dissertation-noah]                  | [review](2019.05.09.watkins-phd.review.md) |
 
 ## Week 7
 
@@ -117,3 +118,7 @@
 
 [disk-bottleneck]:   https://www.usenix.org/legacy/event/fast08/tech/full_papers/zhu/zhu.pdf
 [practical-dedup]:   https://www.usenix.org/legacy/event/fast11/tech/full_papers/Meyer.pdf
+[malacology]:        https://dl.acm.org/citation.cfm?id=3064208
+[declstore]:         https://www.usenix.org/conference/hotstorage17/program/presentation/watkins
+
+[dissertation-noah]: https://escholarship.org/uc/item/72n6c5kq
