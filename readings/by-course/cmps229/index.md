@@ -56,21 +56,21 @@
 
 ## Week 7
 
-| Date     | Day | Title (and Paper Link) | Review  |
-| -------- | --- | ---------------------- | ------- |
-| 19/05/14 | Tue |                        |         |
-| 19/05/14 | Tue |                        |         |
-| 19/05/16 | Thu |                        |         |
-| 19/05/16 | Thu |                        |         |
+| Date     | Day | Title (and Paper Link)                                             | Review                                  |
+| -------- | --- | ------------------------------------------------------------------ | --------------------------------------- |
+| 19/05/14 | Tue | [Too Big to Eat][too-big]                                          | [review](2019.05.14.toobig.review.md)   |
+| 19/05/14 | Tue | [Amazon Redshift Spectrum--No Loading Required][redshift-spectrum] | [review](2019.05.14.redshift.review.md) |
+| 19/05/16 | Thu | Strike                                                             |                                         |
 
 ## Week 8
 
-| Date     | Day | Title (and Paper Link) | Review  |
-| -------- | --- | ---------------------- | ------- |
-| 19/05/21 | Tue |                        |         |
-| 19/05/21 | Tue |                        |         |
-| 19/05/23 | Thu |                        |         |
-| 19/05/23 | Thu |                        |         |
+| Date     | Day | Title (and Paper Link)                                                        | Review                                |
+| -------- | --- | ----------------------------------------------------------------------------- | ------------------------------------- |
+| 19/05/21 | Tue | [Mantle: Programmable Metadata Load Balancer][mantle]                         | [review](2019.05.21.mantle.review.md) |
+| 19/05/21 | Tue | [Cudele: Programmable Consistency and Durability][cudele]                     | [review](2019.05.21.cudele.review.md) |
+| 19/05/21 | Tue | [Scalable, Global Namespaces with Programmable Storage][dissertation-michael] | [review](2019.05.21.cudele.review.md) |
+| 19/05/23 | Thu |                                                                               |                                       |
+| 19/05/23 | Thu |                                                                               |                                       |
 
 ## Week 9
 
@@ -121,4 +121,11 @@
 [malacology]:        https://dl.acm.org/citation.cfm?id=3064208
 [declstore]:         https://www.usenix.org/conference/hotstorage17/program/presentation/watkins
 
-[dissertation-noah]: https://escholarship.org/uc/item/72n6c5kq
+[too-big]:           http://www.eurecom.fr/en/publication/5210/download/data-publi-5210....pdf
+[redshift-spectrum]: https://aws.amazon.com/blogs/big-data/amazon-redshift-spectrum-extends-data-warehousing-out-to-exabytes-no-loading-required/
+
+[mantle]:            https://users.soe.ucsc.edu/~msevilla/papers/sevilla-sc15.pdf
+[cudele]:            https://users.soe.ucsc.edu/~msevilla/papers/sevilla-ipdps18.pdf
+
+[dissertation-noah]:    https://escholarship.org/uc/item/72n6c5kq
+[dissertation-michael]: https://escholarship.org/uc/item/3wd0x3b4
