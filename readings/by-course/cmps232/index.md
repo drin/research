@@ -44,17 +44,17 @@
 
 ## Week 6
 
-| Date     | Day | Title (and Paper Link)                              | Review                           |
-| -------- | --- | --------------------------------------------------- | -------------------------------- |
-| 19/05/06 | Mon | Lightning Talks                                     |                                  |
-| 19/05/08 | Wed | Lightning Talks                                     |                                  |
-| 19/05/10 | Fri | [Reasoning About Knowledge... ][knowledge-analysis] | [review](./2019.05.10.review.md) |
+| Date     | Day | Title (and Paper Link)                                         | Review                           |
+| -------- | --- | -------------------------------------------------------------- | -------------------------------- |
+| 19/05/06 | Mon | Lightning Talks                                                |                                  |
+| 19/05/08 | Wed | Lightning Talks                                                |                                  |
+| 19/05/10 | Fri | [Consistent Transactions with Inconsistent Replication][tapir] | [review](./2019.05.10.review.md) |
 
 ## Week 7
 
 | Date     | Day | Title (and Paper Link)                                         | Review                           |
 | -------- | --- | -------------------------------------------------------------- | -------------------------------- |
-| 19/05/13 | Mon | [Consistent Transactions with Inconsistent Replication][tapir] | [review](./2019.05.13.review.md) |
+| 19/05/13 | Mon | [Reasoning About Knowledge... ][knowledge-analysis]            | [review](./2019.05.13.review.md) |
 | 19/05/15 | Wed | [Sinfonia][sinfonia]                                           | [review](./2019.05.15.review.md) |
 | 19/05/17 | Fri | [MapReduce][mapreduce]                                         | [review](./2019.05.17.review.md) |
 
@@ -70,9 +70,9 @@
 
 | Date     | Day | Title (and Paper Link)                                   | Review                           |
 | -------- | --- | -------------------------------------------------------- | -------------------------------- |
-| 19/05/27 | Mon | [Maelstrom: Mitigating Data-Center Disasters][maelstrom] | [review](./2019.05.27.review.md) |
-| 19/05/29 | Wed | [Canopy: End-to-End Performance Tracing][canopy]         | [review](./2019.05.29.review.md) |
-| 19/05/31 | Fri | [Lineage-driven Fault Injection?][ldfi]                  | [review](./2019.05.31.review.md) |
+| 19/05/27 | Mon | Memorial Day                                             |                                  |
+| 19/05/29 | Wed | [Maelstrom: Mitigating Data-Center Disasters][maelstrom] | [review](./2019.05.29.review.md) |
+| 19/05/31 | Fri | [Canopy: End-to-End Performance Tracing][canopy]         | [review](./2019.05.31.review.md) |
 
 ## Week 10
 
@@ -131,4 +131,5 @@
 [Just Say NO to Paxos Overhead]                  [no-paxos-overhead]
 [Coordination Avoidance in Database Systems]     [coord-avoid-dbms]
 [Pensieve: Non-Intrusive Failure Reproduction]   [pensieve]
+ [Lineage-driven Fault Injection?][ldfi]                  | [review](./2019.05.31.review.md) |
 -->
