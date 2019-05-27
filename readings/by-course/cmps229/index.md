@@ -76,10 +76,10 @@
 
 | Date     | Day | Title (and Paper Link)                                               | Review                                    |
 | -------- | --- | -------------------------------------------------------------------- | ----------------------------------------- |
-| 19/05/28 | Tue | [Packing and Indexing in Cloud File Systems][pack-index]             | [review][2019.05.28.pack-index.review.md] |
-| 19/05/28 | Tue | [Tachyon: Memory Speed Storage for Cluster Computing][tachyon]       | [review][2019.05.28.tachyon.review.md]    |
-| 19/05/30 | Thu | [PLFS: A Checkpoint Filesystem for Parallel Applications][plfs]      | [review][2019.05.30.plfs.review.md]       |
-| 19/05/30 | Thu | [Valmar: High-bandwidth real-time streaming data management][valmar] | [review][2019.05.30.valmar.review.md]     |
+| 19/05/28 | Tue | [Packing and Indexing in Cloud File Systems][pack-index]             | [review](2019.05.28.pack-index.review.md) |
+| 19/05/28 | Tue | [Tachyon: Memory Speed Storage for Cluster Computing][tachyon]       | [review](2019.05.28.tachyon.review.md)    |
+| 19/05/30 | Thu | [PLFS: A Checkpoint Filesystem for Parallel Applications][plfs]      | [review](2019.05.30.plfs.review.md)       |
+| 19/05/30 | Thu | [Valmar: High-bandwidth real-time streaming data management][valmar] | [review](2019.05.30.valmar.review.md)     |
 
 ## Week 10
 
