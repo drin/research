@@ -69,17 +69,17 @@
 | 19/05/21 | Tue | [Mantle: Programmable Metadata Load Balancer][mantle]                         | [review](2019.05.21.mantle.review.md) |
 | 19/05/21 | Tue | [Cudele: Programmable Consistency and Durability][cudele]                     | [review](2019.05.21.cudele.review.md) |
 | 19/05/21 | Tue | [Scalable, Global Namespaces with Programmable Storage][dissertation-michael] | [review](2019.05.21.cudele.review.md) |
-| 19/05/23 | Thu |                                                                               |                                       |
-| 19/05/23 | Thu |                                                                               |                                       |
+| 19/05/23 | Thu | [Dynamo: amazon's highly available key-value store][dynamo]                   |                                       |
+| 19/05/23 | Thu | [Comet: An Active, Distributed Key-Value Store][comet]                        |                                       |
 
 ## Week 9
 
-| Date     | Day | Title (and Paper Link) | Review  |
-| -------- | --- | ---------------------- | ------- |
-| 19/05/28 | Tue |                        |         |
-| 19/05/28 | Tue |                        |         |
-| 19/05/30 | Thu |                        |         |
-| 19/05/30 | Thu |                        |         |
+| Date     | Day | Title (and Paper Link)                                               | Review                                    |
+| -------- | --- | -------------------------------------------------------------------- | ----------------------------------------- |
+| 19/05/28 | Tue | [Packing and Indexing in Cloud File Systems][pack-index]             | [review][2019.05.28.pack-index.review.md] |
+| 19/05/28 | Tue | [Tachyon: Memory Speed Storage for Cluster Computing][tachyon]       | [review][2019.05.28.tachyon.review.md]    |
+| 19/05/30 | Thu | [PLFS: A Checkpoint Filesystem for Parallel Applications][plfs]      | [review][2019.05.30.plfs.review.md]       |
+| 19/05/30 | Thu | [Valmar: High-bandwidth real-time streaming data management][valmar] | [review][2019.05.30.valmar.review.md]     |
 
 ## Week 10
 
@@ -129,3 +129,11 @@
 
 [dissertation-noah]:    https://escholarship.org/uc/item/72n6c5kq
 [dissertation-michael]: https://escholarship.org/uc/item/3wd0x3b4
+
+[dynamo]:            https://dl.acm.org/citation.cfm?id=1294281
+[comet]:             https://vanish.cs.washington.edu/pubs/osdi2010comet.pdf
+
+[pack-index]:        http://www.pdl.cmu.edu/PDL-FTP/CloudComputing/CMU-PDL-17-105.pdf
+[tachyon]:           https://people.csail.mit.edu/matei/papers/2014/socc_tachyon.pdf
+[plfs]:              http://www.pdl.cmu.edu/PDL-FTP/PDSI/plfs.pdf
+[valmar]:            https://ieeexplore.ieee.org/document/6232387
