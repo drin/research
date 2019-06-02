@@ -16,6 +16,7 @@ or to make suggestions.
 * [Albis](https://www.usenix.org/conference/atc18/presentation/trivedi)
 * [Gene Set Enrichment Analysis](https://www.pnas.org/content/pnas/102/43/15545.full.pdf)
 * [Chromium Single Cell 3' Reagent Kits V3](https://assets.ctfassets.net/an68im79xiti/57TK5WCA2Qw048OWkys080/cb8bc03b7bd0303fd385a3832e3337bd/CG000185_ChromiumSingleCell3__FeatureBarcode_CellSurfaceProtein_Rev_B.pdf)
+* [Technology and Biology of Single-Cell RNA Sequencing](https://www.cell.com/action/showPdf?pii=S1097-2765%2815%2900261-0)
 
 ## The Structured Queue
 
