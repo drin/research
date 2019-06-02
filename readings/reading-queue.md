@@ -8,6 +8,15 @@ or to make suggestions.
 
     Note: there are no guarantees of these readings being scheduled.
 
+## On-deck (1-2 week horizon)
+
+* [Nanopore sequencing and assembly of a human genome with ultra-long reads](https://www.nature.com/articles/nbt.4060)
+* http://cole-trapnell-lab.github.io/monocle-release/docs/#theory-behind-monocle
+* [massively parallel... profiling of single cells](https://www.nature.com/articles/ncomms14049.pdf)
+* [Albis](https://www.usenix.org/conference/atc18/presentation/trivedi)
+* [Gene Set Enrichment Analysis](https://www.pnas.org/content/pnas/102/43/15545.full.pdf)
+* [Chromium Single Cell 3' Reagent Kits V3](https://assets.ctfassets.net/an68im79xiti/57TK5WCA2Qw048OWkys080/cb8bc03b7bd0303fd385a3832e3337bd/CG000185_ChromiumSingleCell3__FeatureBarcode_CellSurfaceProtein_Rev_B.pdf)
+
 ## The Structured Queue
 
 | Topic        | Type         | First Author      | Research Lab                            | Reading                                              | Short Description                  |
@@ -32,7 +41,6 @@ or to make suggestions.
 * [LiquidTypes](http://goto.ucsd.edu/~rjhala/liquid/liquid_types.pdf)
 * [Proactive Data Containers](https://sdm.lbl.gov/~sbyna/research/papers/201805_CCGrid2018_PDCsys.pdf)
 * [Pre-mRNA splicing during transcription in a mammalian system](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3154077/pdf/nihms286954.pdf)
-* [Nanopore sequencing and assembly of a human genome with ultra-long reads](https://www.nature.com/articles/nbt.4060)
 * [Orthologs and Paralogs - We Need to Get it Right](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC138949/)
 * [Liquid Haskell Tutorial](http://ucsd-progsys.github.io/liquidhaskell-tutorial/)
 * [HDF5 Data Types](https://support.hdfgroup.org/HDF5/doc1.6/UG/11_Datatypes.html)
