@@ -20,6 +20,7 @@ short and sweet (or not sweet) side projects.
 | Series | [Series - Programmable Storage][programmable-storage]                                             |
 | Series | [Series - Perspectives on Bioinformatics][bioinformatics]                                         |
 | Series | [Series - LDFI for Life][ldfi-for-life]                                                           |
+| Series | [Series - Domain-Specific Solver-Aided Languages][dsal]                                           |
 | Series | [Sidecar working group - Envoyage][envoyage]                                                      |
 
 ### Readings
@@ -68,6 +69,7 @@ when I need to procrastinate important work or when I feel like it should be upd
 [programmable-storage]: blog/programmable-storage
 [ldfi-for-life]:        blog/ldfi-for-life
 [bioinformatics]:       blog/perspectives-on-bioinformatics
+[dsal]:                 blog/domain-specific-solver-aided-languages
 [envoyage]:             https://disorderlylabs.github.io/envoyage
 
 <!-- navigational links -->
