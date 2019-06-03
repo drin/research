@@ -14,7 +14,7 @@ applied this idea to this topic?" or "what if we combine these ideas which seem 
 Until I fill this series out more, I want to keep a running tally of ideas:
 
 * The application of solvers to help determine where to store data (and maybe which format)
-    * This idea led me to swizzles and [Emina Torlak's work on swizzles][paper-swizzle-inventor]
+    * This idea led me to swizzles and [Emina Torlak's work on swizzle inventor][paper-swizzle-inventor]
 * The application of solvers for deciding a "context." The context I have in mind is somewhat vague:
   consider the questions, "am I working on data that can be weakly consistent?" and "is my network
   well-behaving and I am in the optimistic case, or is it adversarial and a partition currently
