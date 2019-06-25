@@ -46,6 +46,7 @@ or to make suggestions.
 * [Liquid Haskell Tutorial](http://ucsd-progsys.github.io/liquidhaskell-tutorial/)
 * [HDF5 Data Types](https://support.hdfgroup.org/HDF5/doc1.6/UG/11_Datatypes.html)
 * [What is PL Research and how is it useful?](http://www.pl-enthusiast.net/2015/05/27/what-is-pl-research-and-how-is-it-useful/)
+* [An order-to-disorder structural switch activates FoxM1](https://elifesciences.org/articles/46131)
 
 <!-- Resources -->
 [lab-taylor]:    https://www.ics.uci.edu/~taylor/
