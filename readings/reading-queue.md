@@ -50,6 +50,7 @@ or to make suggestions.
 * [Universal Context Propagation for Distributed System Instrumentation](https://people.mpi-sws.org/~jcmace/papers/mace2018universal.pdf)
 * [General Baggage Model for End-to-End Tracing](http://systems.cs.brown.edu/systems/wp-content/uploads/2016/10/sun.hongkai.pdf)
 * [We are losing track for causal metadata in Distributed Systems](http://systems.cs.brown.edu/systems/wp-content/uploads/2016/10/fonseca15hpts.pdf)
+* [What is RCU, fundamentally?](https://lwn.net/Articles/262464/)
 
 <!-- Resources -->
 [lab-taylor]:    https://www.ics.uci.edu/~taylor/
