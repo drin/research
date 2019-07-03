@@ -65,6 +65,8 @@ or to make suggestions.
 * [Linux perf tools](http://www.brendangregg.com/overview.html)
 * [open, close, flush performance issues in hdf5](https://www.hdfgroup.org/wp-content/uploads/2018/04/avoid_truncate_white_paper_180219.pdf)
 * [genome-wide mapping of mutations at single-nucleotide resolution](https://www.nature.com/articles/nbt.3718)
+* [A Complete workflow from single cell to mRNA](https://cdn.technologynetworks.com/tn/Resources/pdf/a-complete-workflow-from-single-cell-isolation-to-mrna-sequencing-analysis.pdf)
+* [Challenges and Solutions for Tracing Storage Systems](https://dl.acm.org/citation.cfm?id=3208078.3149376)
 
 <!-- Resources -->
 [lab-taylor]:    https://www.ics.uci.edu/~taylor/
