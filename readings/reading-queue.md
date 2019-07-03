@@ -47,6 +47,9 @@ or to make suggestions.
 * [HDF5 Data Types](https://support.hdfgroup.org/HDF5/doc1.6/UG/11_Datatypes.html)
 * [What is PL Research and how is it useful?](http://www.pl-enthusiast.net/2015/05/27/what-is-pl-research-and-how-is-it-useful/)
 * [An order-to-disorder structural switch activates FoxM1](https://elifesciences.org/articles/46131)
+* [Universal Context Propagation for Distributed System Instrumentation](https://people.mpi-sws.org/~jcmace/papers/mace2018universal.pdf)
+* [General Baggage Model for End-to-End Tracing](http://systems.cs.brown.edu/systems/wp-content/uploads/2016/10/sun.hongkai.pdf)
+* [We are losing track for causal metadata in Distributed Systems](http://systems.cs.brown.edu/systems/wp-content/uploads/2016/10/fonseca15hpts.pdf)
 
 <!-- Resources -->
 [lab-taylor]:    https://www.ics.uci.edu/~taylor/
