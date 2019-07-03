@@ -51,6 +51,12 @@ or to make suggestions.
 * [General Baggage Model for End-to-End Tracing](http://systems.cs.brown.edu/systems/wp-content/uploads/2016/10/sun.hongkai.pdf)
 * [We are losing track for causal metadata in Distributed Systems](http://systems.cs.brown.edu/systems/wp-content/uploads/2016/10/fonseca15hpts.pdf)
 * [What is RCU, fundamentally?](https://lwn.net/Articles/262464/)
+* [Rethinking the application-database interface](https://homes.cs.washington.edu/~akcheung/papers/dissertation.pdf)
+* [Storage Systems and I/O for scientific discovery](https://www.osti.gov/biblio/1491994)
+* [Genotyping structural variants](https://www.biorxiv.org/content/10.1101/654566v1)
+* [Haplotype-aware diplotyping](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1709-0)
+* [Efficient storage of high-throughput dna sequencing](https://genome.cshlp.org//content/21/5/734.full.pdf#page=1&view=FitH)
+* [apache hadoop yarn](https://www.cse.ust.hk/~weiwa/teaching/Fall15-COMP6611B/reading_list/YARN.pdf)
 
 <!-- Resources -->
 [lab-taylor]:    https://www.ics.uci.edu/~taylor/
