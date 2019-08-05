@@ -14,8 +14,10 @@ The posts here will focus on the following goals:
    
 # Posts
 
-| Date       | Type | Link and Description                                         |
-| ---------- | ---- | ------------------------------------------------------------ |
-| 2019.04.16 | Post | [The bioinformatics and software stacks](2019.04.16.post.md) |
+| Date       | Type      | Link and Description                                                 |
+| ---------- | --------- | -------------------------------------------------------------------- |
+| 2019.08.05 | Resources | [Literature context and resources](context.abstractions.md)          |
+| 2019.08.05 | Post      | [The bioinformatics and software stacks](2019.04.24.abstractions.md) |
+| 2019.08.05 | Post      | [Declarative Bioinformatics](2019.08.05.bio-decl.md)                 |
 
 <!-- resources -->
