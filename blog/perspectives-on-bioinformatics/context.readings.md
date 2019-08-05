@@ -1,6 +1,6 @@
 # Readings for Context
 
-For Single-cell RNA-seq sequencing:
+For **s**ingle **c**ell **RNA** **seq**uencing (scRNA-seq):
 * [User Guide - Chromium Single Cell 3' Reagent Kits V3][guide-chromium-sc]
 * [Massively parallel digital transcriptional profiling of single cells][paper-massive-sc-profile]
 * [Technology and Biology of Single-Cell RNA Sequencing][paper-scrna-seq]
