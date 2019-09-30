@@ -1,11 +1,20 @@
-# [Research Blog](http://research.aldrinmontana.com) &middot; [Aldrin Montana](profile)
-I am currently a 1st year PhD student in computer science at UC Santa Cruz, and I am interested
-in writing frequently to make my thoughts and work available and transparent online!
+# &middot; [Aldrin Montana](profile)
+I am currently a 2nd year PhD student in computer science at UC Santa Cruz, and I am interested
+in writing frequently to make my thoughts and work available and transparent online! I mostly
+failed to write the content I wanted to last year, but will hopefully be able to commit more
+time this year.
 
-I will attempt to add new content as bite-sized blog posts, and every so often I will coalesce
-related posts into a separate "book" format (see [mdbook format][mdbook]). This README may not
-always be kept up to date, but I'll do my best :) I am going to try separating content into:
-explorations, readings, and "books".
+---
+### TA Information
+
+    Office Hours       : Tuesday/Thursday [10 AM or 2:00 PM?]
+    Online Office Hours: TBD
+    
+    Contact Info       :
+        E-mail         : akmontan@ucsc.edu
+        Hangouts (IM)  : akmontan@ucsc.edu
+        Google Calendar: https://calendar.google.com/calendar?cid=YWttb250YW5AdWNzYy5lZHU
+        Zoom           : See office hour events on calendar
 
 ---
 ### Explorations
@@ -19,8 +28,8 @@ short and sweet (or not sweet) side projects.
 | Blog   | [Diversifying Consistency in Ceph](blog/programmable-storage/diversifying-consistency-in-ceph.md) |
 | Series | [Series - Programmable Storage][programmable-storage]                                             |
 | Series | [Series - Perspectives on Bioinformatics][bioinformatics]                                         |
-| Series | [Series - LDFI for Life][ldfi-for-life]                                                           |
-| Series | [Series - Domain-Specific Solver-Aided Languages][dsal]                                           |
+| Series | [Series - LDFI for Life][ldfi-for-life]                                                            |
+| Series | [Series - Domain-Specific Solver-Aided Languages][dsal]                                            |
 | Series | [Sidecar working group - Envoyage][envoyage]                                                      |
 
 ### Readings
@@ -63,25 +72,27 @@ when I need to procrastinate important work or when I feel like it should be upd
 | 1    | Spring 2019 | [CMPS 280O][seminar-cmps280o]        |
 
 <!-- misc links -->
-[mdbook]: https://rust-lang-nursery.github.io/mdBook/
+[mdbook]:                https://rust-lang-nursery.github.io/mdBook/
 
 <!-- exploration links -->
-[programmable-storage]: blog/programmable-storage
-[ldfi-for-life]:        blog/ldfi-for-life
-[bioinformatics]:       blog/perspectives-on-bioinformatics
-[dsal]:                 blog/domain-specific-solver-aided-languages
-[envoyage]:             https://disorderlylabs.github.io/envoyage
+[programmable-storage]:  blog/programmable-storage
+[ldfi-for-life]:          blog/ldfi-for-life
+[bioinformatics]:        blog/perspectives-on-bioinformatics
+[dsal]:                  blog/domain-specific-solver-aided-languages
+[envoyage]:              https://disorderlylabs.github.io/envoyage
 
 <!-- navigational links -->
-[reading-by-date]:      readings/by-date
+[reading-by-date]:       readings/by-date
 
-[course-cmps278]:       readings/by-course/cmps278
-[course-cmps290s]:      readings/by-course/cmps290s
-[course-cmps232]:       readings/by-course/cmps232
-[course-cmps229]:       readings/by-course/cmps229
+[course-cmps278]:        readings/by-course/cmps278
+[course-cmps290s]:       readings/by-course/cmps290s
+[course-cmps232]:        readings/by-course/cmps232
+[course-cmps229]:        readings/by-course/cmps229
 
-[seminar-cmps280o]:     https://kohdmonkey.github.io/apl.spring19/
-[seminar-cmps280l]:     readings/by-course/cmps280L
+[seminar-cmps280o]:      https://kohdmonkey.github.io/apl.spring19/
+[seminar-cmps280l]:      readings/by-course/cmps280L
 
-[group-disorderly]:     readings/by-group/disorderly
-[group-declstore]:      readings/by-group/declarative-programmable-storage
+[group-disorderly]:      readings/by-group/disorderly
+[group-declstore]:       readings/by-group/declarative-programmable-storage
+
+[resource-ucsc-calendar]: https://calendar.google.com/calendar?cid=YWttb250YW5AdWNzYy5lZHU
