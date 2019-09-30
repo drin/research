@@ -7,8 +7,17 @@ time this year.
 ---
 ### TA Information
 
+This quarter, Fall 2019, I am TAing for CSE 138 - Distributed Systems. Below is information for
+contacting me, when I plan to hold office hours, and where my physical office is located. I have had
+professors that offered online office hours and were available via instant message as well, so I'd
+like to provide the same. I will make myself available for online office hours and my ucsc google
+account can be used to instant message me. For now I have chosen 2 hours on Saturdays for online
+office hours, but please let me know if a different time would be more convenient (or perhaps weekday
+evenings?).
+
+    Office Location    : LSD Lab (E2 - 398; near the staircase of Engineering 2)
     Office Hours       : Tuesday/Thursday [10 AM or 2:00 PM?]
-    Online Office Hours: TBD
+    Online Office Hours: Saturdays 10:30 AM - 12:30 PM
     
     Contact Info       :
         E-mail         : akmontan@ucsc.edu
