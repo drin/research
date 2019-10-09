@@ -1,6 +1,7 @@
 <!-- Resume template loosely from https://mszep.github.io/pandoc_resume/ -->
 
 # Aldrin Montana
+# &middot; [Aldrin Montana](http://research.aldrinmontana.com)
 
 Virtual Presence
 ----------------
@@ -12,7 +13,7 @@ Virtual Presence
 
 [DockerHub](https://hub.docker.com/u/octalene)
 
-[Research Website](http://research.aldrinmontana.com)
+[OrcID](https://orcid.org/0000-0003-2073-4813)
 
 
 Education
