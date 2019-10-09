@@ -30,16 +30,17 @@ time this year.
 
 ### TA Information
 
-This quarter, Fall 2019, I am TAing for CSE 138 - Distributed Systems. Below is information for
-contacting me and where my physical office is located. I have had professors that offered online
-office hours and were available via instant message as well, so I'd like to provide the same. I can
-be contacted anytime online and I should be able to respond within 24 hours in most cases. Please
-use my ucsc google account for all forms of messaging (IM or email). For now, I am only doing ad-hoc
-office hours (when requested), but if regular office hours would be preferred, please let me know.
+This quarter, Fall 2019, I am TAing for [CSE 138 - Distributed Systems][ucsc-cse138]. Below is
+information for contacting me and where my physical office is located. I have had professors that
+offered online office hours and were available via instant message as well, so I'd like to provide
+the same. I can be contacted anytime online and I should be able to respond within 24 hours in
+most cases. Please use my ucsc google account for all forms of messaging (IM or email). For now,
+I am only doing ad-hoc office hours (when requested), but if regular office hours would be preferred,
+please let me know.
 
     Office Location    : LSD Lab (E2 - 398; near the staircase of Engineering 2)
     Office Hours       : By Appointment
-    Online Office Hours: Feel free to contact anytime
+    Online Office Hours: By Appointment
     
     Contact Info       :
         E-mail         : akmontan@ucsc.edu
@@ -48,10 +49,19 @@ office hours (when requested), but if regular office hours would be preferred, p
         Zoom           : See office hour events on calendar
 
 ---
-### Explorations
-Here is a table providing an overview of the various sections, or "explorations", containing blog posts,
-or series of blog posts for something research-y or project-based. Some of the series below may also include
-short and sweet (or not sweet) side projects.
+
+# Research
+
+### Theorycrafting
+
+I always thought [theorycrafting](https://en.wikipedia.org/wiki/Theorycraft) was a fun word for a fun idea.
+This section indexes blog posts, or series of blog posts, for something research-y or project-based where I
+am ultimately "theorycrafting" (assuming life is a game and/or simulation). Some of the series below may also
+include short and sweet (or not sweet) side projects.
+
+This will be the least complete of all the sections on this website as I have found it is hard for me to take
+various thoughts to completion in a blog format. I tend to keep these thoughts in notes or just in my head,
+though I am trying to improve on this.
 
 | Type   | Name                                                                                              |
 | ------ | ------------------------------------------------------------------------------------------------- |
@@ -63,49 +73,52 @@ short and sweet (or not sweet) side projects.
 | Series | [Series - Domain-Specific Solver-Aided Languages][dsal]                                            |
 | Series | [Sidecar working group - Envoyage][envoyage]                                                      |
 
+
 ### Readings
+
 This section will include paper reviews, paper presentation materials, and anything else that seems
-relatively similar in spirit.
+relatively similar in spirit. I will try to eventually organize the reading sections below in a way
+that it can be easy to tell what I have read, what I thought about it, and maybe gather some fun
+statistics on my reading progress.
 
-To make this area a bit easier to traverse (especially for myself), I am organizing readings into
-"by-course" directories and "by-date" directories. This will allow me to maintain a Table of
-Contents, or schedule, for each course and also to keep some semblance of the ordering in which the
-readings were done, just for convenience. At the top of each schedule, I will have links and
-information on my paper presentations, which will include links to my presentation slides. Then the
-rest of the schedule will just be for the course readings.
 
-#### [Reading Queue](readings/reading-queue.md)
-My queue of readings to do
+#### &middot; [Reading Queue](readings/reading-queue.md)
+I think it would be nice to keep a public reading queue. Maybe others can make recommendations, or at least
+get a sense of what papers I think should be read for anyone in my field.
 
-#### Readings by Date
-Eventually I'll keep some number of most recent readings/reviews, but for now, to see reviews by
-date, simply go to this index: [reviews by date][reading-by-date]. This will be updated periodically,
-when I need to procrastinate important work or when I feel like it should be updated.
 
-#### Readings by Group
+#### Readings by Research Group
 
 | Principal Investigators (PIs)    | Group                                               |
 | -------------------------------- | --------------------------------------------------- |
 | Peter Alvaro                     | [Disorderly Labs][group-disorderly]                 |
 | Peter Alvaro and Carlos Maltzahn | [Declarative Programmable Storage][group-declstore] |
 
+
 #### Readings by Course
 
-##### First Year &middot; Fall 2018 - Spring 2019
+| Quarter     | Course                               |
+| ----------- | ------------------------------------ |
+| Fall 2018   | [CMPS 278 reviews][course-cmps278]   |
+| Fall 2018   | [CMPS 290S reviews][course-cmps290s] |
+| Winter 2019 | [CMPS 280L][seminar-cmps280l]        |
+| Spring 2019 | [CMPS 229][course-cmps229]           |
+| Spring 2019 | [CMPS 232][course-cmps232]           |
+| Spring 2019 | [CMPS 280O][seminar-cmps280o]        |
 
-| Year | Quarter     | Course                               |
-| ---- | ----------- | ------------------------------------ |
-| 1    | Fall 2018   | [CMPS 278 reviews][course-cmps278]   |
-| 1    | Fall 2018   | [CMPS 290S reviews][course-cmps290s] |
-| 1    | Winter 2019 | [CMPS 280L][seminar-cmps280l]        |
-| 1    | Spring 2019 | [CMPS 229][course-cmps229]           |
-| 1    | Spring 2019 | [CMPS 232][course-cmps232]           |
-| 1    | Spring 2019 | [CMPS 280O][seminar-cmps280o]        |
+#### Readings by Date
+
+To see reviews by date, simply go to this index: [reviews by date][reading-by-date]. This
+will be updated periodically, when I need to procrastinate important work or when I feel
+like it should be updated.
+
 
 <!-- misc links -->
 [mdbook]:                  https://rust-lang-nursery.github.io/mdBook/
 
 [ucsc-phd-reqs]:           https://www.soe.ucsc.edu/departments/computer-science-and-engineering/graduate/degree-requirements-cmps#phd
+
+[ucsc-cse138]:             https://github.com/palvaro/CSE138-Fall19
 
 <!-- exploration links -->
 [programmable-storage]:    blog/programmable-storage
