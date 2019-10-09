@@ -1,6 +1,10 @@
 # &middot; [Aldrin Montana](profile)
-I am currently a 2nd year PhD student in computer science at UC Santa Cruz, and I am interested
-in writing frequently to make my thoughts and work available and transparent online! I mostly
+I am currently a 2nd year PhD student in computer science ([CMPS][ucsc-phd-reqs]) at UC Santa Cruz.
+My advisor is Peter Alvaro and I am primarily working with Peter Alvaro, Carlos Maltzahn, and
+Jeff LeFevre on [declarative programmable storage][project-programmability], but I am also interested
+in bioinformatics, distributed systems, and data management systems.
+
+Here, I am hoping to publish my thoughts and research, as well as keep track of readings. I mostly
 failed to write the content I wanted to last year, but will hopefully be able to commit more
 time this year.
 
@@ -80,27 +84,31 @@ when I need to procrastinate important work or when I feel like it should be upd
 | 1    | Spring 2019 | [CMPS 280O][seminar-cmps280o]        |
 
 <!-- misc links -->
-[mdbook]:                https://rust-lang-nursery.github.io/mdBook/
+[mdbook]:                  https://rust-lang-nursery.github.io/mdBook/
+
+[ucsc-phd-reqs]:           https://www.soe.ucsc.edu/departments/computer-science-and-engineering/graduate/degree-requirements-cmps#phd
 
 <!-- exploration links -->
-[programmable-storage]:  blog/programmable-storage
-[ldfi-for-life]:          blog/ldfi-for-life
-[bioinformatics]:        blog/perspectives-on-bioinformatics
-[dsal]:                  blog/domain-specific-solver-aided-languages
-[envoyage]:              https://disorderlylabs.github.io/envoyage
+[programmable-storage]:    blog/programmable-storage
+[ldfi-for-life]:            blog/ldfi-for-life
+[bioinformatics]:          blog/perspectives-on-bioinformatics
+[dsal]:                    blog/domain-specific-solver-aided-languages
+[envoyage]:                https://disorderlylabs.github.io/envoyage
 
 <!-- navigational links -->
-[reading-by-date]:       readings/by-date
+[reading-by-date]:         readings/by-date
 
-[course-cmps278]:        readings/by-course/cmps278
-[course-cmps290s]:       readings/by-course/cmps290s
-[course-cmps232]:        readings/by-course/cmps232
-[course-cmps229]:        readings/by-course/cmps229
+[course-cmps278]:          readings/by-course/cmps278
+[course-cmps290s]:         readings/by-course/cmps290s
+[course-cmps232]:          readings/by-course/cmps232
+[course-cmps229]:          readings/by-course/cmps229
 
-[seminar-cmps280o]:      https://kohdmonkey.github.io/apl.spring19/
-[seminar-cmps280l]:      readings/by-course/cmps280L
+[seminar-cmps280o]:        https://kohdmonkey.github.io/apl.spring19/
+[seminar-cmps280l]:        readings/by-course/cmps280L
 
-[group-disorderly]:      readings/by-group/disorderly
-[group-declstore]:       readings/by-group/declarative-programmable-storage
+[group-disorderly]:        readings/by-group/disorderly
+[group-declstore]:         readings/by-group/declarative-programmable-storage
 
-[resource-ucsc-calendar]: https://calendar.google.com/calendar?cid=YWttb250YW5AdWNzYy5lZHU
+[resource-ucsc-calendar]:  https://calendar.google.com/calendar?cid=YWttb250YW5AdWNzYy5lZHU
+
+[project-programmability]: http://programmability.us/
