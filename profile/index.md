@@ -2,8 +2,6 @@
 
 # &middot; [Aldrin Montana](http://research.aldrinmontana.com)
 
----
-
 [Email](mailto:DrinMontana@acm.org)
 
 [LinkedIn](https://linkedin.com/in/drinmontana)
