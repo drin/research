@@ -8,6 +8,18 @@ Here, I am hoping to publish my thoughts and research, as well as keep track of 
 failed to write the content I wanted to last year, but will hopefully be able to commit more
 time this year.
 
+Virtual Presence
+----------------
+[Email](mailto:DrinMontana@acm.org)
+
+[LinkedIn](https://linkedin.com/in/drinmontana)
+
+[GitHub](https://github.com/drin)
+
+[DockerHub](https://hub.docker.com/u/octalene)
+
+[Research Website](http://research.aldrinmontana.com)
+
 ---
 ### TA Information
 
