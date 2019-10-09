@@ -14,8 +14,6 @@ Virtual Presence
 
 [Research Website](http://research.aldrinmontana.com)
 
-[Personal Website (Work in Progress)](http://drin.github.io)
-
 
 Education
 ---------
