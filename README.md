@@ -1,8 +1,5 @@
 # &middot; [Aldrin Montana](profile)
 
-About Me
---------
-
 I am currently a 2nd year PhD student in computer science ([CMPS][ucsc-phd-reqs]) at UC Santa Cruz.
 My advisor is Peter Alvaro and I am primarily working with Peter Alvaro, Carlos Maltzahn, and
 Jeff LeFevre on [declarative programmable storage][project-programmability], but I am also interested
@@ -12,8 +9,8 @@ Here, I am hoping to publish my thoughts and research, as well as keep track of 
 failed to write the content I wanted to last year, but will hopefully be able to commit more
 time this year.
 
-Virtual Presence
-----------------
+---
+
 [Email](mailto:DrinMontana@acm.org)
 
 [LinkedIn](https://linkedin.com/in/drinmontana)
