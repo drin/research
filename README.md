@@ -1,7 +1,5 @@
 # &middot; [Aldrin Montana](profile)
 
----
-
 <img src='assets/img/aldrin.png' width='240px' align='right'/>
     
 [Email](mailto:DrinMontana@acm.org)
