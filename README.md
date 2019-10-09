@@ -38,7 +38,7 @@ most cases. Please use my ucsc google account for all forms of messaging (IM or 
 I am only doing ad-hoc office hours (when requested), but if regular office hours would be preferred,
 please let me know.
 
-    Office Location    : LSD Lab (E2 - 398; near the staircase of Engineering 2)
+    Office Location    : LSD Lab (E2 - 398)
     Office Hours       : By Appointment
     Online Office Hours: By Appointment
     
