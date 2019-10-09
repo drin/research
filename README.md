@@ -11,6 +11,8 @@ time this year.
 
 ---
 
+<img src='assets/img/aldrin.png' width='240px' align='right'/>
+    
 [Email](mailto:DrinMontana@acm.org)
 
 [LinkedIn](https://linkedin.com/in/drinmontana)
