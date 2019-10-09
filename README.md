@@ -24,6 +24,8 @@ Virtual Presence
 
 [OrcID](https://orcid.org/0000-0003-2073-4813)
 
+[dblp](https://dblp.org/pers/hd/m/Montana:Aldrin)
+
 ---
 ### TA Information
 
