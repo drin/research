@@ -1,14 +1,5 @@
 # &middot; [Aldrin Montana](profile)
 
-I am currently a 2nd year PhD student in computer science ([CMPS][ucsc-phd-reqs]) at UC Santa Cruz.
-My advisor is Peter Alvaro and I am primarily working with Peter Alvaro, Carlos Maltzahn, and
-Jeff LeFevre on [declarative programmable storage][project-programmability], but I am also interested
-in bioinformatics, distributed systems, and data management systems.
-
-Here, I am hoping to publish my thoughts and research, as well as keep track of readings. I mostly
-failed to write the content I wanted to last year, but will hopefully be able to commit more
-time this year.
-
 ---
 
 <img src='assets/img/aldrin.png' width='240px' align='right'/>
@@ -26,6 +17,19 @@ time this year.
 [dblp](https://dblp.org/pers/hd/m/Montana:Aldrin)
 
 ---
+
+### About Me
+
+I am currently a 2nd year PhD student in computer science ([CMPS][ucsc-phd-reqs]) at UC Santa Cruz.
+My advisor is Peter Alvaro and I am primarily working with Peter Alvaro, Carlos Maltzahn, and
+Jeff LeFevre on [declarative programmable storage][project-programmability], but I am also interested
+in bioinformatics, distributed systems, and data management systems.
+
+Here, I am hoping to publish my thoughts and research, as well as keep track of readings. I mostly
+failed to write the content I wanted to last year, but will hopefully be able to commit more
+time this year.
+
+
 ### TA Information
 
 This quarter, Fall 2019, I am TAing for CSE 138 - Distributed Systems. Below is information for
