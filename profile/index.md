@@ -2,8 +2,8 @@
 
 # &middot; [Aldrin Montana](http://research.aldrinmontana.com)
 
-Virtual Presence
-----------------
+---
+
 [Email](mailto:DrinMontana@acm.org)
 
 [LinkedIn](https://linkedin.com/in/drinmontana)
@@ -16,6 +16,7 @@ Virtual Presence
 
 [dblp](https://dblp.org/pers/hd/m/Montana:Aldrin)
 
+---
 
 Education
 ---------
