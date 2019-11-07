@@ -111,6 +111,7 @@ get a sense of what papers I think should be read for anyone in my field.
 | Spring 2019 | [CMPS 229][course-cmps229]           |
 | Spring 2019 | [CMPS 232][course-cmps232]           |
 | Spring 2019 | [CMPS 280O][seminar-cmps280o]        |
+| Fall 2019   | [CSE 220][course-cse220]             |
 
 #### Readings by Date
 
@@ -140,6 +141,7 @@ like it should be updated.
 [course-cmps290s]:         readings/by-course/cmps290s
 [course-cmps232]:          readings/by-course/cmps232
 [course-cmps229]:          readings/by-course/cmps229
+[course-cse220]:           readings/by-course/cse220
 
 [seminar-cmps280o]:        https://kohdmonkey.github.io/apl.spring19/
 [seminar-cmps280l]:        readings/by-course/cmps280L
