@@ -38,9 +38,15 @@ most cases. Please use my ucsc google account for all forms of messaging (IM or 
 I am only doing ad-hoc office hours (when requested), but if regular office hours would be preferred,
 please let me know.
 
-    Office Location    : LSD Lab (E2 - 398)
-    Office Hours       : By Appointment
-    Online Office Hours: By Appointment
+    Office Hours       : Tuesdays - 2pm to 3pm
+    Office Location    : Nook near Peter's office (next to E2 - 353)
+    
+    
+    Office Hours       : Thursdays - 2pm to 3pm
+    Office Location    : LSD Lab (E2 - 398; near the staircase of Engineering 2)
+    
+    Online Office Hours: Saturdays - Please see calendar
+    Office Location    : Google hangouts/meet/chat or Zoom (see below)
     
     Contact Info       :
         E-mail         : akmontan@ucsc.edu
