@@ -14,7 +14,6 @@ For cell trajectory analysis:
 * [PAGA - graph abstraction reconciles clustering with trajectory inference][paper-paga]
 
 For Nanopore sequencing:
-* [Nanopore sequencing and assembly of a human genome with ultra-long reads](https://www.nature.com/articles/nbt.4060)
 * [Efficient de novo assembly of eleven human genomes using PromethION and a novel nanopore toolkit][paper-eleven-genomes]
 
 For Data Analysis:
