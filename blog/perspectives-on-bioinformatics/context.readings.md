@@ -3,9 +3,9 @@
 ### Recommended Reading Order
 
 1. Get key highlights:
-    1. Box 1 of [Current best practices in single‐cell RNA‐seq analysis: a tutorial][paper-best-practices]
-    1. Pages 14 - 16 of [User Guide - Chromium Single Cell 3' Reagent Kits V3][guide-chromium-sc]
-    1. Figure 2 of [Comparative Analysis of Single-Cell RNA Sequencing Methods][paper-scrna-seq-methods]
+    1. **Box 1** of [Current best practices in single‐cell RNA‐seq analysis: a tutorial][paper-best-practices]
+    1. **Pages 14 - 16** of [User Guide - Chromium Single Cell 3' Reagent Kits V3][guide-chromium-sc]
+    1. **Figure 2** of [Comparative Analysis of Single-Cell RNA Sequencing Methods][paper-scrna-seq-methods]
 1. Read more details:
     1. [Current best practices in single‐cell RNA‐seq analysis: a tutorial][paper-best-practices]
     1. [Comparative Analysis of Single-Cell RNA Sequencing Methods][paper-scrna-seq-methods]
