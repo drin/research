@@ -1,6 +1,33 @@
-What are the main contributions of the paper? (1 paragraph)
-What are its strengths and weaknesses? (1-2 paragraphs)
-Comment on the approach / methodology / design aspects of the paper, taking into account the state-of-the-art at the time the paper was written.
-How significant are the contributions of the paper or the potential impact of the paper in its field?
-How scientifically sound is their evaluation methodology and their results?
-Describe an idea on how you might extend or improve upon the work reported in the paper, and/or how the work might inspire you to apply the findings to another application, or generalize it to a broader formulation, etc.
+# Reading Review 2019-11-22
+
+&middot; by Aldrin Montana
+
+## TinyDB: An Acquisitional Query Processing System for Sensor Networks
+
+##### Main contributions
+
+    This paper details several aspects of acquisitional query processing (ACQP), which addresses
+    query processing in an environment with many resource-constrained sensors that are able to
+    intelligently, and with precise control, choose when and how data is acquired.
+
+##### Strengths and weaknesses
+
+    (1-2 paragraphs)
+
+##### Methodology
+
+    text
+
+##### Impact of the paper in its field
+
+    text
+
+##### Evaluation
+
+    text
+
+##### Relevance
+
+    Describe an idea on how you might extend or improve upon the work reported in the paper,
+    and/or how the work might inspire you to apply the findings to another application, or
+    generalize it to a broader formulation, etc.
