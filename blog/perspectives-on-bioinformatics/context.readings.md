@@ -30,6 +30,7 @@ For scRNA-seq analysis pipelines:
 For cell trajectory analysis:
 * [PAGA - graph abstraction reconciles clustering with trajectory inference][paper-paga]
 * [Revealing the vectors of cellular identity with single-cell genomics][paper-cellular-identity]
+* [SPRING: a kinetic interface for visualizing high dimensional single-cell expression data][paper-spring-visual]
 
 For Nanopore sequencing:
 * [Efficient de novo assembly of eleven human genomes using PromethION and a novel nanopore toolkit][paper-eleven-genomes]
@@ -53,5 +54,6 @@ For File Formats:
 [paper-best-practices]:        https://www.embopress.org/doi/full/10.15252/msb.20188746
 [paper-gw-expression-profile]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4481139/
 [paper-cellular-identity]:     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5465644/
+[paper-spring-visual]:         https://academic.oup.com/bioinformatics/article/34/7/1246/4708233
 
 [guide-chromium-sc]: https://support.10xgenomics.com/single-cell-gene-expression/library-prep/doc/user-guide-chromium-single-cell-3-reagent-kits-user-guide-v31-chemistry
