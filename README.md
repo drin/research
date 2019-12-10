@@ -28,34 +28,6 @@ failed to write the content I wanted to last year, but will hopefully be able to
 time this year.
 
 
-### TA Information
-
-This quarter, Fall 2019, I am TAing for [CSE 138 - Distributed Systems][ucsc-cse138]. Below is
-information for contacting me and where my physical office is located. I have had professors that
-offered online office hours and were available via instant message as well, so I'd like to provide
-the same. I can be contacted anytime online and I should be able to respond within 24 hours in
-most cases. Please use my ucsc google account for all forms of messaging (IM or email). For now,
-I am only doing ad-hoc office hours (when requested), but if regular office hours would be preferred,
-please let me know.
-
-    Office Hours       : Tuesdays - 2pm to 3pm
-    Office Location    : Nook near Peter's office (next to E2 - 353)
-    
-    
-    Office Hours       : Thursdays - 2pm to 3pm
-    Office Location    : LSD Lab (E2 - 398; near the staircase of Engineering 2)
-    
-    Online Office Hours: Saturdays - Please see calendar
-    Office Location    : Google hangouts/meet/chat or Zoom (see below)
-    
-    Contact Info       :
-        E-mail         : akmontan@ucsc.edu
-        Hangouts (IM)  : akmontan@ucsc.edu
-        Google Calendar: https://calendar.google.com/calendar?cid=YWttb250YW5AdWNzYy5lZHU
-        Zoom           : See office hour events on calendar
-
----
-
 # Research
 
 ### Theorycrafting
