@@ -2,7 +2,7 @@
 
 <img src='assets/img/aldrin.png' width='240px' align='right'/>
     
-[Email](mailto:DrinMontana@acm.org)
+[Email](mailto:mail@aldrinmontana.com)
 
 [LinkedIn](https://linkedin.com/in/drinmontana)
 
