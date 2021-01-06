@@ -18,7 +18,7 @@
 
 ### About Me
 
-I am currently a 2nd year PhD student in computer science ([CMPS][ucsc-phd-reqs]) at UC Santa Cruz.
+I am currently a 3rd year PhD student in computer science ([CMPS][ucsc-phd-reqs]) at UC Santa Cruz.
 My advisor is Peter Alvaro and I am primarily working with Peter Alvaro, Carlos Maltzahn, and
 Jeff LeFevre on [declarative programmable storage][project-programmability], but I am also interested
 in bioinformatics, distributed systems, and data management systems.
@@ -47,8 +47,8 @@ though I am trying to improve on this.
 | Blog   | [Diversifying Consistency in Ceph](blog/programmable-storage/diversifying-consistency-in-ceph.md) |
 | Series | [Series - Programmable Storage][programmable-storage]                                             |
 | Series | [Series - Perspectives on Bioinformatics][bioinformatics]                                         |
-| Series | [Series - LDFI for Life][ldfi-for-life]                                                            |
-| Series | [Series - Domain-Specific Solver-Aided Languages][dsal]                                            |
+| Series | [Series - LDFI for Life][ldfi-for-life]                                                           |
+| Series | [Series - Domain-Specific Solver-Aided Languages][dsal]                                           |
 | Series | [Sidecar working group - Envoyage][envoyage]                                                      |
 
 
