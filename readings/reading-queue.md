@@ -17,11 +17,13 @@ A list of papers, blog posts, etc. that I plan to read. I also track a reading l
 
 ## The Structured Queue
 
-| Topic        | Type         | First Author      | Research Lab                            | Reading                                              | Short Description                  |
-| ------------ | ------------ | ----------------- | --------------------------------------- | ---------------------------------------------------- | ---------------------------------- |
-| Architecture | Dissertation | Roy Fielding      | [Taylor Lab][lab-taylor]                | [Network-based Software Architectures][phd-fielding] | The power of REST                  |
-| Storage      | M.S. Thesis  | Reza Nasirigerdeh | [UCSC SRL (Dr. Maltzahn)][lab-srl]      | [Data Access Policies for Science][ms-reza]          | ROOT filesystem for science        |
-| SMT-Aided    | Dissertation | Niki Vazou        | [UCSD ProgSys (Dr. Jhala)][lab-progsys] | [Liquid Haskell][phd-vazou]                          | Liquid Haskell for theorem proving |
+| First Author      | Research Lab                            | Title (maybe shortened)                              |
+| ----------------- | --------------------------------------- | ---------------------------------------------------- |
+| Roy Fielding      | [Taylor Lab][lab-taylor]                | [Network-based Software Architectures][phd-fielding] |
+| Reza Nasirigerdeh | [UCSC SRL (Dr. Maltzahn)][lab-srl]      | [Data Access Policies for Science][ms-reza]          |
+| Niki Vazou        | [UCSD ProgSys (Dr. Jhala)][lab-progsys] | [Liquid Haskell][phd-vazou]                          |
+| Muthian Sivathanu | [ADSL (Drs. Arpaci-Dusseau)][lab-adsl]  | [Database-Aware Storage][dbms-sivathanu-storage]     |
+| Kimberly Keeton   |                                         | [A case for intelligent disks][stor-keeton-idisks]   |
 
 
 ## The Unstructured Queue
@@ -82,6 +84,7 @@ A list of papers, blog posts, etc. that I plan to read. I also track a reading l
 [lab-taylor]:      https://www.ics.uci.edu/~taylor/
 [lab-srl]:         https://systems.soe.ucsc.edu/
 [lab-progsys]:     http://cseweb.ucsd.edu/groups/progsys/
+[lab-adsl]:        https://research.cs.wisc.edu/adsl/
 
 [phd-fielding]:    https://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf
 [phd-vazou]:       http://goto.ucsd.edu/~nvazou/thesis/main.pdf
@@ -89,3 +92,8 @@ A list of papers, blog posts, etc. that I plan to read. I also track a reading l
 [ms-reza]:         https://drive.google.com/file/d/1AdHYYz1tdEf1bwsIMywWj4Y2Og_IXZag/view?usp=sharing
 
 [notion-readings]: https://www.notion.so/octalene/8e632ccefb1f446db2bec15ad23b6aba?v=19217ec71f4f4bcb957fb50cd3c601c5
+
+<!-- -->
+<!-- reading links -->
+[dbms-sivathanu-storage]: https://www.usenix.org/legacy/events/fast05/tech/full_papers/sivathanu_db/sivathanu_db.pdf
+[stor-keeton-idisks]:     https://dl.acm.org/doi/abs/10.1145/290593.290602
