@@ -20,7 +20,7 @@
 
 ### About Me
 
-I am currently a 3rd year PhD student in computer science ([CMPS][web-phdreqs]) at UC Santa Cruz,
+I am currently a 4th year PhD student in computer science ([CMPS][web-phdreqs]) at UC Santa Cruz,
 advised by [Peter Alvaro][person-palvaro]. My research interest is in the intersection of data
 management systems, storage systems, programming languages, and bioinformatics. I primarily work
 with Peter Alvaro, Carlos Maltzahn, and Jeff LeFevre; but, I also work with Josh Stuart and Philip
@@ -30,35 +30,30 @@ and [Human Cell Atlas][community-hca] communities.
 
 ### [Research](research/README.md)
 
-This website will include research-related content in the form of blog posts. I am hoping to
-include paper reviews, paper presentation materials, and any strong opinions that I think have
-general value.
-
-The table below lists my most recent blog posts. I will try to regularly add posts, but I have
-historically been very bad at this.
-
-| Topic    | Date     | Title                                                                     |
-| -------- | -------- | ------------------------------------------------------------------------- |
-| personal | 21-03-22 | [Spring Break 2021](research/personal/quarter-end-2021-03.md)             |
+**SkySQL.** Blog posts under the `SkySQL` topic discuss the use of the "Arrow compute engine"
+(project name is still TBD) in order to express queries to skytether. I am attempting to work
+towards specifying a query plan that can be expressed and executed by Arrow, but that can be
+optimized and arbitrarily split.
 
 
+| Topic    | Date     | Title                                                                       |
+| -------- | -------- | --------------------------------------------------------------------------- |
+| SkySQL   | 22-04-XX | [SkySQL Defined](research/skysql/overview.md)                               |
+| SkySQL   | 22-04-XX | [Using Arrow Compute Engine](research/skysql/using-arrow-compute-engine.md) |
 
-#### &middot; [Reading Queue](readings/reading-queue.md)
-I think it would be nice to keep a public reading queue. I welcome recommendations, and hope that
-this serves at least two purposes: what papers are important to a particular field and a marker of
-particularly interesting papers.
+
+####  Readings
+
+[&middot; Reading Log.](readings/reading-log.md) Here is a list of my past readings and relevant
+thoughts. If I go back and re-read a paper, I'll simply append to the entry for that reading so
+that changes in opinion can be referenced (for my own curiosity).
+
+
+[&middot; Reading Queue.](readings/reading-queue.md) Here is a list of materials I plan on reading.
 
 
 <!-- ----------------------------- -->
 <!-- Resources -->
-
-<!-- >> Templates -->
-<!--
-| personal | 21-00-00 | [Spring Break 2021](research/personal/.md)                                |
-| research | 21-00-00 | [Spring Break 2021](research/research/.md)                                |
-| comp-bio | 21-00-00 | [Spring Break 2021](research/comp-bio/.md)                                |
-| comp-sci | 21-00-00 | [Spring Break 2021](research/comp-sci/.md)                                |
--->
 
 <!-- >> In progress content -->
 <!--
