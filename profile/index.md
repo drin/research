@@ -24,7 +24,7 @@ Education
 
     Declarative Programmable Storage
     
-    Advisor: Peter Alvaro
+    Advisors: Peter Alvaro, Josh Stuart
 
 2007-2013
 :   **B.S.-M.S., Computer Science**; Cal Poly, San Luis Obispo
@@ -35,6 +35,10 @@ Education
 
 Work Experience
 ---------------
+
+May 2020 - June 2021
+:   **Seagate (Fremont, CA)**; Software Engineer Intern
+
 
 April 2015 - September 2018
 :   **Personalis (Menlo Park, CA)**; Bioinformatics Analyst/Engineer
