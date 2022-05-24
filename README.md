@@ -1,109 +1,81 @@
 # &middot; [Aldrin Montana](profile)
 
 <img src='assets/img/aldrin.png' width='240px' align='right'/>
-    
-[Email](mailto:mail@aldrinmontana.com)
 
-[LinkedIn](https://linkedin.com/in/drinmontana)
+<!-- Developer ID -->
+[Keybase](https://keybase.io/octalene)
 
 [GitHub](https://github.com/drin)
 
-[DockerHub](https://hub.docker.com/u/octalene)
+[GitLab](https://gitlab.com/octalene)
 
+<!-- Professional ID -->
+[Polywork](https://www.polywork.com/aldrin)
+
+[LinkedIn](https://linkedin.com/in/drinmontana)
+
+<!-- Research ID -->
 [OrcID](https://orcid.org/0000-0003-2073-4813)
 
 [dblp](https://dblp.org/pers/hd/m/Montana:Aldrin)
+    
+<!-- Contact Info -->
+[Email](mailto:drinmontana@duck.com)
 
 ---
 
 ### About Me
 
-I am currently a 3rd year PhD student in computer science ([CMPS][ucsc-phd-reqs]) at UC Santa Cruz.
-My advisor is Peter Alvaro and I am primarily working with Peter Alvaro, Carlos Maltzahn, and
-Jeff LeFevre on [declarative programmable storage][project-programmability], but I am also interested
-in bioinformatics, distributed systems, and data management systems.
-
-# Research
-
-Here, I am hoping to publish my thoughts and research, as well as keep track of readings. I mostly
-failed to write the content I wanted to last year, but will hopefully be able to commit more
-time this year.
-
-### Theorycrafting
-
-I always thought [theorycrafting](https://en.wikipedia.org/wiki/Theorycraft) was a fun word for a fun idea.
-This section indexes blog posts, or series of blog posts, for something research-y or project-based where I
-am ultimately "theorycrafting" (assuming life is a game and/or simulation). Some of the series below may also
-include short and sweet (or not sweet) side projects.
-
-This will be the least complete of all the sections on this website as I have found it is hard for me to take
-various thoughts to completion in a blog format. I tend to keep these thoughts in notes or just in my head,
-though I am trying to improve on this.
-
-| Type   | Name                                                                                              |
-| ------ | ------------------------------------------------------------------------------------------------- |
-| Blog   | [Mixing Consistency over programmable storage](blog/programmable-storage/mixing-consistency.md)   |
-| Blog   | [Diversifying Consistency in Ceph](blog/programmable-storage/diversifying-consistency-in-ceph.md) |
-| Series | [Series - Programmable Storage][programmable-storage]                                             |
-| Series | [Series - Perspectives on Bioinformatics][bioinformatics]                                         |
+I am currently a 4th year PhD student in computer science ([CMPS][web-phdreqs]) at UC Santa Cruz,
+advised by [Peter Alvaro][person-palvaro]. My research interest is in the intersection of data
+management systems, storage systems, programming languages, and bioinformatics. I primarily work
+with Peter Alvaro, Carlos Maltzahn, and Jeff LeFevre; but, I also work with Josh Stuart and Philip
+Kufeldt (Seagate). Additionally, I am trying to contribute to the [Apache Arrow][community-arrow]
+and [Human Cell Atlas][community-hca] communities.
 
 
-### Readings
+### [Research](research/README.md)
 
-This section will include paper reviews, paper presentation materials, and anything else that seems
-relatively similar in spirit. I will try to eventually organize the reading sections below in a way
-that it can be easy to tell what I have read, what I thought about it, and maybe gather some fun
-statistics on my reading progress.
-
-
-#### &middot; [Reading Queue](readings/reading-queue.md)
-I think it would be nice to keep a public reading queue. Maybe others can make recommendations, or at least
-get a sense of what papers I think should be read for anyone in my field.
+**SkySQL.** Blog posts under the `SkySQL` topic discuss the use of the "Arrow compute engine"
+(project name is still TBD) in order to express queries to skytether. I am attempting to work
+towards specifying a query plan that can be expressed and executed by Arrow, but that can be
+optimized and arbitrarily split.
 
 
-#### Readings by Research Group
-
-| Principal Investigators (PIs)    | Group                                               |
-| -------------------------------- | --------------------------------------------------- |
-| Josh Stuart                      | [Stuart Lab][group-jstuart]                         |
-| Peter Alvaro and Carlos Maltzahn | [Declarative Programmable Storage][group-declstore] |
+| Topic    | Date     | Title                                                                       |
+| -------- | -------- | --------------------------------------------------------------------------- |
+| SkySQL   | 22-04-XX | [SkySQL Defined](research/skysql/overview.md)                               |
+| SkySQL   | 22-04-XX | [Using Arrow Compute Engine](research/skysql/using-arrow-compute-engine.md) |
 
 
-#### [Readings by Date][reading-by-date]
+####  Readings
 
-An index of reading reviews by date. This will be updated periodically, when I need to
-procrastinate important work or when I feel like it should be updated.
+[&middot; Reading Log.](readings/reading-log.md) Here is a list of my past readings and relevant
+thoughts. If I go back and re-read a paper, I'll simply append to the entry for that reading so
+that changes in opinion can be referenced (for my own curiosity).
 
 
-<!-- misc links -->
-[mdbook]:                  https://rust-lang-nursery.github.io/mdBook/
+[&middot; Reading Queue.](readings/reading-queue.md) Here is a list of materials I plan on reading.
 
-[ucsc-phd-reqs]:           https://www.soe.ucsc.edu/departments/computer-science-and-engineering/graduate/degree-requirements-cmps#phd
 
-[ucsc-cse138]:             https://github.com/palvaro/CSE138-Fall19
+<!-- ----------------------------- -->
+<!-- Resources -->
 
-<!-- exploration links -->
-[programmable-storage]:    blog/programmable-storage
-[ldfi-for-life]:            blog/ldfi-for-life
-[bioinformatics]:          blog/perspectives-on-bioinformatics
-[dsal]:                    blog/domain-specific-solver-aided-languages
-[envoyage]:                https://disorderlylabs.github.io/envoyage
+<!-- >> In progress content -->
+<!--
+-->
 
-<!-- navigational links -->
-[reading-by-date]:         readings/by-date
 
-[course-cmps278]:          readings/by-course/cmps278
-[course-cmps290s]:         readings/by-course/cmps290s
-[course-cmps232]:          readings/by-course/cmps232
-[course-cmps229]:          readings/by-course/cmps229
-[course-cse220]:           readings/by-course/cse220
+<!-- >> External URLs -->
+<!--    >>> misc links -->
+[web-phdreqs]:     https://www.soe.ucsc.edu/departments/computer-science-and-engineering/graduate/degree-requirements-cmps#phd
 
-[seminar-cmps280o]:        https://kohdmonkey.github.io/apl.spring19/
-[seminar-cmps280l]:        readings/by-course/cmps280L
+[person-palvaro]:  https://people.ucsc.edu/~palvaro/
 
-[group-jstuart]:           readings/by-group/jstuart
-[group-declstore]:         readings/by-group/declarative-programmable-storage
+[community-arrow]: https://arrow.apache.org/community/
+[community-hca]:   https://www.humancellatlas.org/
 
+<!--    >>> exploration links -->
+
+<!--    >>> navigational links -->
 [resource-ucsc-calendar]:  https://calendar.google.com/calendar?cid=YWttb250YW5AdWNzYy5lZHU
-
-[project-programmability]: http://programmability.us/
