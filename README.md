@@ -23,12 +23,11 @@ My advisor is Peter Alvaro and I am primarily working with Peter Alvaro, Carlos 
 Jeff LeFevre on [declarative programmable storage][project-programmability], but I am also interested
 in bioinformatics, distributed systems, and data management systems.
 
+# Research
+
 Here, I am hoping to publish my thoughts and research, as well as keep track of readings. I mostly
 failed to write the content I wanted to last year, but will hopefully be able to commit more
 time this year.
-
-
-# Research
 
 ### Theorycrafting
 
@@ -47,9 +46,6 @@ though I am trying to improve on this.
 | Blog   | [Diversifying Consistency in Ceph](blog/programmable-storage/diversifying-consistency-in-ceph.md) |
 | Series | [Series - Programmable Storage][programmable-storage]                                             |
 | Series | [Series - Perspectives on Bioinformatics][bioinformatics]                                         |
-| Series | [Series - LDFI for Life][ldfi-for-life]                                                           |
-| Series | [Series - Domain-Specific Solver-Aided Languages][dsal]                                           |
-| Series | [Sidecar working group - Envoyage][envoyage]                                                      |
 
 
 ### Readings
@@ -69,27 +65,14 @@ get a sense of what papers I think should be read for anyone in my field.
 
 | Principal Investigators (PIs)    | Group                                               |
 | -------------------------------- | --------------------------------------------------- |
-| Peter Alvaro                     | [Disorderly Labs][group-disorderly]                 |
+| Josh Stuart                      | [Stuart Lab][group-jstuart]                         |
 | Peter Alvaro and Carlos Maltzahn | [Declarative Programmable Storage][group-declstore] |
 
 
-#### Readings by Course
+#### [Readings by Date][reading-by-date]
 
-| Quarter     | Course                               |
-| ----------- | ------------------------------------ |
-| Fall 2018   | [CMPS 278 reviews][course-cmps278]   |
-| Fall 2018   | [CMPS 290S reviews][course-cmps290s] |
-| Winter 2019 | [CMPS 280L][seminar-cmps280l]        |
-| Spring 2019 | [CMPS 229][course-cmps229]           |
-| Spring 2019 | [CMPS 232][course-cmps232]           |
-| Spring 2019 | [CMPS 280O][seminar-cmps280o]        |
-| Fall 2019   | [CSE 220][course-cse220]             |
-
-#### Readings by Date
-
-To see reviews by date, simply go to this index: [reviews by date][reading-by-date]. This
-will be updated periodically, when I need to procrastinate important work or when I feel
-like it should be updated.
+An index of reading reviews by date. This will be updated periodically, when I need to
+procrastinate important work or when I feel like it should be updated.
 
 
 <!-- misc links -->
@@ -118,7 +101,7 @@ like it should be updated.
 [seminar-cmps280o]:        https://kohdmonkey.github.io/apl.spring19/
 [seminar-cmps280l]:        readings/by-course/cmps280L
 
-[group-disorderly]:        readings/by-group/disorderly
+[group-jstuart]:           readings/by-group/jstuart
 [group-declstore]:         readings/by-group/declarative-programmable-storage
 
 [resource-ucsc-calendar]:  https://calendar.google.com/calendar?cid=YWttb250YW5AdWNzYy5lZHU
