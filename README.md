@@ -44,8 +44,10 @@ optimized and arbitrarily split.
 
 | Topic    | Date     | Title                                                                       |
 | -------- | -------- | --------------------------------------------------------------------------- |
-| SkySQL   | 22-04-XX | [SkySQL Defined](research/skysql/overview.md)                               |
-| SkySQL   | 22-04-XX | [Using Arrow Compute Engine](research/skysql/using-arrow-compute-engine.md) |
+| SkySQL   | 22-05-XX | [MSG Express and Skytether](research/skysql/landscape.md)                   |
+| SkySQL   | 22-05-XX | [SkySQL Defined](research/skysql/overview.md)                               |
+<!-- Work in Progress -->
+<!--| SkySQL   | 22-06-XX | [Using Arrow Compute Engine](research/skysql/using-arrow-compute-engine.md) |-->
 
 
 ####  Readings
