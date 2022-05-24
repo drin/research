@@ -46,6 +46,7 @@ optimized and arbitrarily split.
 | -------- | -------- | --------------------------------------------------------------------------- |
 | SkySQL   | 22-05-XX | [MSG Express and Skytether](research/skysql/landscape.md)                   |
 | SkySQL   | 22-05-XX | [SkySQL Defined](research/skysql/overview.md)                               |
+
 <!-- Work in Progress -->
 <!--| SkySQL   | 22-06-XX | [Using Arrow Compute Engine](research/skysql/using-arrow-compute-engine.md) |-->
 
