@@ -4,8 +4,8 @@ One aspect of my research is to figure out how to allow scientists to express qu
 can access and process their data in a way that allows the storage system and storage devices to
 optimize more freely. This means: (1) we **need** scientists to be **more** declarative in how they
 access data and (2) we **need** to provide a data access model and query interface that aligns well
-with system performance regardless of what optimizations the system may make. More specificall, for
-the second objective, we want to avoid scenarios where users feel compelled to learn system
+with system performance regardless of what optimizations the system may make. More specifically,
+for the second objective, we want to avoid scenarios where users feel compelled to learn system
 internals in order to improve performance.
 
 
