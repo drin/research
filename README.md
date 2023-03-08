@@ -26,7 +26,7 @@
 
 ### About Me
 
-I am currently a 4th year PhD student in computer science ([CMPS][web-phdreqs]) at UC Santa Cruz,
+I am currently a 5th year PhD student in computer science ([CMPS][web-phdreqs]) at UC Santa Cruz,
 advised by [Peter Alvaro][person-palvaro]. My research interest is in the intersection of data
 management systems, storage systems, programming languages, and bioinformatics. I primarily work
 with Peter Alvaro, Carlos Maltzahn, and Jeff LeFevre; but, I also work with Josh Stuart and Philip
@@ -36,10 +36,25 @@ and [Human Cell Atlas][community-hca] communities.
 
 ### [Research](research/README.md)
 
-**SkySQL.** Blog posts under the `SkySQL` topic discuss the use of the "Arrow compute engine"
-(project name is still TBD) in order to express queries to skytether. I am attempting to work
-towards specifying a query plan that can be expressed and executed by Arrow, but that can be
-optimized and arbitrarily split.
+I am working on research to leverage computational storage drives (CSDs) for
+bioinformatics (and, more generally, scientific computing workloads). To make my research
+easier to build on or use, I have separated parts of it into separate projects which I
+will try to make individually useful.
+
+
+##### Projects
+
+**[MSG Express](research/msg-express/overview.md).** A domain-specific data management
+system for single-cell gene expression data ("gene expression"). This should be a library
+usable by application developers for interacting with gene expression data and for storing
+and managing that data in a computational storage system.
+
+**Skytether.** A computational storage system that is spiritually an extension of
+SkyhookDM for computational storage devices (CSx). The version I'm building can stand on
+its own, but will largely be a prototype platform for research.
+
+**Mohair.** A library for translating query plans into and from substrait as decomposable
+query plans.
 
 
 | Topic    | Date     | Title                                                                       |
@@ -82,3 +97,5 @@ that changes in opinion can be referenced (for my own curiosity).
 
 <!--    >>> navigational links -->
 [resource-ucsc-calendar]:  https://calendar.google.com/calendar?cid=YWttb250YW5AdWNzYy5lZHU
+
+[docs-sniadict]:   https://www.snia.org/sites/default/files/dictionary/SNIADictionary.pdf
