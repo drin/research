@@ -36,6 +36,9 @@ Education
 Work Experience
 ---------------
 
+June 2022 - Dec 2022
+:   **Voltron Data (Remote)**; Software Engineer Intern, Data Engine
+
 May 2020 - June 2021
 :   **Seagate (Fremont, CA)**; Software Engineer Intern
 
